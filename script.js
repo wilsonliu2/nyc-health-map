@@ -48,7 +48,12 @@ var boundaries = L.geoJson(boroughsGeojson, {
     // Navigate to borough thru click
     layer.on("click", function (e) {
       var boroughName = feature.properties.BoroName;
-      window.location.href = boroughName + "/" + boroughName + ".html";
+
+      if (boroughName == "Staten Island") {
+        window.location.href = "boroughs/staten-island.html";
+      } else {
+        window.location.href = "boroughs/" + boroughName + ".html";
+      }
     });
   },
 }).addTo(map);

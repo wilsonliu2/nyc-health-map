@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Queens Health Map</title>
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <!-- Leaflet JavaScript -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <!-- Leaflet pop-up plugin for responsive pop-ups -->
+    <script src="https://unpkg.com/leaflet-responsive-popup@1.0.0/leaflet.responsive.popup.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-responsive-popup@1.0.0/leaflet.responsive.popup.css"
+    />
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- CSS files -->
+    <link rel="stylesheet" href="boroughs.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Queens Health Map</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">New York City</a></li>
+          <li><a href="brooklyn.html">Brooklyn</a></li>
+          <li><a href="manhattan.html">Manhattan</a></li>
+          <li><a href="bronx.html">Bronx</a></li>
+          <li><a href="staten-island.html">Staten Island</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Container for map selection buttons -->
+    <div id="map-btn-container">
+      <button id="btnDemographicLanguageMap" class="mapSelectBtn">
+        Demographics
+      </button>
+      <button id="btnHealthRiskBehaviorsMap" class="mapSelectBtn">
+        Health Risk Behaviors
+      </button>
+      <button id="btnHealthOutcomesMap" class="mapSelectBtn">
+        Health Outcomes
+      </button>
+      <button id="btnScreeningRatesMap" class="mapSelectBtn">
+        Screening Rates
+      </button>
+      <button id="btnHealthStatusMap" class="mapSelectBtn">
+        Health Status
+      </button>
+    </div>
+    <!-- Container for maps -->
+    <div id="map-container">
+      <div id="demographicLanguageMap" class="map"></div>
+      <div id="healthRiskBehaviorsMap" class="map"></div>
+      <div id="healthOutcomesMap" class="map"></div>
+      <div id="screeningRatesMap" class="map"></div>
+      <div id="healthStatusMap" class="map"></div>
+    </div>
+    <!-- Script files-->
+    <script>
+      // CONFIGURATION
+      const BORO_NAME = "Queens";
+      const COUNTY_NAME = "Queens";
+    </script>
+    <script src="../geojson-data/nyc-health-data.js"></script>
+    <script src="../geojson-data/nyc-language-demographic.js"></script>
+    <script src="mapHandler.js"></script>
+    <script src="map.js"></script>
+  </body>
+</html>
