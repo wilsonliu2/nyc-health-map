@@ -1296,7 +1296,7 @@ maps["healthRiskBehaviorsMap"] = L.map("healthRiskBehaviorsMap", {
   maxBounds: bounds,
   maxZoom: 18,
   minZoom: 11,
-}).setView([40.65, -73.97], 11);
+}).setView([40.65, -73.97], initialZoomLevel);
 
 var baseLayer = L.tileLayer(
   "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
@@ -1599,7 +1599,7 @@ maps["healthOutcomesMap"] = L.map("healthOutcomesMap", {
   maxBounds: bounds,
   maxZoom: 18,
   minZoom: 11,
-}).setView([40.65, -73.97], 11);
+}).setView([40.65, -73.97], initialZoomLevel);
 
 var baseLayer3 = L.tileLayer(
   "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
@@ -2104,7 +2104,7 @@ maps["screeningRatesMap"] = L.map("screeningRatesMap", {
   maxBounds: bounds,
   maxZoom: 18,
   minZoom: 11,
-}).setView([40.65, -73.97], 11);
+}).setView([40.65, -73.97], initialZoomLevel);
 
 var baseLayer4 = L.tileLayer(
   "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
@@ -2449,7 +2449,7 @@ maps["healthStatusMap"] = L.map("healthStatusMap", {
   maxBounds: bounds,
   maxZoom: 18,
   minZoom: 11,
-}).setView([40.65, -73.97], 11);
+}).setView([40.65, -73.97], initialZoomLevel);
 
 var baseLayer5 = L.tileLayer(
   "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
