@@ -4,7 +4,10 @@ function showMap(mapId) {
   mapsElements.forEach((map) => {
     if (map.id === mapId) {
       map.classList.add("active"); // Set selected map as active
-      maps[mapId].invalidateSize(); // Put the map in the correct position
+      // Put the map in the correct position after a 50ms delay
+      setTimeout(() => {
+        maps[mapId].invalidateSize();
+      }, 50);
     } else {
       map.classList.remove("active"); // Remove active class from other map
     }
@@ -39,5 +42,8 @@ document.getElementById("btnHealthStatusMap").addEventListener("click", () => {
 // Show the demographicLanguageMap by default
 document.addEventListener("DOMContentLoaded", () => {
   showMap("demographicLanguageMap");
-  maps["demographicLanguageMap"].invalidateSize();
+  // Put the map in the correct position after a delay
+  setTimeout(() => {
+    maps["demographicLanguageMap"].invalidateSize();
+  }, 50);
 });
