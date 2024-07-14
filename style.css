@@ -10,6 +10,7 @@ body {
   font-family: sans-serif;
 }
 
+/* ================================================================== HEADER STYLING ================================================================== */
 header {
   display: flex;
   justify-content: space-between;
@@ -23,6 +24,7 @@ header h1 {
   font-size: 24px;
 }
 
+/* Navigation styles */
 nav ul {
   list-style: none;
   display: flex;
@@ -34,6 +36,7 @@ nav a {
   color: #0000ee;
 }
 
+/* ================================================================== MAP STYLING ================================================================== */
 #map-container {
   display: flex;
   justify-content: center;

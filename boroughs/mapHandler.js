@@ -42,7 +42,7 @@ document.getElementById("btnHealthStatusMap").addEventListener("click", () => {
 // Show the demographicLanguageMap by default
 document.addEventListener("DOMContentLoaded", () => {
   showMap("demographicLanguageMap");
-  // Put the map in the correct position after a delay
+  // Put the map in the correct position after 50ms delay
   setTimeout(() => {
     maps["demographicLanguageMap"].invalidateSize();
   }, 50);

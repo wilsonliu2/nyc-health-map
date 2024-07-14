@@ -45,7 +45,7 @@ var boundaries = L.geoJson(boroughsGeojson, {
       boundaries.resetStyle(e.target);
     });
 
-    // Navigate to borough thru click
+    // Navigate to borough on click
     layer.on("click", function (e) {
       var boroughName = feature.properties.BoroName;
 
