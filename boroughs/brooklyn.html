@@ -70,9 +70,15 @@
     </div>
     <!-- Script files-->
     <script>
-      // CONFIGURATION
+      //=========================================================== CONFIGURATION =================================================================
       const BORO_NAME = "Brooklyn";
       const COUNTY_NAME = "Kings";
+
+      // MAP BOUNDS - set bounds so the map has limits for visibility
+      var southWest = L.latLng(40.551042, -74.041878),
+        northEast = L.latLng(40.739446, -73.833365),
+        bounds = L.latLngBounds(southWest, northEast);
+      initialZoomLevel = 12;
     </script>
     <script src="../geojson-data/nyc-health-data.js"></script>
     <script src="../geojson-data/nyc-language-demographic.js"></script>

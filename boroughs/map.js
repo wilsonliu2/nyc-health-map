@@ -1,17 +1,12 @@
 //=========================================================== MAP SETUP =================================================================
 var maps = {};
 
-// MAP BOUNDS - set bounds so the map has limits for visibility
-var southWest = L.latLng(40.477399, -74.25909), // Southwest bound (farther south and west)
-  northEast = L.latLng(40.917577, -73.700272), // Northeast bound (farther north and east)
-  bounds = L.latLngBounds(southWest, northEast);
-
 // MAP OBJECT
 maps["demographicLanguageMap"] = L.map("demographicLanguageMap", {
   maxBounds: bounds, // Map automatically bounces back to center
   maxZoom: 18,
   minZoom: 11,
-}).setView([40.65, -73.97], 11);
+}).setView([40.65, -73.97], initialZoomLevel);
 
 // BASEMAP
 var baseLayer = L.tileLayer(

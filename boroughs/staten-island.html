@@ -70,9 +70,15 @@
     </div>
     <!-- Script files-->
     <script>
-      // CONFIGURATION
+      //=========================================================== CONFIGURATION =================================================================
       const BORO_NAME = "Staten Island";
       const COUNTY_NAME = "Richmond";
+
+      // MAP BOUNDS - set bounds so the map has limits for visibility
+      var southWest = L.latLng(40.477399, -74.255641),
+        northEast = L.latLng(40.651381, -74.049713),
+        bounds = L.latLngBounds(southWest, northEast);
+      initialZoomLevel = 12;
     </script>
     <script src="../geojson-data/nyc-health-data.js"></script>
     <script src="../geojson-data/nyc-language-demographic.js"></script>
