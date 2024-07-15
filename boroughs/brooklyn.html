@@ -102,10 +102,11 @@
       const COUNTY_NAME = "Kings";
 
       // MAP BOUNDS - set bounds so the map has limits for visibility
-      var southWest = L.latLng(40.551042, -74.041878),
+      var southWest = L.latLng(40.565042, -74.041878),
         northEast = L.latLng(40.739446, -73.833365),
         bounds = L.latLngBounds(southWest, northEast);
-      initialZoomLevel = 12;
+      const INITIAL_ZOOM_LEVEL = 12;
+      const ZOOM_INCREMENT = 0.5;
     </script>
     <script src="../geojson-data/nyc-health-data.js"></script>
     <script src="../geojson-data/nyc-language-demographic.js"></script>

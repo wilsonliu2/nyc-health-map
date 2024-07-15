@@ -8,8 +8,10 @@ var southWest = L.latLng(40.477399, -74.25909), // Southwest bound (farther sout
 var map = L.map("map", {
   maxBounds: bounds, // Map automatically bounces back to center
   maxZoom: 18,
-  minZoom: 11,
-}).setView([40.65, -73.97], 11);
+  minZoom: 10.75,
+  zoomSnap: 0.25,
+  zoomDelta: 0.25,
+}).setView([40.65, -73.97], 10.75);
 
 // BASEMAP
 var baseLayer = L.tileLayer(

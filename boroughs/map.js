@@ -5,8 +5,10 @@ var maps = {};
 maps["demographicLanguageMap"] = L.map("demographicLanguageMap", {
   maxBounds: bounds, // Map automatically bounces back to center
   maxZoom: 18,
-  minZoom: 11,
-}).setView([40.65, -73.97], initialZoomLevel);
+  minZoom: 11.5,
+  zoomSnap: ZOOM_INCREMENT,
+  zoomDelta: ZOOM_INCREMENT,
+}).setView([40.65, -73.97], INITIAL_ZOOM_LEVEL);
 
 // BASEMAP
 var baseLayer = L.tileLayer(
@@ -687,7 +689,7 @@ demographicGeoJson = L.geoJson(languageGeoJsonData, {
 });
 
 // Function for demographic data to create a pie chart
-function createPieChartForDemographic(id, data) {
+function createPieChartForDemographic(id, data, extraData) {
   // Clear any existing element from the container
   d3.select(id).selectAll("*").remove();
 
@@ -750,9 +752,15 @@ function createPieChartForDemographic(id, data) {
     .on("mouseover", function (event, d) {
       d3.select(this).transition().duration(50).attr("opacity", ".85");
       div.transition().duration(50).style("opacity", 1);
+      var extraText = "";
+      if (extraData[d.data.label]) {
+        extraText = `<br> Under 5: ${formatter.format(
+          extraData[d.data.label]
+        )}`;
+      }
       tooltip
         .style("display", "block")
-        .html(`${d.data.label}: ${formatter.format(d.data.value)}`);
+        .html(`${d.data.label}: ${formatter.format(d.data.value)}${extraText}`);
     })
     .on("mouseout", function (event, d) {
       d3.select(this).transition().duration(50).attr("opacity", "1");
@@ -794,11 +802,27 @@ function createPieChartForDemographic(id, data) {
     .attr("x", legendRect + legendSpacing)
     .attr("y", legendRect - legendSpacing)
     .text((d) => d);
+
+  // Percentage labels
+  g.append("text")
+    .attr("transform", function (d) {
+      return "translate(" + arc.centroid(d) + ")";
+    })
+    .attr("dy", "0.35em")
+    .style("text-anchor", "middle")
+    .text(function (d) {
+      var percentage = (
+        (d.data.value / d3.sum(data, (d) => d.value)) *
+        100
+      ).toFixed(1);
+      return percentage + "%";
+    });
 }
 
 // Create pie chart based on selected type (gender or age)
 function updatePieChart(id, type, properties) {
   var pieData = [];
+  var extraData = {};
 
   if (type === "gender") {
     pieData = [
@@ -807,11 +831,11 @@ function updatePieChart(id, type, properties) {
     ];
   } else if (type === "age") {
     pieData = [
-      { label: "Under 5", value: properties.Under_5 },
       { label: "Under 18", value: properties.Under_18 },
       { label: "18 and over", value: properties["18_plus"] },
       { label: "65 and over", value: properties["65_plus"] },
     ];
+    extraData = { "Under 18": properties.Under_5 };
   } else if (type == "hispanic") {
     pieData = [
       { label: "Hispanic", value: properties.Hispanic },
@@ -819,7 +843,7 @@ function updatePieChart(id, type, properties) {
     ];
   }
 
-  createPieChartForDemographic(`#chart-container-${id}`, pieData);
+  createPieChartForDemographic(`#chart-container-${id}`, pieData, extraData);
 }
 
 // Create bar plot base on race data
@@ -1295,8 +1319,10 @@ updateMap();
 maps["healthRiskBehaviorsMap"] = L.map("healthRiskBehaviorsMap", {
   maxBounds: bounds,
   maxZoom: 18,
-  minZoom: 11,
-}).setView([40.65, -73.97], initialZoomLevel);
+  minZoom: 11.5,
+  zoomSnap: ZOOM_INCREMENT,
+  zoomDelta: ZOOM_INCREMENT,
+}).setView([40.65, -73.97], INITIAL_ZOOM_LEVEL);
 
 var baseLayer = L.tileLayer(
   "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
@@ -1598,8 +1624,10 @@ healthRiskLayers[healthRiskLayerNames.UNINSURED].addTo(
 maps["healthOutcomesMap"] = L.map("healthOutcomesMap", {
   maxBounds: bounds,
   maxZoom: 18,
-  minZoom: 11,
-}).setView([40.65, -73.97], initialZoomLevel);
+  minZoom: 11.5,
+  zoomSnap: ZOOM_INCREMENT,
+  zoomDelta: ZOOM_INCREMENT,
+}).setView([40.65, -73.97], INITIAL_ZOOM_LEVEL);
 
 var baseLayer3 = L.tileLayer(
   "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
@@ -2103,8 +2131,10 @@ healthOutcomesLayers[healthOutcomesLayerNames.ASTHMA_PREVALENCE].addTo(
 maps["screeningRatesMap"] = L.map("screeningRatesMap", {
   maxBounds: bounds,
   maxZoom: 18,
-  minZoom: 11,
-}).setView([40.65, -73.97], initialZoomLevel);
+  minZoom: 11.5,
+  zoomSnap: ZOOM_INCREMENT,
+  zoomDelta: ZOOM_INCREMENT,
+}).setView([40.65, -73.97], INITIAL_ZOOM_LEVEL);
 
 var baseLayer4 = L.tileLayer(
   "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
@@ -2448,8 +2478,10 @@ screeningRatesLayers[screeningRatesLayerNames.ANNUAL_CHECKUP].addTo(
 maps["healthStatusMap"] = L.map("healthStatusMap", {
   maxBounds: bounds,
   maxZoom: 18,
-  minZoom: 11,
-}).setView([40.65, -73.97], initialZoomLevel);
+  minZoom: 11.5,
+  zoomSnap: ZOOM_INCREMENT,
+  zoomDelta: ZOOM_INCREMENT,
+}).setView([40.65, -73.97], INITIAL_ZOOM_LEVEL);
 
 var baseLayer5 = L.tileLayer(
   "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",

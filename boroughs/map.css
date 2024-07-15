@@ -99,16 +99,18 @@ nav a {
 }
 
 .mapSelectBtn {
-  padding: 10px 20px;
   border: none;
   cursor: pointer;
   font-size: 14px;
   color: black;
+  flex: 1;
+  min-width: 50px;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
   .mapSelectBtn {
-    padding: 15px 30px;
+    padding: 10px 20px;
   }
 }
 
