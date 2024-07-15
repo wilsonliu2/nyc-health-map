@@ -41,7 +41,15 @@ nav a {
   color: #0000ee;
 }
 
-/* ================================================================== MAP SECITON STYLING ================================================================== */
+/* ================================================================== MAP STYLING ================================================================== */
+/* ================================= MAP CONTAINERS ================================= */
+/* Everything */
+#map-layout {
+  display: flex;
+  gap: 20px;
+}
+
+/* Everything but the zip-code box */
 #map-section {
   margin-top: 3vh;
   margin-left: 1vw;
@@ -75,7 +83,6 @@ nav a {
 
 .mapSelectBtn {
   padding: 15px 30px;
-  margin: 0;
   border: none;
   cursor: pointer;
   font-size: 14px;
@@ -113,6 +120,33 @@ nav a {
 .mapSelectBtn:active {
   outline: 3px solid lightblue;
   z-index: 1;
+}
+
+/* ================================================================== ZIPCODE STYLING ================================================================== */
+#zip-code-container {
+  margin-top: 30px;
+  width: 30vw;
+  height: 735px;
+  border: 1px solid rgb(33, 37, 41);
+}
+
+#zip-code-header {
+  display: flex;
+  gap: 20px;
+  padding: 8px;
+  background-color: rgb(0, 150, 136);
+}
+
+#zip-code-header-text {
+  font-weight: bold;
+  color: white;
+}
+
+#zip-code-dropdown {
+  font-weight: bold;
+}
+
+#zip-code-content {
 }
 
 /* ================================================================== LEGEND STYLING ================================================================== */
