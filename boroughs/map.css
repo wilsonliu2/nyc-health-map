@@ -13,6 +13,7 @@
 
 body {
   font-family: sans-serif;
+  box-sizing: border-box;
 }
 
 /* ================================================================== HEADER STYLING ================================================================== */
@@ -46,7 +47,15 @@ nav a {
 /* Everything */
 #map-layout {
   display: flex;
+  flex-direction: column;
   gap: 20px;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  #map-layout {
+    flex-direction: row;
+  }
 }
 
 /* Everything but the zip-code box */
@@ -60,8 +69,15 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 700px;
-  width: 65vw;
+  height: 50vh;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  #map-container {
+    height: 700px;
+    width: 65vw;
+  }
 }
 
 /* Styles for all maps, hidden by default */
@@ -79,15 +95,27 @@ nav a {
 /* ================================= MAP BUTTON STYLING ================================= */
 #map-btn-container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .mapSelectBtn {
-  padding: 15px 30px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
   font-size: 14px;
   color: black;
-  height: 10px;
+}
+
+@media (min-width: 768px) {
+  .mapSelectBtn {
+    padding: 15px 30px;
+  }
+}
+
+.mapSelectBtn:focus,
+.mapSelectBtn:active {
+  outline: 3px solid lightblue;
+  z-index: 1;
 }
 
 #censusTractLevel {
@@ -115,19 +143,19 @@ nav a {
 #btnHealthStatusMap {
   background-color: rgb(76, 175, 80);
 }
-
-.mapSelectBtn:focus,
-.mapSelectBtn:active {
-  outline: 3px solid lightblue;
-  z-index: 1;
-}
-
 /* ================================================================== ZIPCODE STYLING ================================================================== */
 #zip-code-container {
   margin-top: 30px;
-  width: 30vw;
-  height: 735px;
+  width: 100%;
+  height: auto;
   border: 1px solid rgb(33, 37, 41);
+}
+
+@media (min-width: 768px) {
+  #zip-code-container {
+    width: 30vw;
+    height: 735px;
+  }
 }
 
 #zip-code-header {
