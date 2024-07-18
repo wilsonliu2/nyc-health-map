@@ -88,15 +88,21 @@
           <!-- Zip code dropdown -->
           <select id="zip-code-dropdown">
             <option>Select a Zip Code</option>
-            <option>10001</option>
-            <option>10002</option>
-            <option>10003</option>
-            <option>10004</option>
-            <option>10005</option>
           </select>
         </div>
 
-        <div id="zip-code-content">content</div>
+        <div id="zip-code-content">
+          <br />
+          <br />
+          <h3 style="text-align: center">Select a new zip code</h3>
+          <br />
+          <h3 style="text-align: center"><i>or</i></h3>
+          <br />
+          <h5 style="text-align: center">
+            Check out the charts below to see an overview of the health
+            statistics on a neighborhood level.
+          </h5>
+        </div>
       </div>
     </div>
     <!-- Script files-->
@@ -114,7 +120,10 @@
     </script>
     <script src="../geojson-data/nyc-health-data.js"></script>
     <script src="../geojson-data/nyc-language-demographic.js"></script>
+    <script src="../geojson-data/zip-code-boundaries.js"></script>
+    <script src="../geojson-data/zip-code-data.js"></script>
     <script src="mapHandler.js"></script>
+    <script src="zipCodeHandler.js"></script>
     <script src="map.js"></script>
   </body>
 </html>

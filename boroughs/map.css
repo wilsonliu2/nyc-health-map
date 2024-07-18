@@ -177,6 +177,31 @@ nav a {
 }
 
 #zip-code-content {
+  max-height: 95%;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+details > summary {
+  padding: 4px;
+  width: 200px;
+  background-color: #f7f5f5;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #bbbbbb;
+  cursor: pointer;
+}
+
+details > p {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 4px;
+  margin: 0;
+  box-shadow: 1px 1px 2px #bbbbbb;
+}
+
+#zip-list-item {
+  font-size: 14px;
 }
 
 /* ================================================================== LEGEND STYLING ================================================================== */
