@@ -31,7 +31,6 @@ function updateContentContainer(selectedZipCode) {
       `;
       return;
     }
-
     // Selected zip
     if (zipCode["Zip Code"] == selectedZipCode) {
       zipCodeContentContainer.innerHTML = `
@@ -40,7 +39,12 @@ function updateContentContainer(selectedZipCode) {
 
       <details>
         <summary>Population Details</summary>
-        <p><a href="#">Gender</a> | <a href="#">Age</a> | <a href="#">Ethnicity</a> | <a href="#">Race</a></p>
+        <div id="chart-navigation">
+          <button id="prev-chart">←</button>
+          <span id="chart-title" style="font-weight: bold; margin: 0 10px;"></span>
+          <button id="next-chart">→</button>
+        </div>
+        <div id="chart-container"></div>
       </details>
 
       <h5 style="font-size: 18px;margin-bottom: 0px;"><strong>Language Statistics</strong></h5> 
@@ -81,6 +85,32 @@ function updateContentContainer(selectedZipCode) {
       <li class="list-item">Vision disability: ${zipCode["Vision disability"]}%</li>
       <li class="list-item">Hearing disability: ${zipCode["Hearing disability"]}%</li>
     `;
+      let currentChartIndex = 0;
+      const chartTypes = ["gender", "age", "ethnicity", "race"];
+
+      function showChart(index) {
+        const chartType = chartTypes[index];
+        document.getElementById("chart-title").textContent =
+          chartType.charAt(0).toUpperCase() + chartType.slice(1);
+        if (chartType === "race") {
+          updateBarPlotForRaceZip("chart-container", zipCode);
+        } else {
+          updatePieChartZip("chart-container", chartType, zipCode);
+        }
+      }
+
+      showChart(currentChartIndex);
+
+      document.getElementById("prev-chart").addEventListener("click", () => {
+        currentChartIndex =
+          (currentChartIndex - 1 + chartTypes.length) % chartTypes.length;
+        showChart(currentChartIndex);
+      });
+
+      document.getElementById("next-chart").addEventListener("click", () => {
+        currentChartIndex = (currentChartIndex + 1) % chartTypes.length;
+        showChart(currentChartIndex);
+      });
     }
   });
 }
@@ -97,3 +127,53 @@ document
     const selectedZip = this.value;
     updateContentContainer(selectedZip);
   });
+
+function updatePieChartZip(id, type, properties) {
+  var pieData = [];
+
+  if (type === "gender") {
+    pieData = [
+      { label: "Male", value: properties.Male },
+      { label: "Female", value: properties.Female },
+    ];
+  } else if (type === "age") {
+    pieData = [
+      { label: "Under 5", value: properties["Under 5 years"] },
+      { label: "Under 18", value: properties["Under 18 years"] },
+      { label: "18 and over", value: properties["18 years and over"] },
+      { label: "65 and over", value: properties["65 years and over"] },
+    ];
+  } else if (type == "ethnicity") {
+    pieData = [
+      { label: "Hispanic", value: properties["Hispanic or Latino"] },
+      { label: "Non-Hispanic", value: properties["Not Hispanic or Latino"] },
+    ];
+  }
+
+  createPieChartForDemographic(`#${id}`, pieData, {});
+}
+
+function updateBarPlotForRaceZip(id, properties) {
+  var barData = [
+    { label: "White", value: parseInt(properties.White) },
+    {
+      label: "Black",
+      value: parseInt(properties["Black or African American"]),
+    },
+    {
+      label: "AIAN",
+      value: parseInt(properties["American Indian and Alaska Native"]),
+    },
+    { label: "Asian", value: parseInt(properties.Asian) },
+    {
+      label: "NHOPI",
+      value: parseInt(properties["Native Hawaiian and Other Pacific Islander"]),
+    },
+    {
+      label: "Other",
+      value: parseInt(properties["Some Other Race"]),
+    },
+  ];
+
+  createBarPlotForDemographics(`#${id}`, barData);
+}
