@@ -3202,7 +3202,7 @@ function getColorForArabic(value) {
     ? "#66c2a4"
     : value > 23
     ? "#99d8c9"
-    : value > 0
+    : value >= 0
     ? "#ccece6"
     : "#606060";
 }
@@ -3220,7 +3220,7 @@ function getColorForChinese(value) {
     ? "#66c2a4"
     : value > 145
     ? "#99d8c9"
-    : value > 0
+    : value >= 0
     ? "#ccece6"
     : "#606060";
 }
@@ -3238,7 +3238,7 @@ function getColorForFrench(value) {
     ? "#66c2a4"
     : value > 47
     ? "#99d8c9"
-    : value > 0
+    : value >= 0
     ? "#ccece6"
     : "#606060";
 }
@@ -3256,7 +3256,7 @@ function getColorForGerman(value) {
     ? "#66c2a4"
     : value > 124
     ? "#99d8c9"
-    : value > 0
+    : value >= 0
     ? "#ccece6"
     : "#606060";
 }
@@ -3274,7 +3274,7 @@ function getColorForKorean(value) {
     ? "#66c2a4"
     : value > 32
     ? "#99d8c9"
-    : value > 0
+    : value >= 0
     ? "#ccece6"
     : "#606060";
 }
@@ -3292,7 +3292,7 @@ function getColorForOther(value) {
     ? "#66c2a4"
     : value > 43
     ? "#99d8c9"
-    : value > 0
+    : value >= 0
     ? "#ccece6"
     : "#606060";
 }
@@ -3310,7 +3310,7 @@ function getColorForOtherAsia(value) {
     ? "#66c2a4"
     : value > 26
     ? "#99d8c9"
-    : value > 0
+    : value >= 0
     ? "#ccece6"
     : "#606060";
 }
@@ -3328,7 +3328,7 @@ function getColorForOtherIndo(value) {
     ? "#66c2a4"
     : value > 87
     ? "#99d8c9"
-    : value > 0
+    : value >= 0
     ? "#ccece6"
     : "#606060";
 }
@@ -3346,7 +3346,7 @@ function getColorForRussian(value) {
     ? "#66c2a4"
     : value > 128
     ? "#99d8c9"
-    : value > 0
+    : value >= 0
     ? "#ccece6"
     : "#606060";
 }
@@ -3364,7 +3364,7 @@ function getColorForSpanish(value) {
     ? "#66c2a4"
     : value > 519
     ? "#99d8c9"
-    : value > 0
+    : value >= 0
     ? "#ccece6"
     : "#606060";
 }
@@ -3382,7 +3382,7 @@ function getColorForTagalog(value) {
     ? "#66c2a4"
     : value > 19
     ? "#99d8c9"
-    : value > 0
+    : value >= 0
     ? "#ccece6"
     : "#606060";
 }
@@ -3400,7 +3400,7 @@ function getColorForVietnamese(value) {
     ? "#66c2a4"
     : value > 6
     ? "#99d8c9"
-    : value > 0
+    : value >= 0
     ? "#ccece6"
     : "#606060";
 }
