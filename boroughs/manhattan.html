@@ -25,6 +25,11 @@
     />
     <!-- D3.js -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Highcharts -->
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <!-- CSS files -->
     <link rel="stylesheet" href="map.css" />
   </head>
@@ -136,6 +141,19 @@
         </div>
       </div>
     </div>
+    <!-- Highcharts Section -->
+    <section id="highCharts-section">
+      <div id="hc-btns">
+        <button id="hc-risk-btn">Health Risk Behaviors</button>
+        <button id="hc-outcomes-btn">Health Outcomes</button>
+        <button id="hc-screens-btn">Screening Rates</button>
+        <button id="hc-status-btn">Health Status</button>
+        <div id="chart-behavior" class="high-charts-container"></div>
+        <div id="chart-health" class="high-charts-container"></div>
+        <div id="chart-screening" class="high-charts-container"></div>
+        <div id="chart-status" class="high-charts-container"></div>
+      </div>
+    </section>
     <!-- Script files-->
     <script>
       //=========================================================== CONFIGURATION =================================================================
@@ -153,7 +171,9 @@
     <script src="../geojson-data/nyc-language-demographic.js"></script>
     <script src="../geojson-data/zip-code-boundaries.js"></script>
     <script src="../geojson-data/zip-code-data.js"></script>
+    <script src="../geojson-data/neighborhood-summaries.js"></script>
     <script src="mapHandler.js"></script>
+    <script src="chartHandler.js"></script>
     <script src="map.js"></script>
     <script src="zipCodeHandler.js"></script>
   </body>
