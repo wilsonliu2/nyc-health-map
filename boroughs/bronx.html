@@ -48,9 +48,6 @@
       <div id="map-section">
         <!-- Container for map selection buttons -->
         <div id="map-btn-container">
-          <button id="censusTractLevel" class="mapSelectBtn">
-            Census Tract Level
-          </button>
           <button id="btnDemographicLanguageMap" class="mapSelectBtn">
             Demographics
           </button>
@@ -141,7 +138,7 @@
 
       // MAP BOUNDS - set bounds so the map has limits for visibility
       var southWest = L.latLng(40.785739, -73.933042),
-        northEast = L.latLng(40.917577, -73.765182),
+        northEast = L.latLng(40.917577, -73.825),
         bounds = L.latLngBounds(southWest, northEast);
       const INITIAL_ZOOM_LEVEL = 12;
       const ZOOM_INCREMENT = 0.5;
