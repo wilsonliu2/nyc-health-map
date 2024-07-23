@@ -3159,6 +3159,53 @@ healthStatusLayers[healthStatusLayerNames.DEPRESSION].addTo(
   maps["healthStatusMap"]
 );
 
+//=========================================================== ZIP CODE =================================================================
+selectedMap = maps["demographicLanguageMap"];
+var zipHighlightLayer = {};
+var zipBoundaryLayer = {};
+
+// Add highlight layer and boundaries to each map
+Object.keys(maps).forEach((mapId) => {
+  zipHighlightLayer[mapId] = L.geoJson(null, {
+    style: {
+      color: "yellow",
+      weight: 5,
+    },
+    interactive: false,
+  }).addTo(maps[mapId]);
+
+  zipBoundaryLayer[mapId] = L.geoJson(zipCodeBoundaries, {
+    style: {
+      fillColor: "transparent",
+      color: "transparent",
+      opacity: 0,
+      fillOpacity: 0,
+    },
+    interactive: false,
+  }).addTo(maps[mapId]);
+});
+
+// Listen for custom highlightZipCode event to highlight that zip code area
+document.addEventListener("highlightZipCode", function (event) {
+  const zipCode = event.detail.zipCode;
+  highlightBoundary(zipCode);
+});
+
+function highlightBoundary(zipCode) {
+  // Clear previous highlights
+  Object.keys(zipHighlightLayer).forEach((mapId) => {
+    zipHighlightLayer[mapId].clearLayers();
+  });
+
+  // Highlight selected zip code on the selected map
+  zipBoundaryLayer[selectedMap._container.id].eachLayer(function (layer) {
+    if (layer.feature.properties.ZIPCODE == zipCode) {
+      zipHighlightLayer[selectedMap._container.id].addData(layer.feature);
+      layer.bringToFront();
+    }
+  });
+}
+
 //=========================================================== COLOR FUNCTIONS =================================================================
 //=========================================================== LANGUAGE COLOR FUNCTIONS =================================================================
 function getColorBasedOnLanguageLegend(language) {

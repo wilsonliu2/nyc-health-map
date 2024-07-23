@@ -125,8 +125,19 @@ document
   .getElementById("zip-code-dropdown")
   .addEventListener("change", function () {
     const selectedZip = this.value;
+    // Update container description for the new zipcode
     updateContentContainer(selectedZip);
+    // Highlight the zip code on the map
+    highlightZipCodeBoundary(selectedZip);
   });
+
+// Fire custom highlightZipCode event with the selected zip code
+function highlightZipCodeBoundary(selectedZipCode) {
+  const event = new CustomEvent("highlightZipCode", {
+    detail: { zipCode: selectedZipCode },
+  });
+  document.dispatchEvent(event);
+}
 
 function updatePieChartZip(id, type, properties) {
   var pieData = [];

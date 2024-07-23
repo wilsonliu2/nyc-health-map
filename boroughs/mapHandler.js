@@ -1,3 +1,5 @@
+var selectedMap;
+
 // Function to show selected map and hide other maps
 function showMap(mapId) {
   const mapsElements = document.querySelectorAll(".map");
@@ -12,6 +14,8 @@ function showMap(mapId) {
       map.classList.remove("active"); // Remove active class from other map
     }
   });
+
+  selectedMap = maps[mapId];
 }
 
 // Event listeners for when a map is selected
