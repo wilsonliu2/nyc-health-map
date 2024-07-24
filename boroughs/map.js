@@ -528,6 +528,7 @@ function updateMap() {
   // Update the legend based on the selected layer and language
   selectedLayer = "language";
   updateLegend(selectedLayer, selectedLanguage);
+  bringZipLayersToFront();
 }
 
 var LanguageControl = L.Control.extend({
@@ -1297,6 +1298,7 @@ mymap.on("baselayerchange", function (e) {
     removeLanguageControl();
     updateLegend(selectedLayer, "");
   }
+  bringZipLayersToFront();
 });
 
 updateLegend(selectedLayer, "");
@@ -1607,6 +1609,7 @@ function updateLegendForHealthRisk(layerName) {
       break;
   }
   document.querySelector(".healthRiskLegend").innerHTML = legendContent;
+  bringZipLayersToFront();
 }
 
 maps["healthRiskBehaviorsMap"].on("baselayerchange", function (e) {
@@ -2115,6 +2118,7 @@ function updateLegendForHealthOutcomes(layerName) {
       break;
   }
   document.querySelector(".healthOutcomesLegend").innerHTML = legendContent;
+  bringZipLayersToFront();
 }
 
 maps["healthOutcomesMap"].on("baselayerchange", function (e) {
@@ -2462,6 +2466,7 @@ function updateLegendForScreeningRates(layerName) {
       break;
   }
   document.querySelector(".screeningRatesLegend").innerHTML = legendContent;
+  bringZipLayersToFront();
 }
 
 maps["screeningRatesMap"].on("baselayerchange", function (e) {
@@ -2867,6 +2872,7 @@ function updateLegendForHealthStatus(layerName) {
       break;
   }
   document.querySelector(".healthStatusLegend").innerHTML = legendContent;
+  bringZipLayersToFront();
 }
 
 maps["healthStatusMap"].on("baselayerchange", function (e) {
@@ -3204,6 +3210,13 @@ function highlightBoundary(zipCode) {
       layer.bringToFront();
     }
   });
+}
+
+function bringZipLayersToFront() {
+  if (zipHighlightLayer && zipBoundaryLayer) {
+    zipHighlightLayer[selectedMap._container.id].bringToFront();
+    zipBoundaryLayer[selectedMap._container.id].bringToFront();
+  }
 }
 
 //=========================================================== COLOR FUNCTIONS =================================================================

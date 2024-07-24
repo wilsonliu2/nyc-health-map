@@ -16,24 +16,34 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #fff;
-  border-bottom: 1px solid #000;
+  background-color: black;
 }
 
 header h1 {
-  font-size: 24px;
+  font-size: 28px;
+  color: white;
+  text-shadow: 2px 2px 4px #858080;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* Navigation styles */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 10px;
 }
 
-nav a {
+header nav ul li {
+  margin-right: 10px;
+}
+
+header nav ul li a {
+  color: white;
   text-decoration: none;
-  color: #0000ee;
+}
+
+header nav ul li a:hover {
+  color: cyan;
 }
 
 /* ================================================================== MAP STYLING ================================================================== */
