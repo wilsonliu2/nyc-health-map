@@ -26,6 +26,17 @@ var baseLayer = L.tileLayer(
 ).addTo(maps["demographicLanguageMap"]);
 
 //=========================================================== CONFIGURATION =================================================================
+// Update language colors on the map
+const languageColors = [
+  "#00441b",
+  "#006d2c",
+  "#238b45",
+  "#41ae76",
+  "#66c2a4",
+  "#99d8c9",
+  "#ccece6",
+  "#606060",
+];
 // Update layer and legend name for health risk map
 const healthRiskLayerNames = {
   UNINSURED: "Uninsured",
@@ -4030,214 +4041,214 @@ function getColorForArabic(value) {
     : value > arabicBreaks[5]
     ? languageColors[1]
     : value > arabicBreaks[4]
-    ? "#238b45"
+    ? languageColors[2]
     : value > arabicBreaks[3]
-    ? "#41ae76"
+    ? languageColors[3]
     : value > arabicBreaks[2]
-    ? "#66c2a4"
+    ? languageColors[4]
     : value > arabicBreaks[1]
-    ? "#99d8c9"
+    ? languageColors[5]
     : value >= arabicBreaks[0]
-    ? "#ccece6"
-    : "#606060";
+    ? languageColors[6]
+    : languageColors[7];
 }
 
 function getColorForChinese(value) {
   return value > chineseBreaks[6]
-    ? "#00441b"
+    ? languageColors[0]
     : value > chineseBreaks[5]
-    ? "#006d2c"
+    ? languageColors[1]
     : value > chineseBreaks[4]
-    ? "#238b45"
+    ? languageColors[2]
     : value > chineseBreaks[3]
-    ? "#41ae76"
+    ? languageColors[3]
     : value > chineseBreaks[2]
-    ? "#66c2a4"
+    ? languageColors[4]
     : value > chineseBreaks[1]
-    ? "#99d8c9"
+    ? languageColors[5]
     : value >= chineseBreaks[0]
-    ? "#ccece6"
-    : "#606060";
+    ? languageColors[6]
+    : languageColors[7];
 }
 
 function getColorForFrench(value) {
   return value > frenchBreaks[6]
-    ? "#00441b"
+    ? languageColors[0]
     : value > frenchBreaks[5]
-    ? "#006d2c"
+    ? languageColors[1]
     : value > frenchBreaks[4]
-    ? "#238b45"
+    ? languageColors[2]
     : value > frenchBreaks[3]
-    ? "#41ae76"
+    ? languageColors[3]
     : value > frenchBreaks[2]
-    ? "#66c2a4"
+    ? languageColors[4]
     : value > frenchBreaks[1]
-    ? "#99d8c9"
+    ? languageColors[5]
     : value >= frenchBreaks[0]
-    ? "#ccece6"
-    : "#606060";
+    ? languageColors[6]
+    : languageColors[7];
 }
 
 function getColorForGerman(value) {
   return value > germanBreaks[6]
-    ? "#00441b"
+    ? languageColors[0]
     : value > germanBreaks[5]
-    ? "#006d2c"
+    ? languageColors[1]
     : value > germanBreaks[4]
-    ? "#238b45"
+    ? languageColors[2]
     : value > germanBreaks[3]
-    ? "#41ae76"
+    ? languageColors[3]
     : value > germanBreaks[2]
-    ? "#66c2a4"
+    ? languageColors[4]
     : value > germanBreaks[1]
-    ? "#99d8c9"
+    ? languageColors[5]
     : value >= germanBreaks[0]
-    ? "#ccece6"
-    : "#606060";
+    ? languageColors[6]
+    : languageColors[7];
 }
 
 function getColorForKorean(value) {
   return value > koreanBreaks[6]
-    ? "#00441b"
+    ? languageColors[0]
     : value > koreanBreaks[5]
-    ? "#006d2c"
+    ? languageColors[1]
     : value > koreanBreaks[4]
-    ? "#238b45"
+    ? languageColors[2]
     : value > koreanBreaks[3]
-    ? "#41ae76"
+    ? languageColors[3]
     : value > koreanBreaks[2]
-    ? "#66c2a4"
+    ? languageColors[4]
     : value > koreanBreaks[1]
-    ? "#99d8c9"
+    ? languageColors[5]
     : value >= koreanBreaks[0]
-    ? "#ccece6"
-    : "#606060";
+    ? languageColors[6]
+    : languageColors[7];
 }
 
 function getColorForOther(value) {
   return value > otherBreaks[6]
-    ? "#00441b"
+    ? languageColors[0]
     : value > otherBreaks[5]
-    ? "#006d2c"
+    ? languageColors[1]
     : value > otherBreaks[4]
-    ? "#238b45"
+    ? languageColors[2]
     : value > otherBreaks[3]
-    ? "#41ae76"
+    ? languageColors[3]
     : value > otherBreaks[2]
-    ? "#66c2a4"
+    ? languageColors[4]
     : value > otherBreaks[1]
-    ? "#99d8c9"
+    ? languageColors[5]
     : value >= otherBreaks[0]
-    ? "#ccece6"
-    : "#606060";
+    ? languageColors[6]
+    : languageColors[7];
 }
 
 function getColorForOtherAsia(value) {
   return value > otherAsiaBreaks[6]
-    ? "#00441b"
+    ? languageColors[0]
     : value > otherAsiaBreaks[5]
-    ? "#006d2c"
+    ? languageColors[1]
     : value > otherAsiaBreaks[4]
-    ? "#238b45"
+    ? languageColors[2]
     : value > otherAsiaBreaks[3]
-    ? "#41ae76"
+    ? languageColors[3]
     : value > otherAsiaBreaks[2]
-    ? "#66c2a4"
+    ? languageColors[4]
     : value > otherAsiaBreaks[1]
-    ? "#99d8c9"
+    ? languageColors[5]
     : value >= otherAsiaBreaks[0]
-    ? "#ccece6"
-    : "#606060";
+    ? languageColors[6]
+    : languageColors[7];
 }
 
 function getColorForOtherIndo(value) {
   return value > otherIndoBreaks[6]
-    ? "#00441b"
+    ? languageColors[0]
     : value > otherIndoBreaks[5]
-    ? "#006d2c"
+    ? languageColors[1]
     : value > otherIndoBreaks[4]
-    ? "#238b45"
+    ? languageColors[2]
     : value > otherIndoBreaks[3]
-    ? "#41ae76"
+    ? languageColors[3]
     : value > otherIndoBreaks[2]
-    ? "#66c2a4"
+    ? languageColors[4]
     : value > otherIndoBreaks[1]
-    ? "#99d8c9"
+    ? languageColors[5]
     : value >= otherIndoBreaks[0]
-    ? "#ccece6"
-    : "#606060";
+    ? languageColors[6]
+    : languageColors[7];
 }
 
 function getColorForRussian(value) {
   return value > russianBreaks[6]
-    ? "#00441b"
+    ? languageColors[0]
     : value > russianBreaks[5]
-    ? "#006d2c"
+    ? languageColors[1]
     : value > russianBreaks[4]
-    ? "#238b45"
+    ? languageColors[2]
     : value > russianBreaks[3]
-    ? "#41ae76"
+    ? languageColors[3]
     : value > russianBreaks[2]
-    ? "#66c2a4"
+    ? languageColors[4]
     : value > russianBreaks[1]
-    ? "#99d8c9"
+    ? languageColors[5]
     : value >= russianBreaks[0]
-    ? "#ccece6"
-    : "#606060";
+    ? languageColors[6]
+    : languageColors[7];
 }
 
 function getColorForSpanish(value) {
   return value > spanishBreaks[6]
-    ? "#00441b"
+    ? languageColors[0]
     : value > spanishBreaks[5]
-    ? "#006d2c"
+    ? languageColors[1]
     : value > spanishBreaks[4]
-    ? "#238b45"
+    ? languageColors[2]
     : value > spanishBreaks[3]
-    ? "#41ae76"
+    ? languageColors[3]
     : value > spanishBreaks[2]
-    ? "#66c2a4"
+    ? languageColors[4]
     : value > spanishBreaks[1]
-    ? "#99d8c9"
+    ? languageColors[5]
     : value >= spanishBreaks[0]
-    ? "#ccece6"
-    : "#606060";
+    ? languageColors[6]
+    : languageColors[7];
 }
 
 function getColorForTagalog(value) {
   return value > tagalogBreaks[6]
-    ? "#00441b"
+    ? languageColors[0]
     : value > tagalogBreaks[5]
-    ? "#006d2c"
+    ? languageColors[1]
     : value > tagalogBreaks[4]
-    ? "#238b45"
+    ? languageColors[2]
     : value > tagalogBreaks[3]
-    ? "#41ae76"
+    ? languageColors[3]
     : value > tagalogBreaks[2]
-    ? "#66c2a4"
+    ? languageColors[4]
     : value > tagalogBreaks[1]
-    ? "#99d8c9"
+    ? languageColors[5]
     : value >= tagalogBreaks[0]
-    ? "#ccece6"
-    : "#606060";
+    ? languageColors[6]
+    : languageColors[7];
 }
 
 function getColorForVietnamese(value) {
   return value > vietnameseBreaks[6]
-    ? "#00441b"
+    ? languageColors[0]
     : value > vietnameseBreaks[5]
-    ? "#006d2c"
+    ? languageColors[1]
     : value > vietnameseBreaks[4]
-    ? "#238b45"
+    ? languageColors[2]
     : value > vietnameseBreaks[3]
-    ? "#41ae76"
+    ? languageColors[3]
     : value > vietnameseBreaks[2]
-    ? "#66c2a4"
+    ? languageColors[4]
     : value > vietnameseBreaks[1]
-    ? "#99d8c9"
+    ? languageColors[5]
     : value >= vietnameseBreaks[0]
-    ? "#ccece6"
-    : "#606060";
+    ? languageColors[6]
+    : languageColors[7];
 }
 
 //=========================================================== DEMOGRAPHIC COLOR FUNCTIONS =================================================================
