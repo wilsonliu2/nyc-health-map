@@ -161,6 +161,75 @@
         bounds = L.latLngBounds(southWest, northEast);
       const INITIAL_ZOOM_LEVEL = 12;
       const ZOOM_INCREMENT = 0.5;
+
+      // Bronx Language Breaks
+      const arabicBreaks = [0, 12, 44, 92, 153, 224, 435];
+      const chineseBreaks = [0, 8, 25, 46, 81, 127, 237];
+      const frenchBreaks = [0, 37, 102, 177, 246, 466, 754];
+      const germanBreaks = [0, 4, 17, 34, 52, 93, 128];
+      const koreanBreaks = [0, 7, 22, 42, 61, 78, 321];
+      const otherBreaks = [0, 57, 147, 286, 471, 727, 1230];
+      const otherAsiaBreaks = [0, 8, 27, 53, 82, 127, 251];
+      const otherIndoBreaks = [0, 66, 207, 386, 726, 1249, 2199];
+      const russianBreaks = [0, 12, 45, 92, 137, 194, 307];
+      const spanishBreaks = [0, 720, 1395, 2171, 3105, 4232, 6327];
+      const tagalogBreaks = [0, 9, 33, 70, 126, 182, 524];
+      const vietnameseBreaks = [0, 5, 20, 38, 74, 139, 256];
+      const totalPopBreaks = [16, 1829, 3091, 4327, 5520, 6844, 9197];
+
+      // Bronx Health Breaks
+      const lackOfHealthInsuranceBreaks = [
+        3.1, 8.4, 12.5, 16.4, 19.7, 22.9, 30.7,
+      ];
+      const bingeDrinkingBreaks = [9.5, 11.9, 13, 14, 15.1, 16.6, 20.1];
+      const currentSmokingBreaks = [6.3, 10.7, 14, 16.8, 19.3, 22.6, 29.6];
+      const physicalInactivityBreaks = [15.7, 23.8, 29.8, 35, 39.4, 43.9, 51.2];
+      const sleepLessThan7HoursBreaks = [
+        24.1, 28.5, 32.8, 36, 37.9, 39.7, 43.1,
+      ];
+      const currentAsthmaBreaks = [9.2, 10.5, 11.6, 12.5, 13.2, 14.2, 16.5];
+      const highBloodPressureBreaks = [
+        14.9, 20.5, 28.4, 31.4, 34.6, 38.5, 52.2,
+      ];
+      const cancerExceptSkinBreaks = [1.8, 3.7, 4.5, 5.5, 6.9, 8.9, 13.8];
+      const cholesterolScreeningBreaks = [
+        62.5, 71.6, 80.1, 82.5, 85.3, 88.7, 94.6,
+      ];
+      const chronicKidneyDiseaseBreaks = [1.6, 2.3, 3, 3.3, 3.7, 4.2, 6.4];
+      const arthritisBreaks = [8.1, 10.7, 16.3, 18.2, 20.4, 23.4, 33.4];
+      const coronaryHeartDiseaseBreaks = [2.5, 3.9, 5, 5.8, 6.7, 7.9, 14.6];
+      const diabetesBreaks = [5.5, 8.3, 11.4, 13.5, 15.3, 17.6, 28.9];
+      const obesityBreaks = [19.8, 25, 29.2, 32.8, 36, 39.1, 44.3];
+      const strokeBreaks = [1.5, 2.3, 2.9, 3.3, 3.8, 4.5, 8];
+      const annualCheckupBreaks = [69.3, 72.4, 74.9, 76.4, 78.2, 80.5, 85.7];
+      const dentalVisitBreaks = [36.3, 45, 50.2, 56.2, 62.9, 69.6, 81.6];
+      const mammographyUseBreaks = [69.5, 69.5, 79.3, 80.5, 81.6, 83, 85.3];
+      const cervicalCancerScreeningBreaks = [
+        51.6, 51.6, 77.5, 80.1, 82.7, 85.7, 89.5,
+      ];
+      const colorectalCancerScreeningBreaks = [
+        62.9, 68, 70.6, 73.7, 77, 80.6, 85.1,
+      ];
+      const depressionBreaks = [14, 16.9, 18.5, 19.8, 20.9, 22.3, 32.4];
+      const frequentMentalHealthDistressBreaks = [
+        8.8, 12.6, 15.3, 17.2, 18.9, 21, 31,
+      ];
+      const frequentPhysicalHealthDistressBreaks = [
+        6.8, 9.6, 11.5, 13.4, 15.2, 17.4, 24.4,
+      ];
+      const fairOrPoorHealthBreaks = [8.2, 13.5, 17.8, 22, 26, 30.7, 39.9];
+      const anyDisabilityBreaks = [21.1, 27.4, 31.6, 35.8, 39.8, 44.2, 54.7];
+      const hearingDisabilityBreaks = [3.2, 4.5, 5.3, 6, 6.8, 8.5, 13.3];
+      const visionDisabilityBreaks = [2.7, 4.9, 7, 9.4, 11.9, 14.9, 22.2];
+      const cognitiveDisabilityBreaks = [
+        6.8, 10.8, 14.2, 17.5, 20.5, 23.6, 29.6,
+      ];
+      const mobilityDisabilityBreaks = [7, 12.9, 16, 18.7, 21.7, 25.3, 38.9];
+      const selfCareDisabilityBreaks = [2.1, 3.8, 5.3, 6.8, 8.3, 10, 18.4];
+      const independentLivingDisabilityBreaks = [
+        4.7, 7.3, 9.5, 11.7, 13.9, 16.7, 23.8,
+      ];
+      const highCholesterolBreaks = [18.3, 23.4, 28.8, 30.6, 32.4, 35.3, 41.1];
     </script>
     <script src="../geojson-data/nyc-health-data.js"></script>
     <script src="../geojson-data/nyc-language-demographic.js"></script>

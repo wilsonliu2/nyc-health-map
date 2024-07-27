@@ -1042,218 +1042,254 @@ function updateLegend(selectedLayer, selectedLanguage) {
       legendContent += `<h4>${selectedLanguage} Speakers</h4>`;
       switch (selectedLanguage) {
         case "Arabic":
-          legendContent +=
-            '<i style="background: #00441b"></i><span>> 966</span><br>';
-          legendContent +=
-            '<i style="background: #006d2c"></i><span>509 - 965</span><br>';
-          legendContent +=
-            '<i style="background: #238b45"></i><span>297 - 508</span><br>';
-          legendContent +=
-            '<i style="background: #41ae76"></i><span>158 - 296</span><br>';
-          legendContent +=
-            '<i style="background: #66c2a4"></i><span>74 - 157</span><br>';
-          legendContent +=
-            '<i style="background: #99d8c9"></i><span>24 - 73</span><br>';
-          legendContent +=
-            '<i style="background: #ccece6"></i><span>0 - 23</span><br>';
+          legendContent += `<i style="background: #00441b"></i><span>> ${arabicBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #006d2c"></i><span>${
+            arabicBreaks[5] + 1
+          } - ${arabicBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #238b45"></i><span>${
+            arabicBreaks[4] + 1
+          } - ${arabicBreaks[5]}</span><br>`;
+          legendContent += `<i style="background: #41ae76"></i><span>${
+            arabicBreaks[3] + 1
+          } - ${arabicBreaks[4]}</span><br>`;
+          legendContent += `<i style="background: #66c2a4"></i><span>${
+            arabicBreaks[2] + 1
+          } - ${arabicBreaks[3]}</span><br>`;
+          legendContent += `<i style="background: #99d8c9"></i><span>${
+            arabicBreaks[1] + 1
+          } - ${arabicBreaks[2]}</span><br>`;
+          legendContent += `<i style="background: #ccece6"></i><span>${arabicBreaks[0]} - ${arabicBreaks[1]}</span><br>`;
           legendContent +=
             '<i style="background: #606060"></i><span>No Data</span><br>';
           break;
         case "Chinese":
-          legendContent +=
-            '<i style="background: #00441b"></i><span>> 6,482</span><br>';
-          legendContent +=
-            '<i style="background: #006d2c"></i><span>2,498 - 6,481</span><br>';
-          legendContent +=
-            '<i style="background: #238b45"></i><span>1,562 - 2,497</span><br>';
-          legendContent +=
-            '<i style="background: #41ae76"></i><span>914 - 1,561</span><br>';
-          legendContent +=
-            '<i style="background: #66c2a4"></i><span>450 - 913</span><br>';
-          legendContent +=
-            '<i style="background: #99d8c9"></i><span>145 - 449</span><br>';
-          legendContent +=
-            '<i style="background: #ccece6"></i><span>0 - 144</span><br>';
+          legendContent += `<i style="background: #00441b"></i><span>> ${chineseBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #006d2c"></i><span>${
+            chineseBreaks[5] + 1
+          } - ${chineseBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #238b45"></i><span>${
+            chineseBreaks[4] + 1
+          } - ${chineseBreaks[5]}</span><br>`;
+          legendContent += `<i style="background: #41ae76"></i><span>${
+            chineseBreaks[3] + 1
+          } - ${chineseBreaks[4]}</span><br>`;
+          legendContent += `<i style="background: #66c2a4"></i><span>${
+            chineseBreaks[2] + 1
+          } - ${chineseBreaks[3]}</span><br>`;
+          legendContent += `<i style="background: #99d8c9"></i><span>${
+            chineseBreaks[1] + 1
+          } - ${chineseBreaks[2]}</span><br>`;
+          legendContent += `<i style="background: #ccece6"></i><span>${chineseBreaks[0]} - ${chineseBreaks[1]}</span><br>`;
           legendContent +=
             '<i style="background: #606060"></i><span>No Data</span><br>';
           break;
         case "French, Haitian Creole, or Cajun":
-          legendContent +=
-            '<i style="background: #00441b"></i><span>> 1,467</span><br>';
-          legendContent +=
-            '<i style="background: #006d2c"></i><span>663 - 1,466</span><br>';
-          legendContent +=
-            '<i style="background: #238b45"></i><span>434 - 662</span><br>';
-          legendContent +=
-            '<i style="background: #41ae76"></i><span>266 - 433</span><br>';
-          legendContent +=
-            '<i style="background: #66c2a4"></i><span>136 - 265</span><br>';
-          legendContent +=
-            '<i style="background: #99d8c9"></i><span>47 - 135</span><br>';
-          legendContent +=
-            '<i style="background: #ccece6"></i><span>0 - 46</span><br>';
+          legendContent += `<i style="background: #00441b"></i><span>> ${frenchBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #006d2c"></i><span>${
+            frenchBreaks[5] + 1
+          } - ${frenchBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #238b45"></i><span>${
+            frenchBreaks[4] + 1
+          } - ${frenchBreaks[5]}</span><br>`;
+          legendContent += `<i style="background: #41ae76"></i><span>${
+            frenchBreaks[3] + 1
+          } - ${frenchBreaks[4]}</span><br>`;
+          legendContent += `<i style="background: #66c2a4"></i><span>${
+            frenchBreaks[2] + 1
+          } - ${frenchBreaks[3]}</span><br>`;
+          legendContent += `<i style="background: #99d8c9"></i><span>${
+            frenchBreaks[1] + 1
+          } - ${frenchBreaks[2]}</span><br>`;
+          legendContent += `<i style="background: #ccece6"></i><span>${frenchBreaks[0]} - ${frenchBreaks[1]}</span><br>`;
           legendContent +=
             '<i style="background: #606060"></i><span>No Data</span><br>';
           break;
         case "German or other West Germanic languages":
-          legendContent +=
-            '<i style="background: #00441b"></i><span>> 6,170</span><br>';
-          legendContent +=
-            '<i style="background: #006d2c"></i><span>3,445 - 6,169</span><br>';
-          legendContent +=
-            '<i style="background: #238b45"></i><span>2,318 - 3,444</span><br>';
-          legendContent +=
-            '<i style="background: #41ae76"></i><span>1,486 - 2,317</span><br>';
-          legendContent +=
-            '<i style="background: #66c2a4"></i><span>625 - 1,485</span><br>';
-          legendContent +=
-            '<i style="background: #99d8c9"></i><span>124 - 624</span><br>';
-          legendContent +=
-            '<i style="background: #ccece6"></i><span>0 - 123</span><br>';
+          legendContent += `<i style="background: #00441b"></i><span>> ${germanBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #006d2c"></i><span>${
+            germanBreaks[5] + 1
+          } - ${germanBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #238b45"></i><span>${
+            germanBreaks[4] + 1
+          } - ${germanBreaks[5]}</span><br>`;
+          legendContent += `<i style="background: #41ae76"></i><span>${
+            germanBreaks[3] + 1
+          } - ${germanBreaks[4]}</span><br>`;
+          legendContent += `<i style="background: #66c2a4"></i><span>${
+            germanBreaks[2] + 1
+          } - ${germanBreaks[3]}</span><br>`;
+          legendContent += `<i style="background: #99d8c9"></i><span>${
+            germanBreaks[1] + 1
+          } - ${germanBreaks[2]}</span><br>`;
+          legendContent += `<i style="background: #ccece6"></i><span>${germanBreaks[0]} - ${germanBreaks[1]}</span><br>`;
           legendContent +=
             '<i style="background: #606060"></i><span>No Data</span><br>';
           break;
         case "Korean":
-          legendContent +=
-            '<i style="background: #00441b"></i><span>> 1,307</span><br>';
-          legendContent +=
-            '<i style="background: #006d2c"></i><span>747 - 1,306</span><br>';
-          legendContent +=
-            '<i style="background: #238b45"></i><span>476 - 746</span><br>';
-          legendContent +=
-            '<i style="background: #41ae76"></i><span>246 - 475</span><br>';
-          legendContent +=
-            '<i style="background: #66c2a4"></i><span>114 - 245</span><br>';
-          legendContent +=
-            '<i style="background: #99d8c9"></i><span>32 - 113</span><br>';
-          legendContent +=
-            '<i style="background: #ccece6"></i><span>0 - 31</span><br>';
+          legendContent += `<i style="background: #00441b"></i><span>> ${koreanBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #006d2c"></i><span>${
+            koreanBreaks[5] + 1
+          } - ${koreanBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #238b45"></i><span>${
+            koreanBreaks[4] + 1
+          } - ${koreanBreaks[5]}</span><br>`;
+          legendContent += `<i style="background: #41ae76"></i><span>${
+            koreanBreaks[3] + 1
+          } - ${koreanBreaks[4]}</span><br>`;
+          legendContent += `<i style="background: #66c2a4"></i><span>${
+            koreanBreaks[2] + 1
+          } - ${koreanBreaks[3]}</span><br>`;
+          legendContent += `<i style="background: #99d8c9"></i><span>${
+            koreanBreaks[1] + 1
+          } - ${koreanBreaks[2]}</span><br>`;
+          legendContent += `<i style="background: #ccece6"></i><span>${koreanBreaks[0]} - ${koreanBreaks[1]}</span><br>`;
           legendContent +=
             '<i style="background: #606060"></i><span>No Data</span><br>';
           break;
         case "Other and unspecified languages":
-          legendContent +=
-            '<i style="background: #00441b"></i><span>> 1,514</span><br>';
-          legendContent +=
-            '<i style="background: #006d2c"></i><span>824 - 1,513</span><br>';
-          legendContent +=
-            '<i style="background: #238b45"></i><span>457 - 823</span><br>';
-          legendContent +=
-            '<i style="background: #41ae76"></i><span>264 - 456</span><br>';
-          legendContent +=
-            '<i style="background: #66c2a4"></i><span>129 - 263</span><br>';
-          legendContent +=
-            '<i style="background: #99d8c9"></i><span>43 - 128</span><br>';
-          legendContent +=
-            '<i style="background: #ccece6"></i><span>0 - 42</span><br>';
+          legendContent += `<i style="background: #00441b"></i><span>> ${otherBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #006d2c"></i><span>${
+            otherBreaks[5] + 1
+          } - ${otherBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #238b45"></i><span>${
+            otherBreaks[4] + 1
+          } - ${otherBreaks[5]}</span><br>`;
+          legendContent += `<i style="background: #41ae76"></i><span>${
+            otherBreaks[3] + 1
+          } - ${otherBreaks[4]}</span><br>`;
+          legendContent += `<i style="background: #66c2a4"></i><span>${
+            otherBreaks[2] + 1
+          } - ${otherBreaks[3]}</span><br>`;
+          legendContent += `<i style="background: #99d8c9"></i><span>${
+            otherBreaks[1] + 1
+          } - ${otherBreaks[2]}</span><br>`;
+          legendContent += `<i style="background: #ccece6"></i><span>${otherBreaks[0]} - ${otherBreaks[1]}</span><br>`;
           legendContent +=
             '<i style="background: #606060"></i><span>No Data</span><br>';
           break;
         case "Other Asian and Pacific Island languages":
-          legendContent +=
-            '<i style="background: #00441b"></i><span>> 785</span><br>';
-          legendContent +=
-            '<i style="background: #006d2c"></i><span>427 - 784</span><br>';
-          legendContent +=
-            '<i style="background: #238b45"></i><span>283 - 426</span><br>';
-          legendContent +=
-            '<i style="background: #41ae76"></i><span>166 - 282</span><br>';
-          legendContent +=
-            '<i style="background: #66c2a4"></i><span>84 - 165</span><br>';
-          legendContent +=
-            '<i style="background: #99d8c9"></i><span>26 - 83</span><br>';
-          legendContent +=
-            '<i style="background: #ccece6"></i><span>0 - 25</span><br>';
+          legendContent += `<i style="background: #00441b"></i><span>> ${otherAsiaBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #006d2c"></i><span>${
+            otherAsiaBreaks[5] + 1
+          } - ${otherAsiaBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #238b45"></i><span>${
+            otherAsiaBreaks[4] + 1
+          } - ${otherAsiaBreaks[5]}</span><br>`;
+          legendContent += `<i style="background: #41ae76"></i><span>${
+            otherAsiaBreaks[3] + 1
+          } - ${otherAsiaBreaks[4]}</span><br>`;
+          legendContent += `<i style="background: #66c2a4"></i><span>${
+            otherAsiaBreaks[2] + 1
+          } - ${otherAsiaBreaks[3]}</span><br>`;
+          legendContent += `<i style="background: #99d8c9"></i><span>${
+            otherAsiaBreaks[1] + 1
+          } - ${otherAsiaBreaks[2]}</span><br>`;
+          legendContent += `<i style="background: #ccece6"></i><span>${otherAsiaBreaks[0]} - ${otherAsiaBreaks[1]}</span><br>`;
           legendContent +=
             '<i style="background: #606060"></i><span>No Data</span><br>';
           break;
         case "Other Indo-European languages":
-          legendContent +=
-            '<i style="background: #00441b"></i><span>> 2,653</span><br>';
-          legendContent +=
-            '<i style="background: #006d2c"></i><span>1,357 - 2,652</span><br>';
-          legendContent +=
-            '<i style="background: #238b45"></i><span>777 - 1,356</span><br>';
-          legendContent +=
-            '<i style="background: #41ae76"></i><span>449 - 776</span><br>';
-          legendContent +=
-            '<i style="background: #66c2a4"></i><span>238 - 448</span><br>';
-          legendContent +=
-            '<i style="background: #99d8c9"></i><span>87 - 237</span><br>';
-          legendContent +=
-            '<i style="background: #ccece6"></i><span>0 - 86</span><br>';
+          legendContent += `<i style="background: #00441b"></i><span>> ${otherIndoBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #006d2c"></i><span>${
+            otherIndoBreaks[5] + 1
+          } - ${otherIndoBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #238b45"></i><span>${
+            otherIndoBreaks[4] + 1
+          } - ${otherIndoBreaks[5]}</span><br>`;
+          legendContent += `<i style="background: #41ae76"></i><span>${
+            otherIndoBreaks[3] + 1
+          } - ${otherIndoBreaks[4]}</span><br>`;
+          legendContent += `<i style="background: #66c2a4"></i><span>${
+            otherIndoBreaks[2] + 1
+          } - ${otherIndoBreaks[3]}</span><br>`;
+          legendContent += `<i style="background: #99d8c9"></i><span>${
+            otherIndoBreaks[1] + 1
+          } - ${otherIndoBreaks[2]}</span><br>`;
+          legendContent += `<i style="background: #ccece6"></i><span>${otherIndoBreaks[0]} - ${otherIndoBreaks[1]}</span><br>`;
           legendContent +=
             '<i style="background: #606060"></i><span>No Data</span><br>';
           break;
         case "Russian, Polish, or other Slavic languages":
-          legendContent +=
-            '<i style="background: #00441b"></i><span>> 3,818</span><br>';
-          legendContent +=
-            '<i style="background: #006d2c"></i><span>2,369 - 3,817</span><br>';
-          legendContent +=
-            '<i style="background: #238b45"></i><span>1,409 - 2,368</span><br>';
-          legendContent +=
-            '<i style="background: #41ae76"></i><span>818 - 1,408</span><br>';
-          legendContent +=
-            '<i style="background: #66c2a4"></i><span>416 - 817</span><br>';
-          legendContent +=
-            '<i style="background: #99d8c9"></i><span>128 - 415</span><br>';
-          legendContent +=
-            '<i style="background: #ccece6"></i><span>0 - 127</span><br>';
+          legendContent += `<i style="background: #00441b"></i><span>> ${russianBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #006d2c"></i><span>${
+            russianBreaks[5] + 1
+          } - ${russianBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #238b45"></i><span>${
+            russianBreaks[4] + 1
+          } - ${russianBreaks[5]}</span><br>`;
+          legendContent += `<i style="background: #41ae76"></i><span>${
+            russianBreaks[3] + 1
+          } - ${russianBreaks[4]}</span><br>`;
+          legendContent += `<i style="background: #66c2a4"></i><span>${
+            russianBreaks[2] + 1
+          } - ${russianBreaks[3]}</span><br>`;
+          legendContent += `<i style="background: #99d8c9"></i><span>${
+            russianBreaks[1] + 1
+          } - ${russianBreaks[2]}</span><br>`;
+          legendContent += `<i style="background: #ccece6"></i><span>${russianBreaks[0]} - ${russianBreaks[1]}</span><br>`;
           legendContent +=
             '<i style="background: #606060"></i><span>No Data</span><br>';
           break;
         case "Spanish":
-          legendContent +=
-            '<i style="background: #00441b"></i><span>> 9,883</span><br>';
-          legendContent +=
-            '<i style="background: #006d2c"></i><span>5,570 - 9,882</span><br>';
-          legendContent +=
-            '<i style="background: #238b45"></i><span>3,588 - 5,569</span><br>';
-          legendContent +=
-            '<i style="background: #41ae76"></i><span>2,273 - 3,587</span><br>';
-          legendContent +=
-            '<i style="background: #66c2a4"></i><span>1,269 - 2,272</span><br>';
-          legendContent +=
-            '<i style="background: #99d8c9"></i><span>519 - 1,268</span><br>';
-          legendContent +=
-            '<i style="background: #ccece6"></i><span>0 - 518</span><br>';
+          legendContent += `<i style="background: #00441b"></i><span>> ${spanishBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #006d2c"></i><span>${
+            spanishBreaks[5] + 1
+          } - ${spanishBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #238b45"></i><span>${
+            spanishBreaks[4] + 1
+          } - ${spanishBreaks[5]}</span><br>`;
+          legendContent += `<i style="background: #41ae76"></i><span>${
+            spanishBreaks[3] + 1
+          } - ${spanishBreaks[4]}</span><br>`;
+          legendContent += `<i style="background: #66c2a4"></i><span>${
+            spanishBreaks[2] + 1
+          } - ${spanishBreaks[3]}</span><br>`;
+          legendContent += `<i style="background: #99d8c9"></i><span>${
+            spanishBreaks[1] + 1
+          } - ${spanishBreaks[2]}</span><br>`;
+          legendContent += `<i style="background: #ccece6"></i><span>${spanishBreaks[0]} - ${spanishBreaks[1]}</span><br>`;
           legendContent +=
             '<i style="background: #606060"></i><span>No Data</span><br>';
           break;
         case "Tagalog (incl. Filipino)":
-          legendContent +=
-            '<i style="background: #00441b"></i><span>> 962</span><br>';
-          legendContent +=
-            '<i style="background: #006d2c"></i><span>524 - 961</span><br>';
-          legendContent +=
-            '<i style="background: #238b45"></i><span>268 - 523</span><br>';
-          legendContent +=
-            '<i style="background: #41ae76"></i><span>132 - 267</span><br>';
-          legendContent +=
-            '<i style="background: #66c2a4"></i><span>62 - 131</span><br>';
-          legendContent +=
-            '<i style="background: #99d8c9"></i><span>19 - 61</span><br>';
-          legendContent +=
-            '<i style="background: #ccece6"></i><span>0 - 18</span><br>';
+          legendContent += `<i style="background: #00441b"></i><span>> ${tagalogBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #006d2c"></i><span>${
+            tagalogBreaks[5] + 1
+          } - ${tagalogBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #238b45"></i><span>${
+            tagalogBreaks[4] + 1
+          } - ${tagalogBreaks[5]}</span><br>`;
+          legendContent += `<i style="background: #41ae76"></i><span>${
+            tagalogBreaks[3] + 1
+          } - ${tagalogBreaks[4]}</span><br>`;
+          legendContent += `<i style="background: #66c2a4"></i><span>${
+            tagalogBreaks[2] + 1
+          } - ${tagalogBreaks[3]}</span><br>`;
+          legendContent += `<i style="background: #99d8c9"></i><span>${
+            tagalogBreaks[1] + 1
+          } - ${tagalogBreaks[2]}</span><br>`;
+          legendContent += `<i style="background: #ccece6"></i><span>${tagalogBreaks[0]} - ${tagalogBreaks[1]}</span><br>`;
           legendContent +=
             '<i style="background: #606060"></i><span>No Data</span><br>';
           break;
         case "Vietnamese":
-          legendContent +=
-            '<i style="background: #00441b"></i><span>> 256</span><br>';
-          legendContent +=
-            '<i style="background: #006d2c"></i><span>131 - 255</span><br>';
-          legendContent +=
-            '<i style="background: #238b45"></i><span>74 - 130</span><br>';
-          legendContent +=
-            '<i style="background: #41ae76"></i><span>41 - 73</span><br>';
-          legendContent +=
-            '<i style="background: #66c2a4"></i><span>20 - 40</span><br>';
-          legendContent +=
-            '<i style="background: #99d8c9"></i><span>6 - 19</span><br>';
-          legendContent +=
-            '<i style="background: #ccece6"></i><span>0 - 5</span><br>';
+          legendContent += `<i style="background: #00441b"></i><span>> ${vietnameseBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #006d2c"></i><span>${
+            vietnameseBreaks[5] + 1
+          } - ${vietnameseBreaks[6]}</span><br>`;
+          legendContent += `<i style="background: #238b45"></i><span>${
+            vietnameseBreaks[4] + 1
+          } - ${vietnameseBreaks[5]}</span><br>`;
+          legendContent += `<i style="background: #41ae76"></i><span>${
+            vietnameseBreaks[3] + 1
+          } - ${vietnameseBreaks[4]}</span><br>`;
+          legendContent += `<i style="background: #66c2a4"></i><span>${
+            vietnameseBreaks[2] + 1
+          } - ${vietnameseBreaks[3]}</span><br>`;
+          legendContent += `<i style="background: #99d8c9"></i><span>${
+            vietnameseBreaks[1] + 1
+          } - ${vietnameseBreaks[2]}</span><br>`;
+          legendContent += `<i style="background: #ccece6"></i><span>${vietnameseBreaks[0]} - ${vietnameseBreaks[1]}</span><br>`;
           legendContent +=
             '<i style="background: #606060"></i><span>No Data</span><br>';
           break;
@@ -1261,20 +1297,23 @@ function updateLegend(selectedLayer, selectedLanguage) {
     }
   } else if ((selectedLayer = "demographics")) {
     legendContent += "<h4>Population Density</h4>";
-    legendContent +=
-      '<i style="background: #00441b"></i><span>> 15,946</span><br>';
-    legendContent +=
-      '<i style="background: #006d2c"></i><span>8,461 - 15,945</span><br>';
-    legendContent +=
-      '<i style="background: #238b45"></i><span>6,160 - 8,460</span><br>';
-    legendContent +=
-      '<i style="background: #41ae76"></i><span>4,637 - 6,159</span><br>';
-    legendContent +=
-      '<i style="background: #66c2a4"></i><span>3,381 - 4,636</span><br>';
-    legendContent +=
-      '<i style="background: #99d8c9"></i><span>2,182 - 3,380</span><br>';
-    legendContent +=
-      '<i style="background: #ccece6"></i><span>0 - 2,181</span><br>';
+    legendContent += `<i style="background: #00441b"></i><span>> ${totalPopBreaks[6]}</span><br>`;
+    legendContent += `<i style="background: #006d2c"></i><span>${
+      totalPopBreaks[5] + 1
+    } - ${totalPopBreaks[6]}</span><br>`;
+    legendContent += `<i style="background: #238b45"></i><span>${
+      totalPopBreaks[4] + 1
+    } - ${totalPopBreaks[5]}</span><br>`;
+    legendContent += `<i style="background: #41ae76"></i><span>${
+      totalPopBreaks[3] + 1
+    } - ${totalPopBreaks[4]}</span><br>`;
+    legendContent += `<i style="background: #66c2a4"></i><span>${
+      totalPopBreaks[2] + 1
+    } - ${totalPopBreaks[3]}</span><br>`;
+    legendContent += `<i style="background: #99d8c9"></i><span>${
+      totalPopBreaks[1] + 1
+    } - ${totalPopBreaks[2]}</span><br>`;
+    legendContent += `<i style="background: #ccece6"></i><span>${totalPopBreaks[0]} - ${totalPopBreaks[1]}</span><br>`;
     legendContent +=
       '<i style="background: #606060"></i><span>No Data</span><br>';
   }
@@ -1518,17 +1557,33 @@ var healthRisklegend = L.control({ position: "bottomleft" });
 healthRisklegend.onAdd = function () {
   var div = L.DomUtil.create("div", "healthRiskLegend");
   div.innerHTML = `
-    <h4>${healthRiskLayerNames.UNINSURED}</h4>
-    <i style="background: ${healthRiskColors[0]}"></i><span> > 31.2%</span><br>
-    <i style="background: ${healthRiskColors[1]}"></i><span>21.4% - 31.1%</span><br>
-    <i style="background: ${healthRiskColors[2]}"></i><span>16.2% - 21.3%</span><br>
-    <i style="background: ${healthRiskColors[3]}"></i><span>12.1% - 16.1%</span><br>
-    <i style="background: ${healthRiskColors[4]}"></i><span>8.7% - 12%</span><br>
-    <i style="background: ${healthRiskColors[5]}"></i><span>5.7% - 8.6%</span><br>
-    <i style="background: ${healthRiskColors[6]}"></i><span>2.1% - 5.6%</span><br>
-    <i style="background: ${healthRiskColors[7]}"></i><span>0% - 2%</span><br>
-    <i style="background: ${healthRiskColors[8]}"></i><span>No Data</span><br>
-  `;
+  <h4>${healthRiskLayerNames.UNINSURED}</h4>
+  <i style="background: ${
+    healthRiskColors[0]
+  }"></i><span> > ${lackOfHealthInsuranceBreaks[6].toFixed(1)}%</span><br>
+  <i style="background: ${healthRiskColors[1]}"></i><span>${(
+    lackOfHealthInsuranceBreaks[5] + 0.1
+  ).toFixed(1)}% - ${lackOfHealthInsuranceBreaks[6].toFixed(1)}%</span><br>
+  <i style="background: ${healthRiskColors[2]}"></i><span>${(
+    lackOfHealthInsuranceBreaks[4] + 0.1
+  ).toFixed(1)}% - ${lackOfHealthInsuranceBreaks[5].toFixed(1)}%</span><br>
+  <i style="background: ${healthRiskColors[3]}"></i><span>${(
+    lackOfHealthInsuranceBreaks[3] + 0.1
+  ).toFixed(1)}% - ${lackOfHealthInsuranceBreaks[4].toFixed(1)}%</span><br>
+  <i style="background: ${healthRiskColors[4]}"></i><span>${(
+    lackOfHealthInsuranceBreaks[2] + 0.1
+  ).toFixed(1)}% - ${lackOfHealthInsuranceBreaks[3].toFixed(1)}%</span><br>
+  <i style="background: ${healthRiskColors[5]}"></i><span>${(
+    lackOfHealthInsuranceBreaks[1] + 0.1
+  ).toFixed(1)}% - ${lackOfHealthInsuranceBreaks[2].toFixed(1)}%</span><br>
+  <i style="background: ${healthRiskColors[6]}"></i><span>${(
+    lackOfHealthInsuranceBreaks[0] + 0.1
+  ).toFixed(1)}% - ${lackOfHealthInsuranceBreaks[1].toFixed(1)}%</span><br>
+  <i style="background: ${
+    healthRiskColors[7]
+  }"></i><span>0% - ${lackOfHealthInsuranceBreaks[0].toFixed(1)}%</span><br>
+  <i style="background: ${healthRiskColors[8]}"></i><span>No Data</span><br>
+`;
   return div;
 };
 
@@ -1539,73 +1594,171 @@ function updateLegendForHealthRisk(layerName) {
   switch (layerName) {
     case healthRiskLayerNames.UNINSURED:
       legendContent = `
-        <h4>${healthRiskLayerNames.UNINSURED}</h4>
-        <i style="background: ${healthRiskColors[0]}"></i><span> > 31.2%</span><br>
-        <i style="background: ${healthRiskColors[1]}"></i><span>21.4% - 31.1%</span><br>
-        <i style="background: ${healthRiskColors[2]}"></i><span>16.2% - 21.3%</span><br>
-        <i style="background: ${healthRiskColors[3]}"></i><span>12.1% - 16.1%</span><br>
-        <i style="background: ${healthRiskColors[4]}"></i><span>8.7% - 12%</span><br>
-        <i style="background: ${healthRiskColors[5]}"></i><span>5.7% - 8.6%</span><br>
-        <i style="background: ${healthRiskColors[6]}"></i><span>2.1% - 5.6%</span><br>
-        <i style="background: ${healthRiskColors[7]}"></i><span>0% - 2%</span><br>
-        <i style="background: ${healthRiskColors[8]}"></i><span>No Data</span><br>
-      `;
+          <h4>${healthRiskLayerNames.UNINSURED}</h4>
+          <i style="background: ${
+            healthRiskColors[0]
+          }"></i><span> > ${lackOfHealthInsuranceBreaks[6].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${healthRiskColors[1]}"></i><span>${(
+        lackOfHealthInsuranceBreaks[5] + 0.1
+      ).toFixed(1)}% - ${lackOfHealthInsuranceBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[2]}"></i><span>${(
+        lackOfHealthInsuranceBreaks[4] + 0.1
+      ).toFixed(1)}% - ${lackOfHealthInsuranceBreaks[5].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[3]}"></i><span>${(
+        lackOfHealthInsuranceBreaks[3] + 0.1
+      ).toFixed(1)}% - ${lackOfHealthInsuranceBreaks[4].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[4]}"></i><span>${(
+        lackOfHealthInsuranceBreaks[2] + 0.1
+      ).toFixed(1)}% - ${lackOfHealthInsuranceBreaks[3].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[5]}"></i><span>${(
+        lackOfHealthInsuranceBreaks[1] + 0.1
+      ).toFixed(1)}% - ${lackOfHealthInsuranceBreaks[2].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[6]}"></i><span>${(
+        lackOfHealthInsuranceBreaks[0] + 0.1
+      ).toFixed(1)}% - ${lackOfHealthInsuranceBreaks[1].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthRiskColors[7]
+          }"></i><span>0% - ${lackOfHealthInsuranceBreaks[0].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${
+            healthRiskColors[8]
+          }"></i><span>No Data</span><br>
+        `;
       break;
     case healthRiskLayerNames.FREQUENT_DRINKERS:
       legendContent = `
-        <h4>${healthRiskLayerNames.FREQUENT_DRINKERS}</h4>
-        <i style="background: ${healthRiskColors[0]}"></i><span> > 29.5%</span><br>
-        <i style="background: ${healthRiskColors[1]}"></i><span>23.2% - 29.4%</span><br>
-        <i style="background: ${healthRiskColors[2]}"></i><span>20.2% - 23.1%</span><br>
-        <i style="background: ${healthRiskColors[3]}"></i><span>17.4% - 20.1%</span><br>
-        <i style="background: ${healthRiskColors[4]}"></i><span>15.1% - 17.3%</span><br>
-        <i style="background: ${healthRiskColors[5]}"></i><span>12.9% - 15%</span><br>
-        <i style="background: ${healthRiskColors[6]}"></i><span>5% - 12.8%</span><br>
-        <i style="background: ${healthRiskColors[7]}"></i><span>0% - 4.9%</span><br>
-        <i style="background: ${healthRiskColors[8]}"></i><span>No Data</span><br>
-      `;
+          <h4>${healthRiskLayerNames.FREQUENT_DRINKERS}</h4>
+          <i style="background: ${
+            healthRiskColors[0]
+          }"></i><span> > ${bingeDrinkingBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[1]}"></i><span>${(
+        bingeDrinkingBreaks[5] + 0.1
+      ).toFixed(1)}% - ${bingeDrinkingBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[2]}"></i><span>${(
+        bingeDrinkingBreaks[4] + 0.1
+      ).toFixed(1)}% - ${bingeDrinkingBreaks[5].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[3]}"></i><span>${(
+        bingeDrinkingBreaks[3] + 0.1
+      ).toFixed(1)}% - ${bingeDrinkingBreaks[4].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[4]}"></i><span>${(
+        bingeDrinkingBreaks[2] + 0.1
+      ).toFixed(1)}% - ${bingeDrinkingBreaks[3].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[5]}"></i><span>${(
+        bingeDrinkingBreaks[1] + 0.1
+      ).toFixed(1)}% - ${bingeDrinkingBreaks[2].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[6]}"></i><span>${(
+        bingeDrinkingBreaks[0] + 0.1
+      ).toFixed(1)}% - ${bingeDrinkingBreaks[1].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthRiskColors[7]
+          }"></i><span>0% - ${bingeDrinkingBreaks[0].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthRiskColors[8]
+          }"></i><span>No Data</span><br>
+        `;
       break;
     case healthRiskLayerNames.CURRENT_SMOKERS:
       legendContent = `
-        <h4>${healthRiskLayerNames.CURRENT_SMOKERS}</h4>
-        <i style="background: ${healthRiskColors[0]}"></i><span> > 45.5%</span><br>
-        <i style="background: ${healthRiskColors[1]}"></i><span>23.2% - 45.4%</span><br>
-        <i style="background: ${healthRiskColors[2]}"></i><span>18.8% - 23.1%</span><br>
-        <i style="background: ${healthRiskColors[3]}"></i><span>15.5% - 18.7%</span><br>
-        <i style="background: ${healthRiskColors[4]}"></i><span>12.7% - 15.4%</span><br>
-        <i style="background: ${healthRiskColors[5]}"></i><span>9.6% - 12.6%</span><br>
-        <i style="background: ${healthRiskColors[6]}"></i><span>5.2% - 9.5%</span><br>
-        <i style="background: ${healthRiskColors[7]}"></i><span>0% - 5.1%</span><br>
-        <i style="background: ${healthRiskColors[8]}"></i><span>No Data</span><br>
-      `;
+          <h4>${healthRiskLayerNames.CURRENT_SMOKERS}</h4>
+          <i style="background: ${
+            healthRiskColors[0]
+          }"></i><span> > ${currentSmokingBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[1]}"></i><span>${(
+        currentSmokingBreaks[5] + 0.1
+      ).toFixed(1)}% - ${currentSmokingBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[2]}"></i><span>${(
+        currentSmokingBreaks[4] + 0.1
+      ).toFixed(1)}% - ${currentSmokingBreaks[5].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[3]}"></i><span>${(
+        currentSmokingBreaks[3] + 0.1
+      ).toFixed(1)}% - ${currentSmokingBreaks[4].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[4]}"></i><span>${(
+        currentSmokingBreaks[2] + 0.1
+      ).toFixed(1)}% - ${currentSmokingBreaks[3].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[5]}"></i><span>${(
+        currentSmokingBreaks[1] + 0.1
+      ).toFixed(1)}% - ${currentSmokingBreaks[2].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[6]}"></i><span>${(
+        currentSmokingBreaks[0] + 0.1
+      ).toFixed(1)}% - ${currentSmokingBreaks[1].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthRiskColors[7]
+          }"></i><span>0% - ${currentSmokingBreaks[0].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthRiskColors[8]
+          }"></i><span>No Data</span><br>
+        `;
       break;
     case healthRiskLayerNames.SEDENTARY_LIFESTYLE:
       legendContent = `
-        <h4>${healthRiskLayerNames.SEDENTARY_LIFESTYLE}</h4>
-        <i style="background: ${healthRiskColors[0]}"></i><span> > 64%</span><br>
-        <i style="background: ${healthRiskColors[1]}"></i><span>40.6% - 63.9%</span><br>
-        <i style="background: ${healthRiskColors[2]}"></i><span>34.3% - 40.5%</span><br>
-        <i style="background: ${healthRiskColors[3]}"></i><span>29% - 34.2%</span><br>
-        <i style="background: ${healthRiskColors[4]}"></i><span>23.8% - 28.9%</span><br>
-        <i style="background: ${healthRiskColors[5]}"></i><span>17.5% - 23.7%</span><br>
-        <i style="background: ${healthRiskColors[6]}"></i><span>9.5% - 17.4%</span><br>
-        <i style="background: ${healthRiskColors[7]}"></i><span>0% - 9.4%</span><br>
-        <i style="background: ${healthRiskColors[8]}"></i><span>No Data</span><br>
-      `;
+          <h4>${healthRiskLayerNames.SEDENTARY_LIFESTYLE}</h4>
+          <i style="background: ${
+            healthRiskColors[0]
+          }"></i><span> > ${physicalInactivityBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[1]}"></i><span>${(
+        physicalInactivityBreaks[5] + 0.1
+      ).toFixed(1)}% - ${physicalInactivityBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[2]}"></i><span>${(
+        physicalInactivityBreaks[4] + 0.1
+      ).toFixed(1)}% - ${physicalInactivityBreaks[5].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[3]}"></i><span>${(
+        physicalInactivityBreaks[3] + 0.1
+      ).toFixed(1)}% - ${physicalInactivityBreaks[4].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[4]}"></i><span>${(
+        physicalInactivityBreaks[2] + 0.1
+      ).toFixed(1)}% - ${physicalInactivityBreaks[3].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[5]}"></i><span>${(
+        physicalInactivityBreaks[1] + 0.1
+      ).toFixed(1)}% - ${physicalInactivityBreaks[2].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[6]}"></i><span>${(
+        physicalInactivityBreaks[0] + 0.1
+      ).toFixed(1)}% - ${physicalInactivityBreaks[1].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthRiskColors[7]
+          }"></i><span>0% - ${physicalInactivityBreaks[0].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${
+            healthRiskColors[8]
+          }"></i><span>No Data</span><br>
+        `;
       break;
     case healthRiskLayerNames.SLEEP_LESS_THAN_7_HOURS:
       legendContent = `
-        <h4>${healthRiskLayerNames.SLEEP_LESS_THAN_7_HOURS}</h4>
-        <i style="background: ${healthRiskColors[0]}"></i><span> > 49.2%</span><br>
-        <i style="background: ${healthRiskColors[1]}"></i><span>41.6% - 49.1%</span><br>
-        <i style="background: ${healthRiskColors[2]}"></i><span>38.6% - 41.5%</span><br>
-        <i style="background: ${healthRiskColors[3]}"></i><span>35.8% - 38.5%</span><br>
-        <i style="background: ${healthRiskColors[4]}"></i><span>33% - 35.7%</span><br>
-        <i style="background: ${healthRiskColors[5]}"></i><span>30% - 32.9%</span><br>
-        <i style="background: ${healthRiskColors[6]}"></i><span>23.3% - 29.9%</span><br>
-        <i style="background: ${healthRiskColors[7]}"></i><span>0% - 23.2%</span><br>
-        <i style="background: ${healthRiskColors[8]}"></i><span>No Data</span><br>
-      `;
+          <h4>${healthRiskLayerNames.SLEEP_LESS_THAN_7_HOURS}</h4>
+          <i style="background: ${
+            healthRiskColors[0]
+          }"></i><span> > ${sleepLessThan7HoursBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[1]}"></i><span>${(
+        sleepLessThan7HoursBreaks[5] + 0.1
+      ).toFixed(1)}% - ${sleepLessThan7HoursBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[2]}"></i><span>${(
+        sleepLessThan7HoursBreaks[4] + 0.1
+      ).toFixed(1)}% - ${sleepLessThan7HoursBreaks[5].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[3]}"></i><span>${(
+        sleepLessThan7HoursBreaks[3] + 0.1
+      ).toFixed(1)}% - ${sleepLessThan7HoursBreaks[4].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[4]}"></i><span>${(
+        sleepLessThan7HoursBreaks[2] + 0.1
+      ).toFixed(1)}% - ${sleepLessThan7HoursBreaks[3].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[5]}"></i><span>${(
+        sleepLessThan7HoursBreaks[1] + 0.1
+      ).toFixed(1)}% - ${sleepLessThan7HoursBreaks[2].toFixed(1)}%</span><br>
+          <i style="background: ${healthRiskColors[6]}"></i><span>${(
+        sleepLessThan7HoursBreaks[0] + 0.1
+      ).toFixed(1)}% - ${sleepLessThan7HoursBreaks[1].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthRiskColors[7]
+          }"></i><span>0% - ${sleepLessThan7HoursBreaks[0].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${
+            healthRiskColors[8]
+          }"></i><span>No Data</span><br>
+        `;
       break;
   }
   document.querySelector(".healthRiskLegend").innerHTML = legendContent;
@@ -1817,7 +1970,7 @@ function addHealthOutcomesData(data) {
 
     var highCholesterolLayer = L.geoJson(feature, {
       style: healthOutcomesStyle(
-        "Cholesterol screening crude prevalence (%)",
+        "High cholesterol crude prevalence (%)",
         getColorForHighCholesterol
       ),
       onEachFeature: function (feature, layer) {
@@ -1957,17 +2110,33 @@ var healthOutcomesLegend = L.control({ position: "bottomleft" });
 healthOutcomesLegend.onAdd = function () {
   var div = L.DomUtil.create("div", "healthOutcomesLegend");
   div.innerHTML = `
-    <h4>${healthOutcomesLayerNames.ASTHMA_PREVALENCE}</h4>
-    <i style="background: ${healthOutcomesColors[0]}"></i><span>> 16.6%</span><br>
-    <i style="background: ${healthOutcomesColors[1]}"></i><span>13.6% - 16.5%</span><br>
-    <i style="background: ${healthOutcomesColors[2]}"></i><span>12.3% - 13.5%</span><br>
-    <i style="background: ${healthOutcomesColors[3]}"></i><span>11.1% - 12.2%</span><br>
-    <i style="background: ${healthOutcomesColors[4]}"></i><span>10% - 11%</span><br>
-    <i style="background: ${healthOutcomesColors[5]}"></i><span>9% - 9.9%</span><br>
-    <i style="background: ${healthOutcomesColors[6]}"></i><span>7.5% - 8.9%</span><br>
-    <i style="background: ${healthOutcomesColors[7]}"></i><span>0% - 7.4%</span><br>
-    <i style="background: ${healthOutcomesColors[8]}"></i><span>No Data</span><br>
-  `;
+  <h4>${healthOutcomesLayerNames.ASTHMA_PREVALENCE}</h4>
+  <i style="background: ${
+    healthOutcomesColors[0]
+  }"></i><span>> ${currentAsthmaBreaks[6].toFixed(1)}%</span><br>
+  <i style="background: ${healthOutcomesColors[1]}"></i><span>${(
+    currentAsthmaBreaks[5] + 0.1
+  ).toFixed(1)}% - ${currentAsthmaBreaks[6].toFixed(1)}%</span><br>
+  <i style="background: ${healthOutcomesColors[2]}"></i><span>${(
+    currentAsthmaBreaks[4] + 0.1
+  ).toFixed(1)}% - ${currentAsthmaBreaks[5].toFixed(1)}%</span><br>
+  <i style="background: ${healthOutcomesColors[3]}"></i><span>${(
+    currentAsthmaBreaks[3] + 0.1
+  ).toFixed(1)}% - ${currentAsthmaBreaks[4].toFixed(1)}%</span><br>
+  <i style="background: ${healthOutcomesColors[4]}"></i><span>${(
+    currentAsthmaBreaks[2] + 0.1
+  ).toFixed(1)}% - ${currentAsthmaBreaks[3].toFixed(1)}%</span><br>
+  <i style="background: ${healthOutcomesColors[5]}"></i><span>${(
+    currentAsthmaBreaks[1] + 0.1
+  ).toFixed(1)}% - ${currentAsthmaBreaks[2].toFixed(1)}%</span><br>
+  <i style="background: ${healthOutcomesColors[6]}"></i><span>${(
+    currentAsthmaBreaks[0] + 0.1
+  ).toFixed(1)}% - ${currentAsthmaBreaks[1].toFixed(1)}%</span><br>
+  <i style="background: ${
+    healthOutcomesColors[7]
+  }"></i><span>0% - ${currentAsthmaBreaks[0].toFixed(1)}%</span><br>
+  <i style="background: ${healthOutcomesColors[8]}"></i><span>No Data</span><br>
+`;
   return div;
 };
 
@@ -1978,143 +2147,323 @@ function updateLegendForHealthOutcomes(layerName) {
   switch (layerName) {
     case healthOutcomesLayerNames.ASTHMA_PREVALENCE:
       legendContent = `
-        <h4>${healthOutcomesLayerNames.ASTHMA_PREVALENCE}</h4>
-        <i style="background: ${healthOutcomesColors[0]}"></i><span>> 16.6%</span><br>
-        <i style="background: ${healthOutcomesColors[1]}"></i><span>13.6% - 16.5%</span><br>
-        <i style="background: ${healthOutcomesColors[2]}"></i><span>12.3% - 13.5%</span><br>
-        <i style="background: ${healthOutcomesColors[3]}"></i><span>11.1% - 12.2%</span><br>
-        <i style="background: ${healthOutcomesColors[4]}"></i><span>10% - 11%</span><br>
-        <i style="background: ${healthOutcomesColors[5]}"></i><span>9% - 9.9%</span><br>
-        <i style="background: ${healthOutcomesColors[6]}"></i><span>7.5% - 8.9%</span><br>
-        <i style="background: ${healthOutcomesColors[7]}"></i><span>0% - 7.4%</span><br>
-        <i style="background: ${healthOutcomesColors[8]}"></i><span>No Data</span><br>
-      `;
+      <h4>${healthOutcomesLayerNames.ASTHMA_PREVALENCE}</h4>
+      <i style="background: ${
+        healthOutcomesColors[0]
+      }"></i><span>> ${currentAsthmaBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[1]}"></i><span>${(
+        currentAsthmaBreaks[5] + 0.1
+      ).toFixed(1)}% - ${currentAsthmaBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[2]}"></i><span>${(
+        currentAsthmaBreaks[4] + 0.1
+      ).toFixed(1)}% - ${currentAsthmaBreaks[5].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[3]}"></i><span>${(
+        currentAsthmaBreaks[3] + 0.1
+      ).toFixed(1)}% - ${currentAsthmaBreaks[4].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[4]}"></i><span>${(
+        currentAsthmaBreaks[2] + 0.1
+      ).toFixed(1)}% - ${currentAsthmaBreaks[3].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[5]}"></i><span>${(
+        currentAsthmaBreaks[1] + 0.1
+      ).toFixed(1)}% - ${currentAsthmaBreaks[2].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[6]}"></i><span>${(
+        currentAsthmaBreaks[0] + 0.1
+      ).toFixed(1)}% - ${currentAsthmaBreaks[1].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[7]
+      }"></i><span>0% - ${currentAsthmaBreaks[0].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[8]
+      }"></i><span>No Data</span><br>
+    `;
       break;
     case healthOutcomesLayerNames.HIGH_BLOOD_PRESSURE:
       legendContent = `
-        <h4>${healthOutcomesLayerNames.HIGH_BLOOD_PRESSURE}</h4>
-        <i style="background: ${healthOutcomesColors[0]}"></i><span>> 73.4%</span><br>
-        <i style="background: ${healthOutcomesColors[1]}"></i><span>37.7% - 73.3%</span><br>
-        <i style="background: ${healthOutcomesColors[2]}"></i><span>32.8% - 37.6%</span><br>
-        <i style="background: ${healthOutcomesColors[3]}"></i><span>28.6% - 32.7%</span><br>
-        <i style="background: ${healthOutcomesColors[4]}"></i><span>24.5% - 28.5%</span><br>
-        <i style="background: ${healthOutcomesColors[5]}"></i><span>19.4% - 24.4%</span><br>
-        <i style="background: ${healthOutcomesColors[6]}"></i><span>9.1% - 19.3%</span><br>
-        <i style="background: ${healthOutcomesColors[7]}"></i><span>0% - 9%</span><br>
-        <i style="background: ${healthOutcomesColors[8]}"></i><span>No Data</span><br>
-      `;
+      <h4>${healthOutcomesLayerNames.HIGH_BLOOD_PRESSURE}</h4>
+      <i style="background: ${
+        healthOutcomesColors[0]
+      }"></i><span>> ${highBloodPressureBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[1]}"></i><span>${(
+        highBloodPressureBreaks[5] + 0.1
+      ).toFixed(1)}% - ${highBloodPressureBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[2]}"></i><span>${(
+        highBloodPressureBreaks[4] + 0.1
+      ).toFixed(1)}% - ${highBloodPressureBreaks[5].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[3]}"></i><span>${(
+        highBloodPressureBreaks[3] + 0.1
+      ).toFixed(1)}% - ${highBloodPressureBreaks[4].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[4]}"></i><span>${(
+        highBloodPressureBreaks[2] + 0.1
+      ).toFixed(1)}% - ${highBloodPressureBreaks[3].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[5]}"></i><span>${(
+        highBloodPressureBreaks[1] + 0.1
+      ).toFixed(1)}% - ${highBloodPressureBreaks[2].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[6]}"></i><span>${(
+        highBloodPressureBreaks[0] + 0.1
+      ).toFixed(1)}% - ${highBloodPressureBreaks[1].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[7]
+      }"></i><span>0% - ${highBloodPressureBreaks[0].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[8]
+      }"></i><span>No Data</span><br>
+    `;
       break;
     case healthOutcomesLayerNames.CANCER_PREVALENCE:
       legendContent = `
-        <h4>${healthOutcomesLayerNames.CANCER_PREVALENCE}</h4>
-        <i style="background: ${healthOutcomesColors[0]}"></i><span>> 19.5%</span><br>
-        <i style="background: ${healthOutcomesColors[1]}"></i><span>9.5% - 19.4%</span><br>
-        <i style="background: ${healthOutcomesColors[2]}"></i><span>7.3% - 9.4%</span><br>
-        <i style="background: ${healthOutcomesColors[3]}"></i><span>6% - 7.2%</span><br>
-        <i style="background: ${healthOutcomesColors[4]}"></i><span>5% - 5.9%</span><br>
-        <i style="background: ${healthOutcomesColors[5]}"></i><span>4% - 4.9%</span><br>
-        <i style="background: ${healthOutcomesColors[6]}"></i><span>1.6% - 3.9%</span><br>
-        <i style="background: ${healthOutcomesColors[7]}"></i><span>0% - 1.5%</span><br>
-        <i style="background: ${healthOutcomesColors[8]}"></i><span>No Data</span><br>
-      `;
+      <h4>${healthOutcomesLayerNames.CANCER_PREVALENCE}</h4>
+      <i style="background: ${
+        healthOutcomesColors[0]
+      }"></i><span>> ${cancerExceptSkinBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[1]}"></i><span>${(
+        cancerExceptSkinBreaks[5] + 0.1
+      ).toFixed(1)}% - ${cancerExceptSkinBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[2]}"></i><span>${(
+        cancerExceptSkinBreaks[4] + 0.1
+      ).toFixed(1)}% - ${cancerExceptSkinBreaks[5].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[3]}"></i><span>${(
+        cancerExceptSkinBreaks[3] + 0.1
+      ).toFixed(1)}% - ${cancerExceptSkinBreaks[4].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[4]}"></i><span>${(
+        cancerExceptSkinBreaks[2] + 0.1
+      ).toFixed(1)}% - ${cancerExceptSkinBreaks[3].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[5]}"></i><span>${(
+        cancerExceptSkinBreaks[1] + 0.1
+      ).toFixed(1)}% - ${cancerExceptSkinBreaks[2].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[6]}"></i><span>${(
+        cancerExceptSkinBreaks[0] + 0.1
+      ).toFixed(1)}% - ${cancerExceptSkinBreaks[1].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[7]
+      }"></i><span>0% - ${cancerExceptSkinBreaks[0].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[8]
+      }"></i><span>No Data</span><br>
+    `;
       break;
     case healthOutcomesLayerNames.HIGH_CHOLESTEROL:
       legendContent = `
-        <h4>${healthOutcomesLayerNames.HIGH_CHOLESTEROL}</h4>
-        <i style="background: ${healthOutcomesColors[0]}"></i><span>> 97.4%</span><br>
-        <i style="background: ${healthOutcomesColors[1]}"></i><span>89.8% - 97.3%</span><br>
-        <i style="background: ${healthOutcomesColors[2]}"></i><span>87.3% - 89.7%</span><br>
-        <i style="background: ${healthOutcomesColors[3]}"></i><span>84.6% - 87.2%</span><br>
-        <i style="background: ${healthOutcomesColors[4]}"></i><span>81.5% - 84.5%</span><br>
-        <i style="background: ${healthOutcomesColors[5]}"></i><span>76% - 81.4%</span><br>
-        <i style="background: ${healthOutcomesColors[6]}"></i><span>62.6% - 75.9%</span><br>
-        <i style="background: ${healthOutcomesColors[7]}"></i><span>0% - 62.5%</span><br>
-        <i style="background: ${healthOutcomesColors[8]}"></i><span>No Data</span><br>
-      `;
+      <h4>${healthOutcomesLayerNames.HIGH_CHOLESTEROL}</h4>
+      <i style="background: ${
+        healthOutcomesColors[0]
+      }"></i><span>> ${highCholesterolBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[1]}"></i><span>${(
+        highCholesterolBreaks[5] + 0.1
+      ).toFixed(1)}% - ${highCholesterolBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[2]}"></i><span>${(
+        highCholesterolBreaks[4] + 0.1
+      ).toFixed(1)}% - ${highCholesterolBreaks[5].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[3]}"></i><span>${(
+        highCholesterolBreaks[3] + 0.1
+      ).toFixed(1)}% - ${highCholesterolBreaks[4].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[4]}"></i><span>${(
+        highCholesterolBreaks[2] + 0.1
+      ).toFixed(1)}% - ${highCholesterolBreaks[3].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[5]}"></i><span>${(
+        highCholesterolBreaks[1] + 0.1
+      ).toFixed(1)}% - ${highCholesterolBreaks[2].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[6]}"></i><span>${(
+        highCholesterolBreaks[0] + 0.1
+      ).toFixed(1)}% - ${highCholesterolBreaks[1].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[7]
+      }"></i><span>0% - ${highCholesterolBreaks[0].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[8]
+      }"></i><span>No Data</span><br>
+    `;
       break;
     case healthOutcomesLayerNames.CHRONIC_KIDNEY_DISEASE:
       legendContent = `
-        <h4>${healthOutcomesLayerNames.CHRONIC_KIDNEY_DISEASE}</h4>
-        <i style="background: ${healthOutcomesColors[0]}"></i><span>> 12%</span><br>
-        <i style="background: ${healthOutcomesColors[1]}"></i><span>5.2% - 11.9%</span><br>
-        <i style="background: ${healthOutcomesColors[2]}"></i><span>3.9% - 5.1%</span><br>
-        <i style="background: ${healthOutcomesColors[3]}"></i><span>3.3% - 3.8%</span><br>
-        <i style="background: ${healthOutcomesColors[4]}"></i><span>2.8% - 3.2%</span><br>
-        <i style="background: ${healthOutcomesColors[5]}"></i><span>2.2% - 2.7%</span><br>
-        <i style="background: ${healthOutcomesColors[6]}"></i><span>0.9% - 2.1%</span><br>
-        <i style="background: ${healthOutcomesColors[7]}"></i><span>0% - 0.8%</span><br>
-        <i style="background: ${healthOutcomesColors[8]}"></i><span>No Data</span><br>
-      `;
+      <h4>${healthOutcomesLayerNames.CHRONIC_KIDNEY_DISEASE}</h4>
+      <i style="background: ${
+        healthOutcomesColors[0]
+      }"></i><span>> ${chronicKidneyDiseaseBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[1]}"></i><span>${(
+        chronicKidneyDiseaseBreaks[5] + 0.1
+      ).toFixed(1)}% - ${chronicKidneyDiseaseBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[2]}"></i><span>${(
+        chronicKidneyDiseaseBreaks[4] + 0.1
+      ).toFixed(1)}% - ${chronicKidneyDiseaseBreaks[5].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[3]}"></i><span>${(
+        chronicKidneyDiseaseBreaks[3] + 0.1
+      ).toFixed(1)}% - ${chronicKidneyDiseaseBreaks[4].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[4]}"></i><span>${(
+        chronicKidneyDiseaseBreaks[2] + 0.1
+      ).toFixed(1)}% - ${chronicKidneyDiseaseBreaks[3].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[5]}"></i><span>${(
+        chronicKidneyDiseaseBreaks[1] + 0.1
+      ).toFixed(1)}% - ${chronicKidneyDiseaseBreaks[2].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[6]}"></i><span>${(
+        chronicKidneyDiseaseBreaks[0] + 0.1
+      ).toFixed(1)}% - ${chronicKidneyDiseaseBreaks[1].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[7]
+      }"></i><span>0% - ${chronicKidneyDiseaseBreaks[0].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[8]
+      }"></i><span>No Data</span><br>
+    `;
       break;
     case healthOutcomesLayerNames.PULMONARY_DISEASE:
       legendContent = `
-        <h4>${healthOutcomesLayerNames.PULMONARY_DISEASE}</h4>
-        <i style="background: ${healthOutcomesColors[0]}"></i><span>> 49.5%</span><br>
-        <i style="background: ${healthOutcomesColors[1]}"></i><span>28% - 49.4%</span><br>
-        <i style="background: ${healthOutcomesColors[2]}"></i><span>22.9% - 27.9%</span><br>
-        <i style="background: ${healthOutcomesColors[3]}"></i><span>20.1% - 22.8%</span><br>
-        <i style="background: ${healthOutcomesColors[4]}"></i><span>17.4% - 20%</span><br>
-        <i style="background: ${healthOutcomesColors[5]}"></i><span>14.1% - 17.3%</span><br>
-        <i style="background: ${healthOutcomesColors[6]}"></i><span>6.2% - 14%</span><br>
-        <i style="background: ${healthOutcomesColors[7]}"></i><span>0% - 6.1%</span><br>
-        <i style="background: ${healthOutcomesColors[8]}"></i><span>No Data</span><br>
-      `;
+      <h4>${healthOutcomesLayerNames.PULMONARY_DISEASE}</h4>
+      <i style="background: ${
+        healthOutcomesColors[0]
+      }"></i><span>> ${arthritisBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[1]}"></i><span>${(
+        arthritisBreaks[5] + 0.1
+      ).toFixed(1)}% - ${arthritisBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[2]}"></i><span>${(
+        arthritisBreaks[4] + 0.1
+      ).toFixed(1)}% - ${arthritisBreaks[5].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[3]}"></i><span>${(
+        arthritisBreaks[3] + 0.1
+      ).toFixed(1)}% - ${arthritisBreaks[4].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[4]}"></i><span>${(
+        arthritisBreaks[2] + 0.1
+      ).toFixed(1)}% - ${arthritisBreaks[3].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[5]}"></i><span>${(
+        arthritisBreaks[1] + 0.1
+      ).toFixed(1)}% - ${arthritisBreaks[2].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[6]}"></i><span>${(
+        arthritisBreaks[0] + 0.1
+      ).toFixed(1)}% - ${arthritisBreaks[1].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[7]
+      }"></i><span>0% - ${arthritisBreaks[0].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[8]
+      }"></i><span>No Data</span><br>
+    `;
       break;
     case healthOutcomesLayerNames.HEART_DISEASE:
       legendContent = `
-        <h4>${healthOutcomesLayerNames.HEART_DISEASE}</h4>
-        <i style="background: ${healthOutcomesColors[0]}"></i><span>> 34.1%</span><br>
-        <i style="background: ${healthOutcomesColors[1]}"></i><span>11.6% - 34%</span><br>
-        <i style="background: ${healthOutcomesColors[2]}"></i><span>7.6% - 11.5%</span><br>
-        <i style="background: ${healthOutcomesColors[3]}"></i><span>5.9% - 7.5%</span><br>
-        <i style="background: ${healthOutcomesColors[4]}"></i><span>4.8% - 5.8%</span><br>
-        <i style="background: ${healthOutcomesColors[5]}"></i><span>3.6% - 4.7%</span><br>
-        <i style="background: ${healthOutcomesColors[6]}"></i><span>1.1% - 3.5%</span><br>
-        <i style="background: ${healthOutcomesColors[7]}"></i><span>0% - 1%</span><br>
-        <i style="background: ${healthOutcomesColors[8]}"></i><span>No Data</span><br>
-      `;
+      <h4>${healthOutcomesLayerNames.HEART_DISEASE}</h4>
+      <i style="background: ${
+        healthOutcomesColors[0]
+      }"></i><span>> ${coronaryHeartDiseaseBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[1]}"></i><span>${(
+        coronaryHeartDiseaseBreaks[5] + 0.1
+      ).toFixed(1)}% - ${coronaryHeartDiseaseBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[2]}"></i><span>${(
+        coronaryHeartDiseaseBreaks[4] + 0.1
+      ).toFixed(1)}% - ${coronaryHeartDiseaseBreaks[5].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[3]}"></i><span>${(
+        coronaryHeartDiseaseBreaks[3] + 0.1
+      ).toFixed(1)}% - ${coronaryHeartDiseaseBreaks[4].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[4]}"></i><span>${(
+        coronaryHeartDiseaseBreaks[2] + 0.1
+      ).toFixed(1)}% - ${coronaryHeartDiseaseBreaks[3].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[5]}"></i><span>${(
+        coronaryHeartDiseaseBreaks[1] + 0.1
+      ).toFixed(1)}% - ${coronaryHeartDiseaseBreaks[2].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[6]}"></i><span>${(
+        coronaryHeartDiseaseBreaks[0] + 0.1
+      ).toFixed(1)}% - ${coronaryHeartDiseaseBreaks[1].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[7]
+      }"></i><span>0% - ${coronaryHeartDiseaseBreaks[0].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[8]
+      }"></i><span>No Data</span><br>
+    `;
       break;
     case healthOutcomesLayerNames.DIABETES_PREVALENCE:
       legendContent = `
-        <h4>${healthOutcomesLayerNames.DIABETES_PREVALENCE}</h4>
-        <i style="background: ${healthOutcomesColors[0]}"></i><span>> 46.2%</span><br>
-        <i style="background: ${healthOutcomesColors[1]}"></i><span>17.8% - 46.1%</span><br>
-        <i style="background: ${healthOutcomesColors[2]}"></i><span>14.5% - 17.7%</span><br>
-        <i style="background: ${healthOutcomesColors[3]}"></i><span>12.2% - 14.4%</span><br>
-        <i style="background: ${healthOutcomesColors[4]}"></i><span>9.9% - 12.1%</span><br>
-        <i style="background: ${healthOutcomesColors[5]}"></i><span>7% - 9.8%</span><br>
-        <i style="background: ${healthOutcomesColors[6]}"></i><span>2.1% - 6.9%</span><br>
-        <i style="background: ${healthOutcomesColors[7]}"></i><span>0% - 2%</span><br>
-        <i style="background: ${healthOutcomesColors[8]}"></i><span>No Data</span><br>
-      `;
+      <h4>${healthOutcomesLayerNames.DIABETES_PREVALENCE}</h4>
+      <i style="background: ${
+        healthOutcomesColors[0]
+      }"></i><span>> ${diabetesBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[1]}"></i><span>${(
+        diabetesBreaks[5] + 0.1
+      ).toFixed(1)}% - ${diabetesBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[2]}"></i><span>${(
+        diabetesBreaks[4] + 0.1
+      ).toFixed(1)}% - ${diabetesBreaks[5].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[3]}"></i><span>${(
+        diabetesBreaks[3] + 0.1
+      ).toFixed(1)}% - ${diabetesBreaks[4].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[4]}"></i><span>${(
+        diabetesBreaks[2] + 0.1
+      ).toFixed(1)}% - ${diabetesBreaks[3].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[5]}"></i><span>${(
+        diabetesBreaks[1] + 0.1
+      ).toFixed(1)}% - ${diabetesBreaks[2].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[6]}"></i><span>${(
+        diabetesBreaks[0] + 0.1
+      ).toFixed(1)}% - ${diabetesBreaks[1].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[7]
+      }"></i><span>0% - ${diabetesBreaks[0].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[8]
+      }"></i><span>No Data</span><br>
+    `;
       break;
     case healthOutcomesLayerNames.OBESITY_PREVALENCE:
       legendContent = `
-        <h4>${healthOutcomesLayerNames.OBESITY_PREVALENCE}</h4>
-        <i style="background: ${healthOutcomesColors[0]}"></i><span>> 48.9%</span><br>
-        <i style="background: ${healthOutcomesColors[1]}"></i><span>36.7% - 48.8%</span><br>
-        <i style="background: ${healthOutcomesColors[2]}"></i><span>32.3% - 36.6%</span><br>
-        <i style="background: ${healthOutcomesColors[3]}"></i><span>28% - 32.2%</span><br>
-        <i style="background: ${healthOutcomesColors[4]}"></i><span>23.7% - 27.9%</span><br>
-        <i style="background: ${healthOutcomesColors[5]}"></i><span>19% - 23.6%</span><br>
-        <i style="background: ${healthOutcomesColors[6]}"></i><span>12.7% - 18.9%</span><br>
-        <i style="background: ${healthOutcomesColors[7]}"></i><span>0% - 12.6%</span><br>
-        <i style="background: ${healthOutcomesColors[8]}"></i><span>No Data</span><br>
-      `;
+      <h4>${healthOutcomesLayerNames.OBESITY_PREVALENCE}</h4>
+      <i style="background: ${
+        healthOutcomesColors[0]
+      }"></i><span>> ${obesityBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[1]}"></i><span>${(
+        obesityBreaks[5] + 0.1
+      ).toFixed(1)}% - ${obesityBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[2]}"></i><span>${(
+        obesityBreaks[4] + 0.1
+      ).toFixed(1)}% - ${obesityBreaks[5].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[3]}"></i><span>${(
+        obesityBreaks[3] + 0.1
+      ).toFixed(1)}% - ${obesityBreaks[4].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[4]}"></i><span>${(
+        obesityBreaks[2] + 0.1
+      ).toFixed(1)}% - ${obesityBreaks[3].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[5]}"></i><span>${(
+        obesityBreaks[1] + 0.1
+      ).toFixed(1)}% - ${obesityBreaks[2].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[6]}"></i><span>${(
+        obesityBreaks[0] + 0.1
+      ).toFixed(1)}% - ${obesityBreaks[1].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[7]
+      }"></i><span>0% - ${obesityBreaks[0].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[8]
+      }"></i><span>No Data</span><br>
+    `;
       break;
     case healthOutcomesLayerNames.STROKE_PREVALENCE:
       legendContent = `
-        <h4>${healthOutcomesLayerNames.STROKE_PREVALENCE}</h4>
-        <i style="background: ${healthOutcomesColors[0]}"></i><span>> 17.5%</span><br>
-        <i style="background: ${healthOutcomesColors[1]}"></i><span>6.4% - 17.4%</span><br>
-        <i style="background: ${healthOutcomesColors[2]}"></i><span>4.4% - 6.3%</span><br>
-        <i style="background: ${healthOutcomesColors[3]}"></i><span>3.5% - 4.3%</span><br>
-        <i style="background: ${healthOutcomesColors[4]}"></i><span>2.8% - 3.4%</span><br>
-        <i style="background: ${healthOutcomesColors[5]}"></i><span>2% - 2.7%</span><br>
-        <i style="background: ${healthOutcomesColors[6]}"></i><span>0.7% - 1.9%</span><br>
-        <i style="background: ${healthOutcomesColors[7]}"></i><span>0% - 0.6%</span><br>
-        <i style="background: ${healthOutcomesColors[8]}"></i><span>No Data</span><br>
-      `;
+      <h4>${healthOutcomesLayerNames.STROKE_PREVALENCE}</h4>
+      <i style="background: ${
+        healthOutcomesColors[0]
+      }"></i><span>> ${strokeBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[1]}"></i><span>${(
+        strokeBreaks[5] + 0.1
+      ).toFixed(1)}% - ${strokeBreaks[6].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[2]}"></i><span>${(
+        strokeBreaks[4] + 0.1
+      ).toFixed(1)}% - ${strokeBreaks[5].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[3]}"></i><span>${(
+        strokeBreaks[3] + 0.1
+      ).toFixed(1)}% - ${strokeBreaks[4].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[4]}"></i><span>${(
+        strokeBreaks[2] + 0.1
+      ).toFixed(1)}% - ${strokeBreaks[3].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[5]}"></i><span>${(
+        strokeBreaks[1] + 0.1
+      ).toFixed(1)}% - ${strokeBreaks[2].toFixed(1)}%</span><br>
+      <i style="background: ${healthOutcomesColors[6]}"></i><span>${(
+        strokeBreaks[0] + 0.1
+      ).toFixed(1)}% - ${strokeBreaks[1].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[7]
+      }"></i><span>0% - ${strokeBreaks[0].toFixed(1)}%</span><br>
+      <i style="background: ${
+        healthOutcomesColors[8]
+      }"></i><span>No Data</span><br>
+    `;
       break;
   }
   document.querySelector(".healthOutcomesLegend").innerHTML = legendContent;
@@ -2361,17 +2710,33 @@ var screeningRatesLegend = L.control({ position: "bottomleft" });
 screeningRatesLegend.onAdd = function () {
   var div = L.DomUtil.create("div", "screeningRatesLegend");
   div.innerHTML = `
-    <h4>${screeningRatesLayerNames.ANNUAL_CHECKUP}</h4>
-    <i style="background: ${screeningRatesColors[0]}"></i><span>> 91.4%</span><br>
-    <i style="background: ${screeningRatesColors[1]}"></i><span>81.6% - 91.3%</span><br>
-    <i style="background: ${screeningRatesColors[2]}"></i><span>78.8% - 81.5%</span><br>
-    <i style="background: ${screeningRatesColors[3]}"></i><span>76.6% - 78.7%</span><br>
-    <i style="background: ${screeningRatesColors[4]}"></i><span>74.5% - 76.5%</span><br>
-    <i style="background: ${screeningRatesColors[5]}"></i><span>71.8% - 74.4%</span><br>
-    <i style="background: ${screeningRatesColors[6]}"></i><span>66.2% - 71.7%</span><br>
-    <i style="background: ${screeningRatesColors[7]}"></i><span>0% - 66.1%</span><br>
-    <i style="background: ${screeningRatesColors[8]}"></i><span>No Data</span><br>
-  `;
+  <h4>${screeningRatesLayerNames.ANNUAL_CHECKUP}</h4>
+  <i style="background: ${
+    screeningRatesColors[0]
+  }"></i><span>> ${annualCheckupBreaks[6].toFixed(1)}%</span><br>
+  <i style="background: ${screeningRatesColors[1]}"></i><span>${(
+    annualCheckupBreaks[5] + 0.1
+  ).toFixed(1)}% - ${annualCheckupBreaks[6].toFixed(1)}%</span><br>
+  <i style="background: ${screeningRatesColors[2]}"></i><span>${(
+    annualCheckupBreaks[4] + 0.1
+  ).toFixed(1)}% - ${annualCheckupBreaks[5].toFixed(1)}%</span><br>
+  <i style="background: ${screeningRatesColors[3]}"></i><span>${(
+    annualCheckupBreaks[3] + 0.1
+  ).toFixed(1)}% - ${annualCheckupBreaks[4].toFixed(1)}%</span><br>
+  <i style="background: ${screeningRatesColors[4]}"></i><span>${(
+    annualCheckupBreaks[2] + 0.1
+  ).toFixed(1)}% - ${annualCheckupBreaks[3].toFixed(1)}%</span><br>
+  <i style="background: ${screeningRatesColors[5]}"></i><span>${(
+    annualCheckupBreaks[1] + 0.1
+  ).toFixed(1)}% - ${annualCheckupBreaks[2].toFixed(1)}%</span><br>
+  <i style="background: ${screeningRatesColors[6]}"></i><span>${(
+    annualCheckupBreaks[0] + 0.1
+  ).toFixed(1)}% - ${annualCheckupBreaks[1].toFixed(1)}%</span><br>
+  <i style="background: ${
+    screeningRatesColors[7]
+  }"></i><span>0% - ${annualCheckupBreaks[0].toFixed(1)}%</span><br>
+  <i style="background: ${screeningRatesColors[8]}"></i><span>No Data</span><br>
+`;
   return div;
 };
 
@@ -2383,85 +2748,227 @@ function updateLegendForScreeningRates(layerName) {
     case screeningRatesLayerNames.ANNUAL_CHECKUP:
       legendContent = `
         <h4>${screeningRatesLayerNames.ANNUAL_CHECKUP}</h4>
-        <i style="background: ${screeningRatesColors[0]}"></i><span>> 91.4%</span><br>
-        <i style="background: ${screeningRatesColors[1]}"></i><span>81.6% - 91.3%</span><br>
-        <i style="background: ${screeningRatesColors[2]}"></i><span>78.8% - 81.5%</span><br>
-        <i style="background: ${screeningRatesColors[3]}"></i><span>76.6% - 78.7%</span><br>
-        <i style="background: ${screeningRatesColors[4]}"></i><span>74.5% - 76.5%</span><br>
-        <i style="background: ${screeningRatesColors[5]}"></i><span>71.8% - 74.4%</span><br>
-        <i style="background: ${screeningRatesColors[6]}"></i><span>66.2% - 71.7%</span><br>
-        <i style="background: ${screeningRatesColors[7]}"></i><span>0% - 66.1%</span><br>
-        <i style="background: ${screeningRatesColors[8]}"></i><span>No Data</span><br>
+        <i style="background: ${
+          screeningRatesColors[0]
+        }"></i><span>> ${annualCheckupBreaks[6].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[1]}"></i><span>${(
+        annualCheckupBreaks[5] + 0.1
+      ).toFixed(1)}% - ${annualCheckupBreaks[6].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[2]}"></i><span>${(
+        annualCheckupBreaks[4] + 0.1
+      ).toFixed(1)}% - ${annualCheckupBreaks[5].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[3]}"></i><span>${(
+        annualCheckupBreaks[3] + 0.1
+      ).toFixed(1)}% - ${annualCheckupBreaks[4].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[4]}"></i><span>${(
+        annualCheckupBreaks[2] + 0.1
+      ).toFixed(1)}% - ${annualCheckupBreaks[3].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[5]}"></i><span>${(
+        annualCheckupBreaks[1] + 0.1
+      ).toFixed(1)}% - ${annualCheckupBreaks[2].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[6]}"></i><span>${(
+        annualCheckupBreaks[0] + 0.1
+      ).toFixed(1)}% - ${annualCheckupBreaks[1].toFixed(1)}%</span><br>
+        <i style="background: ${
+          screeningRatesColors[7]
+        }"></i><span>0% - ${annualCheckupBreaks[0].toFixed(1)}%</span><br>
+        <i style="background: ${
+          screeningRatesColors[8]
+        }"></i><span>No Data</span><br>
       `;
       break;
     case screeningRatesLayerNames.DENTAL_VISIT:
       legendContent = `
         <h4>${screeningRatesLayerNames.DENTAL_VISIT}</h4>
-        <i style="background: ${screeningRatesColors[0]}"></i><span>> 83%</span><br>
-        <i style="background: ${screeningRatesColors[1]}"></i><span>72.2% - 82.9%</span><br>
-        <i style="background: ${screeningRatesColors[2]}"></i><span>64.9% - 72.1%</span><br>
-        <i style="background: ${screeningRatesColors[3]}"></i><span>58.6% - 64.8%</span><br>
-        <i style="background: ${screeningRatesColors[4]}"></i><span>52.3% - 58.5%</span><br>
-        <i style="background: ${screeningRatesColors[5]}"></i><span>45.1% - 52.2%</span><br>
-        <i style="background: ${screeningRatesColors[6]}"></i><span>23.4% - 45%</span><br>
-        <i style="background: ${screeningRatesColors[7]}"></i><span>0% - 23.3%</span><br>
-        <i style="background: ${screeningRatesColors[8]}"></i><span>No Data</span><br>
+        <i style="background: ${
+          screeningRatesColors[0]
+        }"></i><span>> ${dentalVisitBreaks[6].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[1]}"></i><span>${(
+        dentalVisitBreaks[5] + 0.1
+      ).toFixed(1)}% - ${dentalVisitBreaks[6].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[2]}"></i><span>${(
+        dentalVisitBreaks[4] + 0.1
+      ).toFixed(1)}% - ${dentalVisitBreaks[5].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[3]}"></i><span>${(
+        dentalVisitBreaks[3] + 0.1
+      ).toFixed(1)}% - ${dentalVisitBreaks[4].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[4]}"></i><span>${(
+        dentalVisitBreaks[2] + 0.1
+      ).toFixed(1)}% - ${dentalVisitBreaks[3].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[5]}"></i><span>${(
+        dentalVisitBreaks[1] + 0.1
+      ).toFixed(1)}% - ${dentalVisitBreaks[2].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[6]}"></i><span>${(
+        dentalVisitBreaks[0] + 0.1
+      ).toFixed(1)}% - ${dentalVisitBreaks[1].toFixed(1)}%</span><br>
+        <i style="background: ${
+          screeningRatesColors[7]
+        }"></i><span>0% - ${dentalVisitBreaks[0].toFixed(1)}%</span><br>
+        <i style="background: ${
+          screeningRatesColors[8]
+        }"></i><span>No Data</span><br>
       `;
       break;
     case screeningRatesLayerNames.CHOLESTEROL_SCREENING:
       legendContent = `
         <h4>${screeningRatesLayerNames.CHOLESTEROL_SCREENING}</h4>
-        <i style="background: ${screeningRatesColors[0]}"></i><span>> 97.4%</span><br>
-        <i style="background: ${screeningRatesColors[1]}"></i><span>89.8% - 97.3%</span><br>
-        <i style="background: ${screeningRatesColors[2]}"></i><span>87.3% - 89.7%</span><br>
-        <i style="background: ${screeningRatesColors[3]}"></i><span>84.6% - 87.2%</span><br>
-        <i style="background: ${screeningRatesColors[4]}"></i><span>81.5% - 84.5%</span><br>
-        <i style="background: ${screeningRatesColors[5]}"></i><span>76% - 81.4%</span><br>
-        <i style="background: ${screeningRatesColors[6]}"></i><span>62.6% - 75.9%</span><br>
-        <i style="background: ${screeningRatesColors[7]}"></i><span>0% - 62.5%</span><br>
-        <i style="background: ${screeningRatesColors[8]}"></i><span>No Data</span><br>
+        <i style="background: ${
+          screeningRatesColors[0]
+        }"></i><span>> ${cholesterolScreeningBreaks[6].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[1]}"></i><span>${(
+        cholesterolScreeningBreaks[5] + 0.1
+      ).toFixed(1)}% - ${cholesterolScreeningBreaks[6].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[2]}"></i><span>${(
+        cholesterolScreeningBreaks[4] + 0.1
+      ).toFixed(1)}% - ${cholesterolScreeningBreaks[5].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[3]}"></i><span>${(
+        cholesterolScreeningBreaks[3] + 0.1
+      ).toFixed(1)}% - ${cholesterolScreeningBreaks[4].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[4]}"></i><span>${(
+        cholesterolScreeningBreaks[2] + 0.1
+      ).toFixed(1)}% - ${cholesterolScreeningBreaks[3].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[5]}"></i><span>${(
+        cholesterolScreeningBreaks[1] + 0.1
+      ).toFixed(1)}% - ${cholesterolScreeningBreaks[2].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[6]}"></i><span>${(
+        cholesterolScreeningBreaks[0] + 0.1
+      ).toFixed(1)}% - ${cholesterolScreeningBreaks[1].toFixed(1)}%</span><br>
+        <i style="background: ${
+          screeningRatesColors[7]
+        }"></i><span>0% - ${cholesterolScreeningBreaks[0].toFixed(
+        1
+      )}%</span><br>
+        <i style="background: ${
+          screeningRatesColors[8]
+        }"></i><span>No Data</span><br>
       `;
       break;
     case screeningRatesLayerNames.MAMMOGRAPHY_SCREENING:
       legendContent = `
         <h4>${screeningRatesLayerNames.MAMMOGRAPHY_SCREENING}</h4>
-        <i style="background: ${screeningRatesColors[0]}"></i><span>> 86.4%</span><br>
-        <i style="background: ${screeningRatesColors[1]}"></i><span>83.2% - 86.3%</span><br>
-        <i style="background: ${screeningRatesColors[2]}"></i><span>81.2% - 83.1%</span><br>
-        <i style="background: ${screeningRatesColors[3]}"></i><span>79.5% - 81.1%</span><br>
-        <i style="background: ${screeningRatesColors[4]}"></i><span>77.9% - 79.4%</span><br>
-        <i style="background: ${screeningRatesColors[5]}"></i><span>75.3% - 77.8%</span><br>
-        <i style="background: ${screeningRatesColors[6]}"></i><span>69.6% - 75.2%</span><br>
-        <i style="background: ${screeningRatesColors[7]}"></i><span>0% - 69.5%</span><br>
-        <i style="background: ${screeningRatesColors[8]}"></i><span>No Data</span><br>
+        <i style="background: ${
+          screeningRatesColors[0]
+        }"></i><span>> ${mammographyUseBreaks[6].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[1]}"></i><span>${(
+        mammographyUseBreaks[5] + 0.1
+      ).toFixed(1)}% - ${mammographyUseBreaks[6].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[2]}"></i><span>${(
+        mammographyUseBreaks[4] + 0.1
+      ).toFixed(1)}% - ${mammographyUseBreaks[5].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[3]}"></i><span>${(
+        mammographyUseBreaks[3] + 0.1
+      ).toFixed(1)}% - ${mammographyUseBreaks[4].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[4]}"></i><span>${(
+        mammographyUseBreaks[2] + 0.1
+      ).toFixed(1)}% - ${mammographyUseBreaks[3].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[5]}"></i><span>${(
+        mammographyUseBreaks[1] + 0.1
+      ).toFixed(1)}% - ${mammographyUseBreaks[2].toFixed(1)}%</span><br>
+        <i style="background: ${screeningRatesColors[6]}"></i><span>${(
+        mammographyUseBreaks[0] + 0.1
+      ).toFixed(1)}% - ${mammographyUseBreaks[1].toFixed(1)}%</span><br>
+        <i style="background: ${
+          screeningRatesColors[7]
+        }"></i><span>0% - ${mammographyUseBreaks[0].toFixed(1)}%</span><br>
+        <i style="background: ${
+          screeningRatesColors[8]
+        }"></i><span>No Data</span><br>
       `;
       break;
     case screeningRatesLayerNames.CERVICAL_SCREENING:
       legendContent = `
         <h4>${screeningRatesLayerNames.CERVICAL_SCREENING}</h4>
-        <i style="background: ${screeningRatesColors[0]}"></i><span>> 91.5%</span><br>
-        <i style="background: ${screeningRatesColors[1]}"></i><span>86.3% - 91.4%</span><br>
-        <i style="background: ${screeningRatesColors[2]}"></i><span>83.1% - 86.2%</span><br>
-        <i style="background: ${screeningRatesColors[3]}"></i><span>79.8% - 83%</span><br>
-        <i style="background: ${screeningRatesColors[4]}"></i><span>75.9% - 79.7%</span><br>
-        <i style="background: ${screeningRatesColors[5]}"></i><span>69.5% - 75.8%</span><br>
-        <i style="background: ${screeningRatesColors[6]}"></i><span>51.7% - 69.4%</span><br>
-        <i style="background: ${screeningRatesColors[7]}"></i><span>0% - 51.6%</span><br>
-        <i style="background: ${screeningRatesColors[8]}"></i><span>No Data</span><br>
+        <i style="background: ${
+          screeningRatesColors[0]
+        }"></i><span>> ${cervicalCancerScreeningBreaks[6].toFixed(
+        1
+      )}%</span><br>
+        <i style="background: ${screeningRatesColors[1]}"></i><span>${(
+        cervicalCancerScreeningBreaks[5] + 0.1
+      ).toFixed(1)}% - ${cervicalCancerScreeningBreaks[6].toFixed(
+        1
+      )}%</span><br>
+        <i style="background: ${screeningRatesColors[2]}"></i><span>${(
+        cervicalCancerScreeningBreaks[4] + 0.1
+      ).toFixed(1)}% - ${cervicalCancerScreeningBreaks[5].toFixed(
+        1
+      )}%</span><br>
+        <i style="background: ${screeningRatesColors[3]}"></i><span>${(
+        cervicalCancerScreeningBreaks[3] + 0.1
+      ).toFixed(1)}% - ${cervicalCancerScreeningBreaks[4].toFixed(
+        1
+      )}%</span><br>
+        <i style="background: ${screeningRatesColors[4]}"></i><span>${(
+        cervicalCancerScreeningBreaks[2] + 0.1
+      ).toFixed(1)}% - ${cervicalCancerScreeningBreaks[3].toFixed(
+        1
+      )}%</span><br>
+        <i style="background: ${screeningRatesColors[5]}"></i><span>${(
+        cervicalCancerScreeningBreaks[1] + 0.1
+      ).toFixed(1)}% - ${cervicalCancerScreeningBreaks[2].toFixed(
+        1
+      )}%</span><br>
+        <i style="background: ${screeningRatesColors[6]}"></i><span>${(
+        cervicalCancerScreeningBreaks[0] + 0.1
+      ).toFixed(1)}% - ${cervicalCancerScreeningBreaks[1].toFixed(
+        1
+      )}%</span><br>
+        <i style="background: ${
+          screeningRatesColors[7]
+        }"></i><span>0% - ${cervicalCancerScreeningBreaks[0].toFixed(
+        1
+      )}%</span><br>
+        <i style="background: ${
+          screeningRatesColors[8]
+        }"></i><span>No Data</span><br>
       `;
       break;
     case screeningRatesLayerNames.COLORECTAL_SCREENING:
       legendContent = `
         <h4>${screeningRatesLayerNames.COLORECTAL_SCREENING}</h4>
-        <i style="background: ${screeningRatesColors[0]}"></i><span>> 85.2%</span><br>
-        <i style="background: ${screeningRatesColors[1]}"></i><span>79.5% - 85.1%</span><br>
-        <i style="background: ${screeningRatesColors[2]}"></i><span>76.1% - 79.4%</span><br>
-        <i style="background: ${screeningRatesColors[3]}"></i><span>72.8% - 76%</span><br>
-        <i style="background: ${screeningRatesColors[4]}"></i><span>69.3% - 72.7%</span><br>
-        <i style="background: ${screeningRatesColors[5]}"></i><span>64.9% - 69.2%</span><br>
-        <i style="background: ${screeningRatesColors[6]}"></i><span>54% - 64.8%</span><br>
-        <i style="background: ${screeningRatesColors[7]}"></i><span>0% - 53.9%</span><br>
-        <i style="background: ${screeningRatesColors[8]}"></i><span>No Data</span><br>
+        <i style="background: ${
+          screeningRatesColors[0]
+        }"></i><span>> ${colorectalCancerScreeningBreaks[6].toFixed(
+        1
+      )}%</span><br>
+        <i style="background: ${screeningRatesColors[1]}"></i><span>${(
+        colorectalCancerScreeningBreaks[5] + 0.1
+      ).toFixed(1)}% - ${colorectalCancerScreeningBreaks[6].toFixed(
+        1
+      )}%</span><br>
+        <i style="background: ${screeningRatesColors[2]}"></i><span>${(
+        colorectalCancerScreeningBreaks[4] + 0.1
+      ).toFixed(1)}% - ${colorectalCancerScreeningBreaks[5].toFixed(
+        1
+      )}%</span><br>
+        <i style="background: ${screeningRatesColors[3]}"></i><span>${(
+        colorectalCancerScreeningBreaks[3] + 0.1
+      ).toFixed(1)}% - ${colorectalCancerScreeningBreaks[4].toFixed(
+        1
+      )}%</span><br>
+        <i style="background: ${screeningRatesColors[4]}"></i><span>${(
+        colorectalCancerScreeningBreaks[2] + 0.1
+      ).toFixed(1)}% - ${colorectalCancerScreeningBreaks[3].toFixed(
+        1
+      )}%</span><br>
+        <i style="background: ${screeningRatesColors[5]}"></i><span>${(
+        colorectalCancerScreeningBreaks[1] + 0.1
+      ).toFixed(1)}% - ${colorectalCancerScreeningBreaks[2].toFixed(
+        1
+      )}%</span><br>
+        <i style="background: ${screeningRatesColors[6]}"></i><span>${(
+        colorectalCancerScreeningBreaks[0] + 0.1
+      ).toFixed(1)}% - ${colorectalCancerScreeningBreaks[1].toFixed(
+        1
+      )}%</span><br>
+        <i style="background: ${
+          screeningRatesColors[7]
+        }"></i><span>0% - ${colorectalCancerScreeningBreaks[0].toFixed(
+        1
+      )}%</span><br>
+        <i style="background: ${
+          screeningRatesColors[8]
+        }"></i><span>No Data</span><br>
       `;
       break;
   }
@@ -2697,17 +3204,33 @@ var healthStatusLegend = L.control({ position: "bottomleft" });
 healthStatusLegend.onAdd = function () {
   var div = L.DomUtil.create("div", "healthStatusLegend");
   div.innerHTML = `
-    <h4>${healthStatusLayerNames.DEPRESSION}</h4>
-    <i style="background: ${healthStatusColors[0]}"></i><span>> 32.5%</span><br>
-    <i style="background: ${healthStatusColors[1]}"></i><span>23.3% - 32.4%</span><br>
-    <i style="background: ${healthStatusColors[2]}"></i><span>20.7% - 23.2%</span><br>
-    <i style="background: ${healthStatusColors[3]}"></i><span>18.9% - 20.6%</span><br>
-    <i style="background: ${healthStatusColors[4]}"></i><span>17.2% - 18.8%</span><br>
-    <i style="background: ${healthStatusColors[5]}"></i><span>15.3% - 17.1%</span><br>
-    <i style="background: ${healthStatusColors[6]}"></i><span>11.9% - 15.2%</span><br>
-    <i style="background: ${healthStatusColors[7]}"></i><span>0% - 11.8%</span><br>
-    <i style="background: ${healthStatusColors[8]}"></i><span>No Data</span><br>
-  `;
+  <h4>${healthStatusLayerNames.DEPRESSION}</h4>
+  <i style="background: ${
+    healthStatusColors[0]
+  }"></i><span>> ${depressionBreaks[6].toFixed(1)}%</span><br>
+  <i style="background: ${healthStatusColors[1]}"></i><span>${(
+    depressionBreaks[5] + 0.1
+  ).toFixed(1)}% - ${depressionBreaks[6].toFixed(1)}%</span><br>
+  <i style="background: ${healthStatusColors[2]}"></i><span>${(
+    depressionBreaks[4] + 0.1
+  ).toFixed(1)}% - ${depressionBreaks[5].toFixed(1)}%</span><br>
+  <i style="background: ${healthStatusColors[3]}"></i><span>${(
+    depressionBreaks[3] + 0.1
+  ).toFixed(1)}% - ${depressionBreaks[4].toFixed(1)}%</span><br>
+  <i style="background: ${healthStatusColors[4]}"></i><span>${(
+    depressionBreaks[2] + 0.1
+  ).toFixed(1)}% - ${depressionBreaks[3].toFixed(1)}%</span><br>
+  <i style="background: ${healthStatusColors[5]}"></i><span>${(
+    depressionBreaks[1] + 0.1
+  ).toFixed(1)}% - ${depressionBreaks[2].toFixed(1)}%</span><br>
+  <i style="background: ${healthStatusColors[6]}"></i><span>${(
+    depressionBreaks[0] + 0.1
+  ).toFixed(1)}% - ${depressionBreaks[1].toFixed(1)}%</span><br>
+  <i style="background: ${
+    healthStatusColors[7]
+  }"></i><span>0% - ${depressionBreaks[0].toFixed(1)}%</span><br>
+  <i style="background: ${healthStatusColors[8]}"></i><span>No Data</span><br>
+`;
   return div;
 };
 
@@ -2718,156 +3241,408 @@ function updateLegendForHealthStatus(layerName) {
   switch (layerName) {
     case healthStatusLayerNames.DEPRESSION:
       legendContent = `
-        <h4>${healthStatusLayerNames.DEPRESSION}</h4>
-        <i style="background: ${healthStatusColors[0]}"></i><span>> 32.5%</span><br>
-        <i style="background: ${healthStatusColors[1]}"></i><span>23.3% - 32.4%</span><br>
-        <i style="background: ${healthStatusColors[2]}"></i><span>20.7% - 23.2%</span><br>
-        <i style="background: ${healthStatusColors[3]}"></i><span>18.9% - 20.6%</span><br>
-        <i style="background: ${healthStatusColors[4]}"></i><span>17.2% - 18.8%</span><br>
-        <i style="background: ${healthStatusColors[5]}"></i><span>15.3% - 17.1%</span><br>
-        <i style="background: ${healthStatusColors[6]}"></i><span>11.9% - 15.2%</span><br>
-        <i style="background: ${healthStatusColors[7]}"></i><span>0% - 11.8%</span><br>
-        <i style="background: ${healthStatusColors[8]}"></i><span>No Data</span><br>
-      `;
+          <h4>${healthStatusLayerNames.DEPRESSION}</h4>
+          <i style="background: ${
+            healthStatusColors[0]
+          }"></i><span>> ${depressionBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[1]}"></i><span>${(
+        depressionBreaks[5] + 0.1
+      ).toFixed(1)}% - ${depressionBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[2]}"></i><span>${(
+        depressionBreaks[4] + 0.1
+      ).toFixed(1)}% - ${depressionBreaks[5].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[3]}"></i><span>${(
+        depressionBreaks[3] + 0.1
+      ).toFixed(1)}% - ${depressionBreaks[4].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[4]}"></i><span>${(
+        depressionBreaks[2] + 0.1
+      ).toFixed(1)}% - ${depressionBreaks[3].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[5]}"></i><span>${(
+        depressionBreaks[1] + 0.1
+      ).toFixed(1)}% - ${depressionBreaks[2].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[6]}"></i><span>${(
+        depressionBreaks[0] + 0.1
+      ).toFixed(1)}% - ${depressionBreaks[1].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthStatusColors[7]
+          }"></i><span>0% - ${depressionBreaks[0].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthStatusColors[8]
+          }"></i><span>No Data</span><br>
+        `;
       break;
     case healthStatusLayerNames.MENTAL_HEALTH_BAD:
       legendContent = `
-        <h4>${healthStatusLayerNames.MENTAL_HEALTH_BAD}</h4>
-        <i style="background: ${healthStatusColors[0]}"></i><span>> 31.1%</span><br>
-        <i style="background: ${healthStatusColors[1]}"></i><span>22.2% - 31%</span><br>
-        <i style="background: ${healthStatusColors[2]}"></i><span>18.9% - 22.1%</span><br>
-        <i style="background: ${healthStatusColors[3]}"></i><span>16.6% - 18.8%</span><br>
-        <i style="background: ${healthStatusColors[4]}"></i><span>14.7% - 16.5%</span><br>
-        <i style="background: ${healthStatusColors[5]}"></i><span>12.8% - 14.6%</span><br>
-        <i style="background: ${healthStatusColors[6]}"></i><span>7.3% - 12.7%</span><br>
-        <i style="background: ${healthStatusColors[7]}"></i><span>0% - 7.2%</span><br>
-        <i style="background: ${healthStatusColors[8]}"></i><span>No Data</span><br>
-      `;
+          <h4>${healthStatusLayerNames.MENTAL_HEALTH_BAD}</h4>
+          <i style="background: ${
+            healthStatusColors[0]
+          }"></i><span>> ${frequentMentalHealthDistressBreaks[6].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${healthStatusColors[1]}"></i><span>${(
+        frequentMentalHealthDistressBreaks[5] + 0.1
+      ).toFixed(1)}% - ${frequentMentalHealthDistressBreaks[6].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${healthStatusColors[2]}"></i><span>${(
+        frequentMentalHealthDistressBreaks[4] + 0.1
+      ).toFixed(1)}% - ${frequentMentalHealthDistressBreaks[5].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${healthStatusColors[3]}"></i><span>${(
+        frequentMentalHealthDistressBreaks[3] + 0.1
+      ).toFixed(1)}% - ${frequentMentalHealthDistressBreaks[4].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${healthStatusColors[4]}"></i><span>${(
+        frequentMentalHealthDistressBreaks[2] + 0.1
+      ).toFixed(1)}% - ${frequentMentalHealthDistressBreaks[3].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${healthStatusColors[5]}"></i><span>${(
+        frequentMentalHealthDistressBreaks[1] + 0.1
+      ).toFixed(1)}% - ${frequentMentalHealthDistressBreaks[2].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${healthStatusColors[6]}"></i><span>${(
+        frequentMentalHealthDistressBreaks[0] + 0.1
+      ).toFixed(1)}% - ${frequentMentalHealthDistressBreaks[1].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${
+            healthStatusColors[7]
+          }"></i><span>0% - ${frequentMentalHealthDistressBreaks[0].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${
+            healthStatusColors[8]
+          }"></i><span>No Data</span><br>
+        `;
       break;
     case healthStatusLayerNames.PHYSICAL_HEALTH_BAD:
       legendContent = `
-        <h4>${healthStatusLayerNames.PHYSICAL_HEALTH_BAD}</h4>
-        <i style="background: ${healthStatusColors[0]}"></i><span>> 31.4%</span><br>
-        <i style="background: ${healthStatusColors[1]}"></i><span>17.1% - 31.3%</span><br>
-        <i style="background: ${healthStatusColors[2]}"></i><span>14% - 17%</span><br>
-        <i style="background: ${healthStatusColors[3]}"></i><span>11.7% - 13.9%</span><br>
-        <i style="background: ${healthStatusColors[4]}"></i><span>9.8% - 11.6%</span><br>
-        <i style="background: ${healthStatusColors[5]}"></i><span>7.6% - 9.7%</span><br>
-        <i style="background: ${healthStatusColors[6]}"></i><span>3.9% - 7.5%</span><br>
-        <i style="background: ${healthStatusColors[7]}"></i><span>0% - 3.8%</span><br>
-        <i style="background: ${healthStatusColors[8]}"></i><span>No Data</span><br>
-      `;
+          <h4>${healthStatusLayerNames.PHYSICAL_HEALTH_BAD}</h4>
+          <i style="background: ${
+            healthStatusColors[0]
+          }"></i><span>> ${frequentPhysicalHealthDistressBreaks[6].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${healthStatusColors[1]}"></i><span>${(
+        frequentPhysicalHealthDistressBreaks[5] + 0.1
+      ).toFixed(1)}% - ${frequentPhysicalHealthDistressBreaks[6].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${healthStatusColors[2]}"></i><span>${(
+        frequentPhysicalHealthDistressBreaks[4] + 0.1
+      ).toFixed(1)}% - ${frequentPhysicalHealthDistressBreaks[5].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${healthStatusColors[3]}"></i><span>${(
+        frequentPhysicalHealthDistressBreaks[3] + 0.1
+      ).toFixed(1)}% - ${frequentPhysicalHealthDistressBreaks[4].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${healthStatusColors[4]}"></i><span>${(
+        frequentPhysicalHealthDistressBreaks[2] + 0.1
+      ).toFixed(1)}% - ${frequentPhysicalHealthDistressBreaks[3].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${healthStatusColors[5]}"></i><span>${(
+        frequentPhysicalHealthDistressBreaks[1] + 0.1
+      ).toFixed(1)}% - ${frequentPhysicalHealthDistressBreaks[2].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${healthStatusColors[6]}"></i><span>${(
+        frequentPhysicalHealthDistressBreaks[0] + 0.1
+      ).toFixed(1)}% - ${frequentPhysicalHealthDistressBreaks[1].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${
+            healthStatusColors[7]
+          }"></i><span>0% - ${frequentPhysicalHealthDistressBreaks[0].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${
+            healthStatusColors[8]
+          }"></i><span>No Data</span><br>
+        `;
       break;
     case healthStatusLayerNames.POOR_SELF_RATED_HEALTH:
       legendContent = `
-        <h4>${healthStatusLayerNames.POOR_SELF_RATED_HEALTH}</h4>
-        <i style="background: ${healthStatusColors[0]}"></i><span>> 57.2%</span><br>
-        <i style="background: ${healthStatusColors[1]}"></i><span>29.8% - 57.1%</span><br>
-        <i style="background: ${healthStatusColors[2]}"></i><span>23.2% - 29.7%</span><br>
-        <i style="background: ${healthStatusColors[3]}"></i><span>18.4% - 23.1%</span><br>
-        <i style="background: ${healthStatusColors[4]}"></i><span>14.4% - 18.3%</span><br>
-        <i style="background: ${healthStatusColors[5]}"></i><span>10.2% - 14.3%</span><br>
-        <i style="background: ${healthStatusColors[6]}"></i><span>4.4% - 10.1%</span><br>
-        <i style="background: ${healthStatusColors[7]}"></i><span>0% - 4.3%</span><br>
-        <i style="background: ${healthStatusColors[8]}"></i><span>No Data</span><br>
-      `;
+          <h4>${healthStatusLayerNames.POOR_SELF_RATED_HEALTH}</h4>
+          <i style="background: ${
+            healthStatusColors[0]
+          }"></i><span>> ${fairOrPoorHealthBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[1]}"></i><span>${(
+        fairOrPoorHealthBreaks[5] + 0.1
+      ).toFixed(1)}% - ${fairOrPoorHealthBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[2]}"></i><span>${(
+        fairOrPoorHealthBreaks[4] + 0.1
+      ).toFixed(1)}% - ${fairOrPoorHealthBreaks[5].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[3]}"></i><span>${(
+        fairOrPoorHealthBreaks[3] + 0.1
+      ).toFixed(1)}% - ${fairOrPoorHealthBreaks[4].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[4]}"></i><span>${(
+        fairOrPoorHealthBreaks[2] + 0.1
+      ).toFixed(1)}% - ${fairOrPoorHealthBreaks[3].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[5]}"></i><span>${(
+        fairOrPoorHealthBreaks[1] + 0.1
+      ).toFixed(1)}% - ${fairOrPoorHealthBreaks[2].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[6]}"></i><span>${(
+        fairOrPoorHealthBreaks[0] + 0.1
+      ).toFixed(1)}% - ${fairOrPoorHealthBreaks[1].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthStatusColors[7]
+          }"></i><span>0% - ${fairOrPoorHealthBreaks[0].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthStatusColors[8]
+          }"></i><span>No Data</span><br>
+        `;
       break;
     case healthStatusLayerNames.DISABILITY:
       legendContent = `
-        <h4>${healthStatusLayerNames.DISABILITY}</h4>
-        <i style="background: ${healthStatusColors[0]}"></i><span>> 70.6%</span><br>
-        <i style="background: ${healthStatusColors[1]}"></i><span>40.9% - 70.5%</span><br>
-        <i style="background: ${healthStatusColors[2]}"></i><span>34% - 40.8%</span><br>
-        <i style="background: ${healthStatusColors[3]}"></i><span>28.9% - 33.9%</span><br>
-        <i style="background: ${healthStatusColors[4]}"></i><span>24.6% - 28.8%</span><br>
-        <i style="background: ${healthStatusColors[5]}"></i><span>19.6% - 24.5%</span><br>
-        <i style="background: ${healthStatusColors[6]}"></i><span>11.4% - 19.5%</span><br>
-        <i style="background: ${healthStatusColors[7]}"></i><span>0% - 11.3%</span><br>
-        <i style="background: ${healthStatusColors[8]}"></i><span>No Data</span><br>
-      `;
+          <h4>${healthStatusLayerNames.DISABILITY}</h4>
+          <i style="background: ${
+            healthStatusColors[0]
+          }"></i><span>> ${anyDisabilityBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[1]}"></i><span>${(
+        anyDisabilityBreaks[5] + 0.1
+      ).toFixed(1)}% - ${anyDisabilityBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[2]}"></i><span>${(
+        anyDisabilityBreaks[4] + 0.1
+      ).toFixed(1)}% - ${anyDisabilityBreaks[5].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[3]}"></i><span>${(
+        anyDisabilityBreaks[3] + 0.1
+      ).toFixed(1)}% - ${anyDisabilityBreaks[4].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[4]}"></i><span>${(
+        anyDisabilityBreaks[2] + 0.1
+      ).toFixed(1)}% - ${anyDisabilityBreaks[3].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[5]}"></i><span>${(
+        anyDisabilityBreaks[1] + 0.1
+      ).toFixed(1)}% - ${anyDisabilityBreaks[2].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[6]}"></i><span>${(
+        anyDisabilityBreaks[0] + 0.1
+      ).toFixed(1)}% - ${anyDisabilityBreaks[1].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthStatusColors[7]
+          }"></i><span>0% - ${anyDisabilityBreaks[0].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthStatusColors[8]
+          }"></i><span>No Data</span><br>
+        `;
       break;
     case healthStatusLayerNames.HEARING_DISABILITY:
       legendContent = `
           <h4>${healthStatusLayerNames.HEARING_DISABILITY}</h4>
-          <i style="background: ${healthStatusColors[0]}"></i><span>> 29.8%</span><br>
-          <i style="background: ${healthStatusColors[1]}"></i><span>11.7% - 29.7%</span><br>
-          <i style="background: ${healthStatusColors[2]}"></i><span>8% - 11.6%</span><br>
-          <i style="background: ${healthStatusColors[3]}"></i><span>6.3% - 7.9%</span><br>
-          <i style="background: ${healthStatusColors[4]}"></i><span>5.2% - 6.2%</span><br>
-          <i style="background: ${healthStatusColors[5]}"></i><span>4.1% - 5.1%</span><br>
-          <i style="background: ${healthStatusColors[6]}"></i><span>1.8% - 4%</span><br>
-          <i style="background: ${healthStatusColors[7]}"></i><span>0% - 1.7%</span><br>
-          <i style="background: ${healthStatusColors[8]}"></i><span>No Data</span><br>
+          <i style="background: ${
+            healthStatusColors[0]
+          }"></i><span>> ${hearingDisabilityBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[1]}"></i><span>${(
+        hearingDisabilityBreaks[5] + 0.1
+      ).toFixed(1)}% - ${hearingDisabilityBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[2]}"></i><span>${(
+        hearingDisabilityBreaks[4] + 0.1
+      ).toFixed(1)}% - ${hearingDisabilityBreaks[5].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[3]}"></i><span>${(
+        hearingDisabilityBreaks[3] + 0.1
+      ).toFixed(1)}% - ${hearingDisabilityBreaks[4].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[4]}"></i><span>${(
+        hearingDisabilityBreaks[2] + 0.1
+      ).toFixed(1)}% - ${hearingDisabilityBreaks[3].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[5]}"></i><span>${(
+        hearingDisabilityBreaks[1] + 0.1
+      ).toFixed(1)}% - ${hearingDisabilityBreaks[2].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[6]}"></i><span>${(
+        hearingDisabilityBreaks[0] + 0.1
+      ).toFixed(1)}% - ${hearingDisabilityBreaks[1].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthStatusColors[7]
+          }"></i><span>0% - ${hearingDisabilityBreaks[0].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthStatusColors[8]
+          }"></i><span>No Data</span><br>
         `;
       break;
     case healthStatusLayerNames.VISION_DISABILITY:
       legendContent = `
           <h4>${healthStatusLayerNames.VISION_DISABILITY}</h4>
-          <i style="background: ${healthStatusColors[0]}"></i><span>> 34%</span><br>
-          <i style="background: ${healthStatusColors[1]}"></i><span>14.3% - 33.9%</span><br>
-          <i style="background: ${healthStatusColors[2]}"></i><span>10.5% - 14.2%</span><br>
-          <i style="background: ${healthStatusColors[3]}"></i><span>7.9% - 10.4%</span><br>
-          <i style="background: ${healthStatusColors[4]}"></i><span>5.8% - 7.8%</span><br>
-          <i style="background: ${healthStatusColors[5]}"></i><span>3.9% - 5.7%</span><br>
-          <i style="background: ${healthStatusColors[6]}"></i><span>1.5% - 3.8%</span><br>
-          <i style="background: ${healthStatusColors[7]}"></i><span>0% - 1.4%</span><br>
-          <i style="background: ${healthStatusColors[8]}"></i><span>No Data</span><br>
+          <i style="background: ${
+            healthStatusColors[0]
+          }"></i><span>> ${visionDisabilityBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[1]}"></i><span>${(
+        visionDisabilityBreaks[5] + 0.1
+      ).toFixed(1)}% - ${visionDisabilityBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[2]}"></i><span>${(
+        visionDisabilityBreaks[4] + 0.1
+      ).toFixed(1)}% - ${visionDisabilityBreaks[5].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[3]}"></i><span>${(
+        visionDisabilityBreaks[3] + 0.1
+      ).toFixed(1)}% - ${visionDisabilityBreaks[4].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[4]}"></i><span>${(
+        visionDisabilityBreaks[2] + 0.1
+      ).toFixed(1)}% - ${visionDisabilityBreaks[3].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[5]}"></i><span>${(
+        visionDisabilityBreaks[1] + 0.1
+      ).toFixed(1)}% - ${visionDisabilityBreaks[2].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[6]}"></i><span>${(
+        visionDisabilityBreaks[0] + 0.1
+      ).toFixed(1)}% - ${visionDisabilityBreaks[1].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthStatusColors[7]
+          }"></i><span>0% - ${visionDisabilityBreaks[0].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthStatusColors[8]
+          }"></i><span>No Data</span><br>
         `;
       break;
     case healthStatusLayerNames.COGNITIVE_DISABILITY:
       legendContent = `
           <h4>${healthStatusLayerNames.COGNITIVE_DISABILITY}</h4>
-          <i style="background: ${healthStatusColors[0]}"></i><span>> 30.8%</span><br>
-          <i style="background: ${healthStatusColors[1]}"></i><span>21.6% - 30.7%</span><br>
-          <i style="background: ${healthStatusColors[2]}"></i><span>17.6% - 21.5%</span><br>
-          <i style="background: ${healthStatusColors[3]}"></i><span>14.3% - 17.5%</span><br>
-          <i style="background: ${healthStatusColors[4]}"></i><span>11.7% - 14.2%</span><br>
-          <i style="background: ${healthStatusColors[5]}"></i><span>9.1% - 11.6%</span><br>
-          <i style="background: ${healthStatusColors[6]}"></i><span>5.6% - 9%</span><br>
-          <i style="background: ${healthStatusColors[7]}"></i><span>0% - 5.5%</span><br>
-          <i style="background: ${healthStatusColors[8]}"></i><span>No Data</span><br>
+          <i style="background: ${
+            healthStatusColors[0]
+          }"></i><span>> ${cognitiveDisabilityBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[1]}"></i><span>${(
+        cognitiveDisabilityBreaks[5] + 0.1
+      ).toFixed(1)}% - ${cognitiveDisabilityBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[2]}"></i><span>${(
+        cognitiveDisabilityBreaks[4] + 0.1
+      ).toFixed(1)}% - ${cognitiveDisabilityBreaks[5].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[3]}"></i><span>${(
+        cognitiveDisabilityBreaks[3] + 0.1
+      ).toFixed(1)}% - ${cognitiveDisabilityBreaks[4].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[4]}"></i><span>${(
+        cognitiveDisabilityBreaks[2] + 0.1
+      ).toFixed(1)}% - ${cognitiveDisabilityBreaks[3].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[5]}"></i><span>${(
+        cognitiveDisabilityBreaks[1] + 0.1
+      ).toFixed(1)}% - ${cognitiveDisabilityBreaks[2].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[6]}"></i><span>${(
+        cognitiveDisabilityBreaks[0] + 0.1
+      ).toFixed(1)}% - ${cognitiveDisabilityBreaks[1].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthStatusColors[7]
+          }"></i><span>0% - ${cognitiveDisabilityBreaks[0].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${
+            healthStatusColors[8]
+          }"></i><span>No Data</span><br>
         `;
       break;
     case healthStatusLayerNames.MOBILITY_DISABILITY:
       legendContent = `
           <h4>${healthStatusLayerNames.MOBILITY_DISABILITY}</h4>
-          <i style="background: ${healthStatusColors[0]}"></i><span>> 57%</span><br>
-          <i style="background: ${healthStatusColors[1]}"></i><span>24.1% - 56.9%</span><br>
-          <i style="background: ${healthStatusColors[2]}"></i><span>18.7% - 24%</span><br>
-          <i style="background: ${healthStatusColors[3]}"></i><span>15.2% - 18.6%</span><br>
-          <i style="background: ${healthStatusColors[4]}"></i><span>12.2% - 15.1%</span><br>
-          <i style="background: ${healthStatusColors[5]}"></i><span>8.6% - 12.1%</span><br>
-          <i style="background: ${healthStatusColors[6]}"></i><span>2.6% - 8.5%</span><br>
-          <i style="background: ${healthStatusColors[7]}"></i><span>0% - 2.5%</span><br>
-          <i style="background: ${healthStatusColors[8]}"></i><span>No Data</span><br>
+          <i style="background: ${
+            healthStatusColors[0]
+          }"></i><span>> ${mobilityDisabilityBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[1]}"></i><span>${(
+        mobilityDisabilityBreaks[5] + 0.1
+      ).toFixed(1)}% - ${mobilityDisabilityBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[2]}"></i><span>${(
+        mobilityDisabilityBreaks[4] + 0.1
+      ).toFixed(1)}% - ${mobilityDisabilityBreaks[5].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[3]}"></i><span>${(
+        mobilityDisabilityBreaks[3] + 0.1
+      ).toFixed(1)}% - ${mobilityDisabilityBreaks[4].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[4]}"></i><span>${(
+        mobilityDisabilityBreaks[2] + 0.1
+      ).toFixed(1)}% - ${mobilityDisabilityBreaks[3].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[5]}"></i><span>${(
+        mobilityDisabilityBreaks[1] + 0.1
+      ).toFixed(1)}% - ${mobilityDisabilityBreaks[2].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[6]}"></i><span>${(
+        mobilityDisabilityBreaks[0] + 0.1
+      ).toFixed(1)}% - ${mobilityDisabilityBreaks[1].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthStatusColors[7]
+          }"></i><span>0% - ${mobilityDisabilityBreaks[0].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${
+            healthStatusColors[8]
+          }"></i><span>No Data</span><br>
         `;
       break;
     case healthStatusLayerNames.SELF_CARE_DISABILITY:
       legendContent = `
           <h4>${healthStatusLayerNames.SELF_CARE_DISABILITY}</h4>
-          <i style="background: ${healthStatusColors[0]}"></i><span>> 28.3%</span><br>
-          <i style="background: ${healthStatusColors[1]}"></i><span>10% - 28.2%</span><br>
-          <i style="background: ${healthStatusColors[2]}"></i><span>7.2% - 9.9%</span><br>
-          <i style="background: ${healthStatusColors[3]}"></i><span>5.3% - 7.1%</span><br>
-          <i style="background: ${healthStatusColors[4]}"></i><span>3.9% - 5.2%</span><br>
-          <i style="background: ${healthStatusColors[5]}"></i><span>2.6% - 3.8%</span><br>
-          <i style="background: ${healthStatusColors[6]}"></i><span>0.9% - 2.5%</span><br>
-          <i style="background: ${healthStatusColors[7]}"></i><span>0% - 0.8%</span><br>
-          <i style="background: ${healthStatusColors[8]}"></i><span>No Data</span><br>
+          <i style="background: ${
+            healthStatusColors[0]
+          }"></i><span>> ${selfCareDisabilityBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[1]}"></i><span>${(
+        selfCareDisabilityBreaks[5] + 0.1
+      ).toFixed(1)}% - ${selfCareDisabilityBreaks[6].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[2]}"></i><span>${(
+        selfCareDisabilityBreaks[4] + 0.1
+      ).toFixed(1)}% - ${selfCareDisabilityBreaks[5].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[3]}"></i><span>${(
+        selfCareDisabilityBreaks[3] + 0.1
+      ).toFixed(1)}% - ${selfCareDisabilityBreaks[4].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[4]}"></i><span>${(
+        selfCareDisabilityBreaks[2] + 0.1
+      ).toFixed(1)}% - ${selfCareDisabilityBreaks[3].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[5]}"></i><span>${(
+        selfCareDisabilityBreaks[1] + 0.1
+      ).toFixed(1)}% - ${selfCareDisabilityBreaks[2].toFixed(1)}%</span><br>
+          <i style="background: ${healthStatusColors[6]}"></i><span>${(
+        selfCareDisabilityBreaks[0] + 0.1
+      ).toFixed(1)}% - ${selfCareDisabilityBreaks[1].toFixed(1)}%</span><br>
+          <i style="background: ${
+            healthStatusColors[7]
+          }"></i><span>0% - ${selfCareDisabilityBreaks[0].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${
+            healthStatusColors[8]
+          }"></i><span>No Data</span><br>
         `;
       break;
     case healthStatusLayerNames.INDEPENDENT_LIVING_DISABILITY:
       legendContent = `
           <h4>${healthStatusLayerNames.INDEPENDENT_LIVING_DISABILITY}</h4>
-          <i style="background: ${healthStatusColors[0]}"></i><span>> 31.9%</span><br>
-          <i style="background: ${healthStatusColors[1]}"></i><span>16.7% - 31.8%</span><br>
-          <i style="background: ${healthStatusColors[2]}"></i><span>12.7% - 16.6%</span><br>
-          <i style="background: ${healthStatusColors[3]}"></i><span>9.9% - 12.6%</span><br>
-          <i style="background: ${healthStatusColors[4]}"></i><span>7.7% - 9.8%</span><br>
-          <i style="background: ${healthStatusColors[5]}"></i><span>5.6% - 7.6%</span><br>
-          <i style="background: ${healthStatusColors[6]}"></i><span>2.9% - 5.5%</span><br>
-          <i style="background: ${healthStatusColors[7]}"></i><span>0% - 2.8%</span><br>
-          <i style="background: ${healthStatusColors[8]}"></i><span>No Data</span><br>
+          <i style="background: ${
+            healthStatusColors[0]
+          }"></i><span>> ${independentLivingDisabilityBreaks[6].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${healthStatusColors[1]}"></i><span>${(
+        independentLivingDisabilityBreaks[5] + 0.1
+      ).toFixed(1)}% - ${independentLivingDisabilityBreaks[6].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${healthStatusColors[2]}"></i><span>${(
+        independentLivingDisabilityBreaks[4] + 0.1
+      ).toFixed(1)}% - ${independentLivingDisabilityBreaks[5].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${healthStatusColors[3]}"></i><span>${(
+        independentLivingDisabilityBreaks[3] + 0.1
+      ).toFixed(1)}% - ${independentLivingDisabilityBreaks[4].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${healthStatusColors[4]}"></i><span>${(
+        independentLivingDisabilityBreaks[2] + 0.1
+      ).toFixed(1)}% - ${independentLivingDisabilityBreaks[3].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${healthStatusColors[5]}"></i><span>${(
+        independentLivingDisabilityBreaks[1] + 0.1
+      ).toFixed(1)}% - ${independentLivingDisabilityBreaks[2].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${healthStatusColors[6]}"></i><span>${(
+        independentLivingDisabilityBreaks[0] + 0.1
+      ).toFixed(1)}% - ${independentLivingDisabilityBreaks[1].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${
+            healthStatusColors[7]
+          }"></i><span>0% - ${independentLivingDisabilityBreaks[0].toFixed(
+        1
+      )}%</span><br>
+          <i style="background: ${
+            healthStatusColors[8]
+          }"></i><span>No Data</span><br>
         `;
       break;
   }
@@ -3250,255 +4025,255 @@ function getColorBasedOnLanguageLegend(language) {
 }
 
 function getColorForArabic(value) {
-  return value > 965
+  return value > arabicBreaks[6]
     ? languageColors[0]
-    : value > 508
+    : value > arabicBreaks[5]
     ? languageColors[1]
-    : value > 296
+    : value > arabicBreaks[4]
     ? "#238b45"
-    : value > 157
+    : value > arabicBreaks[3]
     ? "#41ae76"
-    : value > 73
+    : value > arabicBreaks[2]
     ? "#66c2a4"
-    : value > 23
+    : value > arabicBreaks[1]
     ? "#99d8c9"
-    : value >= 0
+    : value >= arabicBreaks[0]
     ? "#ccece6"
     : "#606060";
 }
 
 function getColorForChinese(value) {
-  return value > 6482
+  return value > chineseBreaks[6]
     ? "#00441b"
-    : value > 2498
+    : value > chineseBreaks[5]
     ? "#006d2c"
-    : value > 1562
+    : value > chineseBreaks[4]
     ? "#238b45"
-    : value > 914
+    : value > chineseBreaks[3]
     ? "#41ae76"
-    : value > 450
+    : value > chineseBreaks[2]
     ? "#66c2a4"
-    : value > 145
+    : value > chineseBreaks[1]
     ? "#99d8c9"
-    : value >= 0
+    : value >= chineseBreaks[0]
     ? "#ccece6"
     : "#606060";
 }
 
 function getColorForFrench(value) {
-  return value > 1467
+  return value > frenchBreaks[6]
     ? "#00441b"
-    : value > 663
+    : value > frenchBreaks[5]
     ? "#006d2c"
-    : value > 434
+    : value > frenchBreaks[4]
     ? "#238b45"
-    : value > 266
+    : value > frenchBreaks[3]
     ? "#41ae76"
-    : value > 136
+    : value > frenchBreaks[2]
     ? "#66c2a4"
-    : value > 47
+    : value > frenchBreaks[1]
     ? "#99d8c9"
-    : value >= 0
+    : value >= frenchBreaks[0]
     ? "#ccece6"
     : "#606060";
 }
 
 function getColorForGerman(value) {
-  return value > 6170
+  return value > germanBreaks[6]
     ? "#00441b"
-    : value > 3445
+    : value > germanBreaks[5]
     ? "#006d2c"
-    : value > 2318
+    : value > germanBreaks[4]
     ? "#238b45"
-    : value > 1486
+    : value > germanBreaks[3]
     ? "#41ae76"
-    : value > 625
+    : value > germanBreaks[2]
     ? "#66c2a4"
-    : value > 124
+    : value > germanBreaks[1]
     ? "#99d8c9"
-    : value >= 0
+    : value >= germanBreaks[0]
     ? "#ccece6"
     : "#606060";
 }
 
 function getColorForKorean(value) {
-  return value > 1307
+  return value > koreanBreaks[6]
     ? "#00441b"
-    : value > 747
+    : value > koreanBreaks[5]
     ? "#006d2c"
-    : value > 476
+    : value > koreanBreaks[4]
     ? "#238b45"
-    : value > 246
+    : value > koreanBreaks[3]
     ? "#41ae76"
-    : value > 114
+    : value > koreanBreaks[2]
     ? "#66c2a4"
-    : value > 32
+    : value > koreanBreaks[1]
     ? "#99d8c9"
-    : value >= 0
+    : value >= koreanBreaks[0]
     ? "#ccece6"
     : "#606060";
 }
 
 function getColorForOther(value) {
-  return value > 1514
+  return value > otherBreaks[6]
     ? "#00441b"
-    : value > 824
+    : value > otherBreaks[5]
     ? "#006d2c"
-    : value > 457
+    : value > otherBreaks[4]
     ? "#238b45"
-    : value > 264
+    : value > otherBreaks[3]
     ? "#41ae76"
-    : value > 129
+    : value > otherBreaks[2]
     ? "#66c2a4"
-    : value > 43
+    : value > otherBreaks[1]
     ? "#99d8c9"
-    : value >= 0
+    : value >= otherBreaks[0]
     ? "#ccece6"
     : "#606060";
 }
 
 function getColorForOtherAsia(value) {
-  return value > 785
+  return value > otherAsiaBreaks[6]
     ? "#00441b"
-    : value > 427
+    : value > otherAsiaBreaks[5]
     ? "#006d2c"
-    : value > 283
+    : value > otherAsiaBreaks[4]
     ? "#238b45"
-    : value > 166
+    : value > otherAsiaBreaks[3]
     ? "#41ae76"
-    : value > 84
+    : value > otherAsiaBreaks[2]
     ? "#66c2a4"
-    : value > 26
+    : value > otherAsiaBreaks[1]
     ? "#99d8c9"
-    : value >= 0
+    : value >= otherAsiaBreaks[0]
     ? "#ccece6"
     : "#606060";
 }
 
 function getColorForOtherIndo(value) {
-  return value > 2653
+  return value > otherIndoBreaks[6]
     ? "#00441b"
-    : value > 1357
+    : value > otherIndoBreaks[5]
     ? "#006d2c"
-    : value > 777
+    : value > otherIndoBreaks[4]
     ? "#238b45"
-    : value > 449
+    : value > otherIndoBreaks[3]
     ? "#41ae76"
-    : value > 238
+    : value > otherIndoBreaks[2]
     ? "#66c2a4"
-    : value > 87
+    : value > otherIndoBreaks[1]
     ? "#99d8c9"
-    : value >= 0
+    : value >= otherIndoBreaks[0]
     ? "#ccece6"
     : "#606060";
 }
 
 function getColorForRussian(value) {
-  return value > 3818
+  return value > russianBreaks[6]
     ? "#00441b"
-    : value > 2369
+    : value > russianBreaks[5]
     ? "#006d2c"
-    : value > 1409
+    : value > russianBreaks[4]
     ? "#238b45"
-    : value > 818
+    : value > russianBreaks[3]
     ? "#41ae76"
-    : value > 416
+    : value > russianBreaks[2]
     ? "#66c2a4"
-    : value > 128
+    : value > russianBreaks[1]
     ? "#99d8c9"
-    : value >= 0
+    : value >= russianBreaks[0]
     ? "#ccece6"
     : "#606060";
 }
 
 function getColorForSpanish(value) {
-  return value > 9883
+  return value > spanishBreaks[6]
     ? "#00441b"
-    : value > 5570
+    : value > spanishBreaks[5]
     ? "#006d2c"
-    : value > 3588
+    : value > spanishBreaks[4]
     ? "#238b45"
-    : value > 2273
+    : value > spanishBreaks[3]
     ? "#41ae76"
-    : value > 1269
+    : value > spanishBreaks[2]
     ? "#66c2a4"
-    : value > 519
+    : value > spanishBreaks[1]
     ? "#99d8c9"
-    : value >= 0
+    : value >= spanishBreaks[0]
     ? "#ccece6"
     : "#606060";
 }
 
 function getColorForTagalog(value) {
-  return value > 962
+  return value > tagalogBreaks[6]
     ? "#00441b"
-    : value > 524
+    : value > tagalogBreaks[5]
     ? "#006d2c"
-    : value > 268
+    : value > tagalogBreaks[4]
     ? "#238b45"
-    : value > 132
+    : value > tagalogBreaks[3]
     ? "#41ae76"
-    : value > 62
+    : value > tagalogBreaks[2]
     ? "#66c2a4"
-    : value > 19
+    : value > tagalogBreaks[1]
     ? "#99d8c9"
-    : value >= 0
+    : value >= tagalogBreaks[0]
     ? "#ccece6"
     : "#606060";
 }
 
 function getColorForVietnamese(value) {
-  return value > 256
+  return value > vietnameseBreaks[6]
     ? "#00441b"
-    : value > 131
+    : value > vietnameseBreaks[5]
     ? "#006d2c"
-    : value > 74
+    : value > vietnameseBreaks[4]
     ? "#238b45"
-    : value > 41
+    : value > vietnameseBreaks[3]
     ? "#41ae76"
-    : value > 20
+    : value > vietnameseBreaks[2]
     ? "#66c2a4"
-    : value > 6
+    : value > vietnameseBreaks[1]
     ? "#99d8c9"
-    : value >= 0
+    : value >= vietnameseBreaks[0]
     ? "#ccece6"
     : "#606060";
 }
 
 //=========================================================== DEMOGRAPHIC COLOR FUNCTIONS =================================================================
 function getColorScaleForDemographics(population) {
-  return population > 15945
+  return population > totalPopBreaks[6]
     ? "#00441b"
-    : population > 8460
+    : population > totalPopBreaks[5]
     ? "#006d2c"
-    : population > 6159
+    : population > totalPopBreaks[4]
     ? "#238b45"
-    : population > 4634
+    : population > totalPopBreaks[3]
     ? "#41ae76"
-    : population > 3380
+    : population > totalPopBreaks[2]
     ? "#66c2a4"
-    : population > 2181
+    : population > totalPopBreaks[1]
     ? "#99d8c9"
-    : population > 0
+    : population > totalPopBreaks[0]
     ? "#ccece6"
     : "#606060";
 }
 
 //=========================================================== HEALTH RISK COLOR FUNCTIONS =================================================================
 function getColorForUninsured(percent) {
-  return percent > 31.1
+  return percent > lackOfHealthInsuranceBreaks[6]
     ? healthRiskColors[0]
-    : percent > 21.3
+    : percent > lackOfHealthInsuranceBreaks[5]
     ? healthRiskColors[1]
-    : percent > 16.1
+    : percent > lackOfHealthInsuranceBreaks[4]
     ? healthRiskColors[2]
-    : percent > 12
+    : percent > lackOfHealthInsuranceBreaks[3]
     ? healthRiskColors[3]
-    : percent > 8.6
+    : percent > lackOfHealthInsuranceBreaks[2]
     ? healthRiskColors[4]
-    : percent > 5.6
+    : percent > lackOfHealthInsuranceBreaks[1]
     ? healthRiskColors[5]
-    : percent > 2
+    : percent > lackOfHealthInsuranceBreaks[0]
     ? healthRiskColors[6]
     : percent > 0
     ? healthRiskColors[7]
@@ -3506,19 +4281,19 @@ function getColorForUninsured(percent) {
 }
 
 function getColorForFrequentDrinkers(percent) {
-  return percent > 29.4
+  return percent > bingeDrinkingBreaks[6]
     ? healthRiskColors[0]
-    : percent > 23.1
+    : percent > bingeDrinkingBreaks[5]
     ? healthRiskColors[1]
-    : percent > 20.1
+    : percent > bingeDrinkingBreaks[4]
     ? healthRiskColors[2]
-    : percent > 17.3
+    : percent > bingeDrinkingBreaks[3]
     ? healthRiskColors[3]
-    : percent > 15
+    : percent > bingeDrinkingBreaks[2]
     ? healthRiskColors[4]
-    : percent > 12.8
+    : percent > bingeDrinkingBreaks[1]
     ? healthRiskColors[5]
-    : percent > 4.9
+    : percent > bingeDrinkingBreaks[0]
     ? healthRiskColors[6]
     : percent > 0
     ? healthRiskColors[7]
@@ -3526,19 +4301,19 @@ function getColorForFrequentDrinkers(percent) {
 }
 
 function getColorForCurrentSmokers(percent) {
-  return percent > 45.4
+  return percent > currentSmokingBreaks[6]
     ? healthRiskColors[0]
-    : percent > 23.1
+    : percent > currentSmokingBreaks[5]
     ? healthRiskColors[1]
-    : percent > 18.7
+    : percent > currentSmokingBreaks[4]
     ? healthRiskColors[2]
-    : percent > 15.4
+    : percent > currentSmokingBreaks[3]
     ? healthRiskColors[3]
-    : percent > 12.6
+    : percent > currentSmokingBreaks[2]
     ? healthRiskColors[4]
-    : percent > 9.5
+    : percent > currentSmokingBreaks[1]
     ? healthRiskColors[5]
-    : percent > 5.1
+    : percent > currentSmokingBreaks[0]
     ? healthRiskColors[6]
     : percent > 0
     ? healthRiskColors[7]
@@ -3546,19 +4321,19 @@ function getColorForCurrentSmokers(percent) {
 }
 
 function getColorForSedentaryLifestyle(percent) {
-  return percent > 63.9
+  return percent > physicalInactivityBreaks[6]
     ? healthRiskColors[0]
-    : percent > 40.5
+    : percent > physicalInactivityBreaks[5]
     ? healthRiskColors[1]
-    : percent > 34.2
+    : percent > physicalInactivityBreaks[4]
     ? healthRiskColors[2]
-    : percent > 28.9
+    : percent > physicalInactivityBreaks[3]
     ? healthRiskColors[3]
-    : percent > 23.7
+    : percent > physicalInactivityBreaks[2]
     ? healthRiskColors[4]
-    : percent > 17.4
+    : percent > physicalInactivityBreaks[1]
     ? healthRiskColors[5]
-    : percent > 9.4
+    : percent > physicalInactivityBreaks[0]
     ? healthRiskColors[6]
     : percent > 0
     ? healthRiskColors[7]
@@ -3566,19 +4341,19 @@ function getColorForSedentaryLifestyle(percent) {
 }
 
 function getColorForSleepLessThan7Hours(percent) {
-  return percent > 49.1
+  return percent > sleepLessThan7HoursBreaks[6]
     ? healthRiskColors[0]
-    : percent > 41.5
+    : percent > sleepLessThan7HoursBreaks[5]
     ? healthRiskColors[1]
-    : percent > 38.5
+    : percent > sleepLessThan7HoursBreaks[4]
     ? healthRiskColors[2]
-    : percent > 35.7
+    : percent > sleepLessThan7HoursBreaks[3]
     ? healthRiskColors[3]
-    : percent > 32.9
+    : percent > sleepLessThan7HoursBreaks[2]
     ? healthRiskColors[4]
-    : percent > 29.9
+    : percent > sleepLessThan7HoursBreaks[1]
     ? healthRiskColors[5]
-    : percent > 23.2
+    : percent > sleepLessThan7HoursBreaks[0]
     ? healthRiskColors[6]
     : percent > 0
     ? healthRiskColors[7]
@@ -3587,19 +4362,19 @@ function getColorForSleepLessThan7Hours(percent) {
 
 //=========================================================== HEALTH OUTCOMES COLOR FUNCTIONS =================================================================
 function getColorForCurrentAsthma(percent) {
-  return percent > 16.5
+  return percent > currentAsthmaBreaks[6]
     ? healthOutcomesColors[0]
-    : percent > 13.5
+    : percent > currentAsthmaBreaks[5]
     ? healthOutcomesColors[1]
-    : percent > 12.2
+    : percent > currentAsthmaBreaks[4]
     ? healthOutcomesColors[2]
-    : percent > 11
+    : percent > currentAsthmaBreaks[3]
     ? healthOutcomesColors[3]
-    : percent > 9.9
+    : percent > currentAsthmaBreaks[2]
     ? healthOutcomesColors[4]
-    : percent > 8.9
+    : percent > currentAsthmaBreaks[1]
     ? healthOutcomesColors[5]
-    : percent > 7.4
+    : percent > currentAsthmaBreaks[0]
     ? healthOutcomesColors[6]
     : percent > 0
     ? healthOutcomesColors[7]
@@ -3607,19 +4382,19 @@ function getColorForCurrentAsthma(percent) {
 }
 
 function getColorForHighBlood(percent) {
-  return percent > 73.3
+  return percent > highBloodPressureBreaks[6]
     ? healthOutcomesColors[0]
-    : percent > 37.6
+    : percent > highBloodPressureBreaks[5]
     ? healthOutcomesColors[1]
-    : percent > 32.7
+    : percent > highBloodPressureBreaks[4]
     ? healthOutcomesColors[2]
-    : percent > 28.5
+    : percent > highBloodPressureBreaks[3]
     ? healthOutcomesColors[3]
-    : percent > 24.4
+    : percent > highBloodPressureBreaks[2]
     ? healthOutcomesColors[4]
-    : percent > 19.3
+    : percent > highBloodPressureBreaks[1]
     ? healthOutcomesColors[5]
-    : percent > 9
+    : percent > highBloodPressureBreaks[0]
     ? healthOutcomesColors[6]
     : percent > 0
     ? healthOutcomesColors[7]
@@ -3627,19 +4402,19 @@ function getColorForHighBlood(percent) {
 }
 
 function getColorForCancerAdults(percent) {
-  return percent > 19.4
+  return percent > cancerExceptSkinBreaks[6]
     ? healthOutcomesColors[0]
-    : percent > 9.4
+    : percent > cancerExceptSkinBreaks[5]
     ? healthOutcomesColors[1]
-    : percent > 7.2
+    : percent > cancerExceptSkinBreaks[4]
     ? healthOutcomesColors[2]
-    : percent > 5.9
+    : percent > cancerExceptSkinBreaks[3]
     ? healthOutcomesColors[3]
-    : percent > 4.9
+    : percent > cancerExceptSkinBreaks[2]
     ? healthOutcomesColors[4]
-    : percent > 3.9
+    : percent > cancerExceptSkinBreaks[1]
     ? healthOutcomesColors[5]
-    : percent > 1.5
+    : percent > cancerExceptSkinBreaks[0]
     ? healthOutcomesColors[6]
     : percent > 0
     ? healthOutcomesColors[7]
@@ -3647,19 +4422,19 @@ function getColorForCancerAdults(percent) {
 }
 
 function getColorForHighCholesterol(percent) {
-  return percent > 97.3
+  return percent > highCholesterolBreaks[6]
     ? healthOutcomesColors[0]
-    : percent > 89.7
+    : percent > highCholesterolBreaks[5]
     ? healthOutcomesColors[1]
-    : percent > 87.2
+    : percent > highCholesterolBreaks[4]
     ? healthOutcomesColors[2]
-    : percent > 84.5
+    : percent > highCholesterolBreaks[3]
     ? healthOutcomesColors[3]
-    : percent > 81.4
+    : percent > highCholesterolBreaks[2]
     ? healthOutcomesColors[4]
-    : percent > 75.9
+    : percent > highCholesterolBreaks[1]
     ? healthOutcomesColors[5]
-    : percent > 62.5
+    : percent > highCholesterolBreaks[0]
     ? healthOutcomesColors[6]
     : percent > 0
     ? healthOutcomesColors[7]
@@ -3667,19 +4442,19 @@ function getColorForHighCholesterol(percent) {
 }
 
 function getColorForKidneyDisease(percent) {
-  return percent > 11.9
+  return percent > chronicKidneyDiseaseBreaks[6]
     ? healthOutcomesColors[0]
-    : percent > 5.1
+    : percent > chronicKidneyDiseaseBreaks[5]
     ? healthOutcomesColors[1]
-    : percent > 3.8
+    : percent > chronicKidneyDiseaseBreaks[4]
     ? healthOutcomesColors[2]
-    : percent > 3.2
+    : percent > chronicKidneyDiseaseBreaks[3]
     ? healthOutcomesColors[3]
-    : percent > 2.7
+    : percent > chronicKidneyDiseaseBreaks[2]
     ? healthOutcomesColors[4]
-    : percent > 2.1
+    : percent > chronicKidneyDiseaseBreaks[1]
     ? healthOutcomesColors[5]
-    : percent > 0.8
+    : percent > chronicKidneyDiseaseBreaks[0]
     ? healthOutcomesColors[6]
     : percent > 0
     ? healthOutcomesColors[7]
@@ -3687,19 +4462,19 @@ function getColorForKidneyDisease(percent) {
 }
 
 function getColorForPulmonaryDisease(percent) {
-  return percent > 49.4
+  return percent > arthritisBreaks[6]
     ? healthOutcomesColors[0]
-    : percent > 27.9
+    : percent > arthritisBreaks[5]
     ? healthOutcomesColors[1]
-    : percent > 22.8
+    : percent > arthritisBreaks[4]
     ? healthOutcomesColors[2]
-    : percent > 20
+    : percent > arthritisBreaks[3]
     ? healthOutcomesColors[3]
-    : percent > 17.3
+    : percent > arthritisBreaks[2]
     ? healthOutcomesColors[4]
-    : percent > 14
+    : percent > arthritisBreaks[1]
     ? healthOutcomesColors[5]
-    : percent > 6.1
+    : percent > arthritisBreaks[0]
     ? healthOutcomesColors[6]
     : percent > 0
     ? healthOutcomesColors[7]
@@ -3707,19 +4482,19 @@ function getColorForPulmonaryDisease(percent) {
 }
 
 function getColorForHeartDisease(percent) {
-  return percent > 34
+  return percent > coronaryHeartDiseaseBreaks[6]
     ? healthOutcomesColors[0]
-    : percent > 11.5
+    : percent > coronaryHeartDiseaseBreaks[5]
     ? healthOutcomesColors[1]
-    : percent > 7.5
+    : percent > coronaryHeartDiseaseBreaks[4]
     ? healthOutcomesColors[2]
-    : percent > 5.8
+    : percent > coronaryHeartDiseaseBreaks[3]
     ? healthOutcomesColors[3]
-    : percent > 4.7
+    : percent > coronaryHeartDiseaseBreaks[2]
     ? healthOutcomesColors[4]
-    : percent > 3.5
+    : percent > coronaryHeartDiseaseBreaks[1]
     ? healthOutcomesColors[5]
-    : percent > 1
+    : percent > coronaryHeartDiseaseBreaks[0]
     ? healthOutcomesColors[6]
     : percent > 0
     ? healthOutcomesColors[7]
@@ -3727,19 +4502,19 @@ function getColorForHeartDisease(percent) {
 }
 
 function getColorForDiabetes(percent) {
-  return percent > 46.1
+  return percent > diabetesBreaks[6]
     ? healthOutcomesColors[0]
-    : percent > 17.7
+    : percent > diabetesBreaks[5]
     ? healthOutcomesColors[1]
-    : percent > 14.4
+    : percent > diabetesBreaks[4]
     ? healthOutcomesColors[2]
-    : percent > 12.1
+    : percent > diabetesBreaks[3]
     ? healthOutcomesColors[3]
-    : percent > 9.8
+    : percent > diabetesBreaks[2]
     ? healthOutcomesColors[4]
-    : percent > 6.9
+    : percent > diabetesBreaks[1]
     ? healthOutcomesColors[5]
-    : percent > 2
+    : percent > diabetesBreaks[0]
     ? healthOutcomesColors[6]
     : percent > 0
     ? healthOutcomesColors[7]
@@ -3747,19 +4522,19 @@ function getColorForDiabetes(percent) {
 }
 
 function getColorForObesity(percent) {
-  return percent > 48.8
+  return percent > obesityBreaks[6]
     ? healthOutcomesColors[0]
-    : percent > 36.6
+    : percent > obesityBreaks[5]
     ? healthOutcomesColors[1]
-    : percent > 32.2
+    : percent > obesityBreaks[4]
     ? healthOutcomesColors[2]
-    : percent > 27.9
+    : percent > obesityBreaks[3]
     ? healthOutcomesColors[3]
-    : percent > 23.6
+    : percent > obesityBreaks[2]
     ? healthOutcomesColors[4]
-    : percent > 18.9
+    : percent > obesityBreaks[1]
     ? healthOutcomesColors[5]
-    : percent > 12.6
+    : percent > obesityBreaks[0]
     ? healthOutcomesColors[6]
     : percent > 0
     ? healthOutcomesColors[7]
@@ -3767,19 +4542,19 @@ function getColorForObesity(percent) {
 }
 
 function getColorForStroke(percent) {
-  return percent > 17.4
+  return percent > strokeBreaks[6]
     ? healthOutcomesColors[0]
-    : percent > 6.3
+    : percent > strokeBreaks[5]
     ? healthOutcomesColors[1]
-    : percent > 4.3
+    : percent > strokeBreaks[4]
     ? healthOutcomesColors[2]
-    : percent > 3.4
+    : percent > strokeBreaks[3]
     ? healthOutcomesColors[3]
-    : percent > 2.7
+    : percent > strokeBreaks[2]
     ? healthOutcomesColors[4]
-    : percent > 1.9
+    : percent > strokeBreaks[1]
     ? healthOutcomesColors[5]
-    : percent > 0.6
+    : percent > strokeBreaks[0]
     ? healthOutcomesColors[6]
     : percent > 0
     ? healthOutcomesColors[7]
@@ -3788,19 +4563,19 @@ function getColorForStroke(percent) {
 
 //=========================================================== SCREENING RATES COLOR FUNCTIONS =================================================================
 function getColorForAnnualCheckUp(percent) {
-  return percent > 91.3
+  return percent > annualCheckupBreaks[6]
     ? screeningRatesColors[0]
-    : percent > 81.5
+    : percent > annualCheckupBreaks[5]
     ? screeningRatesColors[1]
-    : percent > 78.7
+    : percent > annualCheckupBreaks[4]
     ? screeningRatesColors[2]
-    : percent > 76.5
+    : percent > annualCheckupBreaks[3]
     ? screeningRatesColors[3]
-    : percent > 74.4
+    : percent > annualCheckupBreaks[2]
     ? screeningRatesColors[4]
-    : percent > 71.7
+    : percent > annualCheckupBreaks[1]
     ? screeningRatesColors[5]
-    : percent > 66.1
+    : percent > annualCheckupBreaks[0]
     ? screeningRatesColors[6]
     : percent > 0
     ? screeningRatesColors[7]
@@ -3808,19 +4583,19 @@ function getColorForAnnualCheckUp(percent) {
 }
 
 function getColorForDentalVisit(percent) {
-  return percent > 82.9
+  return percent > dentalVisitBreaks[6]
     ? screeningRatesColors[0]
-    : percent > 72.1
+    : percent > dentalVisitBreaks[5]
     ? screeningRatesColors[1]
-    : percent > 64.8
+    : percent > dentalVisitBreaks[4]
     ? screeningRatesColors[2]
-    : percent > 58.5
+    : percent > dentalVisitBreaks[3]
     ? screeningRatesColors[3]
-    : percent > 52.2
+    : percent > dentalVisitBreaks[2]
     ? screeningRatesColors[4]
-    : percent > 45
+    : percent > dentalVisitBreaks[1]
     ? screeningRatesColors[5]
-    : percent > 23.3
+    : percent > dentalVisitBreaks[0]
     ? screeningRatesColors[6]
     : percent > 0
     ? screeningRatesColors[7]
@@ -3828,19 +4603,19 @@ function getColorForDentalVisit(percent) {
 }
 
 function getColorForCholesterolScreening(percent) {
-  return percent > 97.3
+  return percent > cholesterolScreeningBreaks[6]
     ? screeningRatesColors[0]
-    : percent > 89.7
+    : percent > cholesterolScreeningBreaks[5]
     ? screeningRatesColors[1]
-    : percent > 87.2
+    : percent > cholesterolScreeningBreaks[4]
     ? screeningRatesColors[2]
-    : percent > 84.5
+    : percent > cholesterolScreeningBreaks[3]
     ? screeningRatesColors[3]
-    : percent > 81.4
+    : percent > cholesterolScreeningBreaks[2]
     ? screeningRatesColors[4]
-    : percent > 75.9
+    : percent > cholesterolScreeningBreaks[1]
     ? screeningRatesColors[5]
-    : percent > 62.5
+    : percent > cholesterolScreeningBreaks[0]
     ? screeningRatesColors[6]
     : percent > 0
     ? screeningRatesColors[7]
@@ -3848,19 +4623,19 @@ function getColorForCholesterolScreening(percent) {
 }
 
 function getColorForMammographyScreening(percent) {
-  return percent > 86.3
+  return percent > mammographyUseBreaks[6]
     ? screeningRatesColors[0]
-    : percent > 83.1
+    : percent > mammographyUseBreaks[5]
     ? screeningRatesColors[1]
-    : percent > 81.1
+    : percent > mammographyUseBreaks[4]
     ? screeningRatesColors[2]
-    : percent > 79.4
+    : percent > mammographyUseBreaks[3]
     ? screeningRatesColors[3]
-    : percent > 77.8
+    : percent > mammographyUseBreaks[2]
     ? screeningRatesColors[4]
-    : percent > 75.2
+    : percent > mammographyUseBreaks[1]
     ? screeningRatesColors[5]
-    : percent > 69.5
+    : percent > mammographyUseBreaks[0]
     ? screeningRatesColors[6]
     : percent > 0
     ? screeningRatesColors[7]
@@ -3868,19 +4643,19 @@ function getColorForMammographyScreening(percent) {
 }
 
 function getColorForCervicalScreening(percent) {
-  return percent > 91.4
+  return percent > cervicalCancerScreeningBreaks[6]
     ? screeningRatesColors[0]
-    : percent > 86.2
+    : percent > cervicalCancerScreeningBreaks[5]
     ? screeningRatesColors[1]
-    : percent > 83
+    : percent > cervicalCancerScreeningBreaks[4]
     ? screeningRatesColors[2]
-    : percent > 79.7
+    : percent > cervicalCancerScreeningBreaks[3]
     ? screeningRatesColors[3]
-    : percent > 75.8
+    : percent > cervicalCancerScreeningBreaks[2]
     ? screeningRatesColors[4]
-    : percent > 69.4
+    : percent > cervicalCancerScreeningBreaks[1]
     ? screeningRatesColors[5]
-    : percent > 51.6
+    : percent > cervicalCancerScreeningBreaks[0]
     ? screeningRatesColors[6]
     : percent > 0
     ? screeningRatesColors[7]
@@ -3888,19 +4663,19 @@ function getColorForCervicalScreening(percent) {
 }
 
 function getColorForColorectalScreening(percent) {
-  return percent > 85.1
+  return percent > colorectalCancerScreeningBreaks[6]
     ? screeningRatesColors[0]
-    : percent > 79.4
+    : percent > colorectalCancerScreeningBreaks[5]
     ? screeningRatesColors[1]
-    : percent > 76
+    : percent > colorectalCancerScreeningBreaks[4]
     ? screeningRatesColors[2]
-    : percent > 72.7
+    : percent > colorectalCancerScreeningBreaks[3]
     ? screeningRatesColors[3]
-    : percent > 69.2
+    : percent > colorectalCancerScreeningBreaks[2]
     ? screeningRatesColors[4]
-    : percent > 64.8
+    : percent > colorectalCancerScreeningBreaks[1]
     ? screeningRatesColors[5]
-    : percent > 53.9
+    : percent > colorectalCancerScreeningBreaks[0]
     ? screeningRatesColors[6]
     : percent > 0
     ? screeningRatesColors[7]
@@ -3909,19 +4684,19 @@ function getColorForColorectalScreening(percent) {
 
 //=========================================================== HEALTH STATUS COLOR FUNCTIONS =================================================================
 function getColorForDepression(percent) {
-  return percent > 32.4
+  return percent > depressionBreaks[6]
     ? healthStatusColors[0]
-    : percent > 23.2
+    : percent > depressionBreaks[5]
     ? healthStatusColors[1]
-    : percent > 20.6
+    : percent > depressionBreaks[4]
     ? healthStatusColors[2]
-    : percent > 18.8
+    : percent > depressionBreaks[3]
     ? healthStatusColors[3]
-    : percent > 17.1
+    : percent > depressionBreaks[2]
     ? healthStatusColors[4]
-    : percent > 15.2
+    : percent > depressionBreaks[1]
     ? healthStatusColors[5]
-    : percent > 11.8
+    : percent > depressionBreaks[0]
     ? healthStatusColors[6]
     : percent > 0
     ? healthStatusColors[7]
@@ -3929,19 +4704,19 @@ function getColorForDepression(percent) {
 }
 
 function getColorForMentalHealthBad(percent) {
-  return percent > 31
+  return percent > frequentMentalHealthDistressBreaks[6]
     ? healthStatusColors[0]
-    : percent > 22.1
+    : percent > frequentMentalHealthDistressBreaks[5]
     ? healthStatusColors[1]
-    : percent > 18.8
+    : percent > frequentMentalHealthDistressBreaks[4]
     ? healthStatusColors[2]
-    : percent > 16.5
+    : percent > frequentMentalHealthDistressBreaks[3]
     ? healthStatusColors[3]
-    : percent > 14.6
+    : percent > frequentMentalHealthDistressBreaks[2]
     ? healthStatusColors[4]
-    : percent > 12.7
+    : percent > frequentMentalHealthDistressBreaks[1]
     ? healthStatusColors[5]
-    : percent > 7.2
+    : percent > frequentMentalHealthDistressBreaks[0]
     ? healthStatusColors[6]
     : percent > 0
     ? healthStatusColors[7]
@@ -3949,19 +4724,19 @@ function getColorForMentalHealthBad(percent) {
 }
 
 function getColorForPhysicalHealthBad(percent) {
-  return percent > 31.3
+  return percent > frequentPhysicalHealthDistressBreaks[6]
     ? healthStatusColors[0]
-    : percent > 17
+    : percent > frequentPhysicalHealthDistressBreaks[5]
     ? healthStatusColors[1]
-    : percent > 13.9
+    : percent > frequentPhysicalHealthDistressBreaks[4]
     ? healthStatusColors[2]
-    : percent > 11.6
+    : percent > frequentPhysicalHealthDistressBreaks[3]
     ? healthStatusColors[3]
-    : percent > 9.7
+    : percent > frequentPhysicalHealthDistressBreaks[2]
     ? healthStatusColors[4]
-    : percent > 7.5
+    : percent > frequentPhysicalHealthDistressBreaks[1]
     ? healthStatusColors[5]
-    : percent > 3.8
+    : percent > frequentPhysicalHealthDistressBreaks[0]
     ? healthStatusColors[6]
     : percent > 0
     ? healthStatusColors[7]
@@ -3969,19 +4744,19 @@ function getColorForPhysicalHealthBad(percent) {
 }
 
 function getColorForPoorSelfRatedHealth(percent) {
-  return percent > 57.1
+  return percent > fairOrPoorHealthBreaks[6]
     ? healthStatusColors[0]
-    : percent > 29.7
+    : percent > fairOrPoorHealthBreaks[5]
     ? healthStatusColors[1]
-    : percent > 23.1
+    : percent > fairOrPoorHealthBreaks[4]
     ? healthStatusColors[2]
-    : percent > 18.3
+    : percent > fairOrPoorHealthBreaks[3]
     ? healthStatusColors[3]
-    : percent > 14.3
+    : percent > fairOrPoorHealthBreaks[2]
     ? healthStatusColors[4]
-    : percent > 10.1
+    : percent > fairOrPoorHealthBreaks[1]
     ? healthStatusColors[5]
-    : percent > 4.3
+    : percent > fairOrPoorHealthBreaks[0]
     ? healthStatusColors[6]
     : percent > 0
     ? healthStatusColors[7]
@@ -3989,19 +4764,19 @@ function getColorForPoorSelfRatedHealth(percent) {
 }
 
 function getColorForDisability(percent) {
-  return percent > 70.5
+  return percent > anyDisabilityBreaks[6]
     ? healthStatusColors[0]
-    : percent > 40.8
+    : percent > anyDisabilityBreaks[5]
     ? healthStatusColors[1]
-    : percent > 33.9
+    : percent > anyDisabilityBreaks[4]
     ? healthStatusColors[2]
-    : percent > 28.8
+    : percent > anyDisabilityBreaks[3]
     ? healthStatusColors[3]
-    : percent > 24.5
+    : percent > anyDisabilityBreaks[2]
     ? healthStatusColors[4]
-    : percent > 19.5
+    : percent > anyDisabilityBreaks[1]
     ? healthStatusColors[5]
-    : percent > 11.3
+    : percent > anyDisabilityBreaks[0]
     ? healthStatusColors[6]
     : percent > 0
     ? healthStatusColors[7]
@@ -4009,19 +4784,19 @@ function getColorForDisability(percent) {
 }
 
 function getColorForHearingDisability(percent) {
-  return percent > 29.7
+  return percent > hearingDisabilityBreaks[6]
     ? healthStatusColors[0]
-    : percent > 11.6
+    : percent > hearingDisabilityBreaks[5]
     ? healthStatusColors[1]
-    : percent > 7.9
+    : percent > hearingDisabilityBreaks[4]
     ? healthStatusColors[2]
-    : percent > 6.2
+    : percent > hearingDisabilityBreaks[3]
     ? healthStatusColors[3]
-    : percent > 5.1
+    : percent > hearingDisabilityBreaks[2]
     ? healthStatusColors[4]
-    : percent > 4
+    : percent > hearingDisabilityBreaks[1]
     ? healthStatusColors[5]
-    : percent > 1.7
+    : percent > hearingDisabilityBreaks[0]
     ? healthStatusColors[6]
     : percent > 0
     ? healthStatusColors[7]
@@ -4029,19 +4804,19 @@ function getColorForHearingDisability(percent) {
 }
 
 function getColorForVisionDisability(percent) {
-  return percent > 33.9
+  return percent > visionDisabilityBreaks[6]
     ? healthStatusColors[0]
-    : percent > 14.2
+    : percent > visionDisabilityBreaks[5]
     ? healthStatusColors[1]
-    : percent > 10.4
+    : percent > visionDisabilityBreaks[4]
     ? healthStatusColors[2]
-    : percent > 7.8
+    : percent > visionDisabilityBreaks[3]
     ? healthStatusColors[3]
-    : percent > 5.7
+    : percent > visionDisabilityBreaks[2]
     ? healthStatusColors[4]
-    : percent > 3.8
+    : percent > visionDisabilityBreaks[1]
     ? healthStatusColors[5]
-    : percent > 1.4
+    : percent > visionDisabilityBreaks[0]
     ? healthStatusColors[6]
     : percent > 0
     ? healthStatusColors[7]
@@ -4049,19 +4824,19 @@ function getColorForVisionDisability(percent) {
 }
 
 function getColorForCognitiveDisability(percent) {
-  return percent > 30.7
+  return percent > cognitiveDisabilityBreaks[6]
     ? healthStatusColors[0]
-    : percent > 21.5
+    : percent > cognitiveDisabilityBreaks[5]
     ? healthStatusColors[1]
-    : percent > 17.5
+    : percent > cognitiveDisabilityBreaks[4]
     ? healthStatusColors[2]
-    : percent > 14.2
+    : percent > cognitiveDisabilityBreaks[3]
     ? healthStatusColors[3]
-    : percent > 11.6
+    : percent > cognitiveDisabilityBreaks[2]
     ? healthStatusColors[4]
-    : percent > 9
+    : percent > cognitiveDisabilityBreaks[1]
     ? healthStatusColors[5]
-    : percent > 5.5
+    : percent > cognitiveDisabilityBreaks[0]
     ? healthStatusColors[6]
     : percent > 0
     ? healthStatusColors[7]
@@ -4069,19 +4844,19 @@ function getColorForCognitiveDisability(percent) {
 }
 
 function getColorForMobilityDisability(percent) {
-  return percent > 56.9
+  return percent > mobilityDisabilityBreaks[6]
     ? healthStatusColors[0]
-    : percent > 24
+    : percent > mobilityDisabilityBreaks[5]
     ? healthStatusColors[1]
-    : percent > 18.6
+    : percent > mobilityDisabilityBreaks[4]
     ? healthStatusColors[2]
-    : percent > 15.1
+    : percent > mobilityDisabilityBreaks[3]
     ? healthStatusColors[3]
-    : percent > 12.1
+    : percent > mobilityDisabilityBreaks[2]
     ? healthStatusColors[4]
-    : percent > 8.5
+    : percent > mobilityDisabilityBreaks[1]
     ? healthStatusColors[5]
-    : percent > 2.5
+    : percent > mobilityDisabilityBreaks[0]
     ? healthStatusColors[6]
     : percent > 0
     ? healthStatusColors[7]
@@ -4089,19 +4864,19 @@ function getColorForMobilityDisability(percent) {
 }
 
 function getColorForSelfCareDisability(percent) {
-  return percent > 28.2
+  return percent > selfCareDisabilityBreaks[6]
     ? healthStatusColors[0]
-    : percent > 9.9
+    : percent > selfCareDisabilityBreaks[5]
     ? healthStatusColors[1]
-    : percent > 7.1
+    : percent > selfCareDisabilityBreaks[4]
     ? healthStatusColors[2]
-    : percent > 5.2
+    : percent > selfCareDisabilityBreaks[3]
     ? healthStatusColors[3]
-    : percent > 3.8
+    : percent > selfCareDisabilityBreaks[2]
     ? healthStatusColors[4]
-    : percent > 2.5
+    : percent > selfCareDisabilityBreaks[1]
     ? healthStatusColors[5]
-    : percent > 0.8
+    : percent > selfCareDisabilityBreaks[0]
     ? healthStatusColors[6]
     : percent > 0
     ? healthStatusColors[7]
@@ -4109,19 +4884,19 @@ function getColorForSelfCareDisability(percent) {
 }
 
 function getColorForIndependentLivingDisability(percent) {
-  return percent > 31.8
+  return percent > independentLivingDisabilityBreaks[6]
     ? healthStatusColors[0]
-    : percent > 16.6
+    : percent > independentLivingDisabilityBreaks[5]
     ? healthStatusColors[1]
-    : percent > 12.6
+    : percent > independentLivingDisabilityBreaks[4]
     ? healthStatusColors[2]
-    : percent > 9.8
+    : percent > independentLivingDisabilityBreaks[3]
     ? healthStatusColors[3]
-    : percent > 7.6
+    : percent > independentLivingDisabilityBreaks[2]
     ? healthStatusColors[4]
-    : percent > 5.5
+    : percent > independentLivingDisabilityBreaks[1]
     ? healthStatusColors[5]
-    : percent > 2.8
+    : percent > independentLivingDisabilityBreaks[0]
     ? healthStatusColors[6]
     : percent > 0
     ? healthStatusColors[7]
