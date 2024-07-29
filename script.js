@@ -1,7 +1,7 @@
 //=========================================================== MAP SETUP =================================================================
 // MAP BOUNDS - set bounds so the map has limits for visibility
 var southWest = L.latLng(40.477399, -74.25909), // Southwest bound (farther south and west)
-  northEast = L.latLng(40.917577, -73.700272), // Northeast bound (farther north and east)
+  northEast = L.latLng(42.917577, -73.700272), // Northeast bound (farther north and east)
   bounds = L.latLngBounds(southWest, northEast);
 
 // MAP OBJECT
@@ -11,6 +11,8 @@ var map = L.map("map", {
   minZoom: 10.75,
   zoomSnap: 0.25,
   zoomDelta: 0.25,
+  dragging: false,
+  scrollWheelZoom: false,
 }).setView([40.65, -73.97], 10.75);
 
 // BASEMAP

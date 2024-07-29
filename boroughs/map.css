@@ -95,6 +95,7 @@ header nav ul li a:hover {
   height: 100%;
   width: 100%;
   display: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 /* Show selected map */
