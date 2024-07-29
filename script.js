@@ -28,11 +28,44 @@ var baseLayer = L.tileLayer(
   }
 ).addTo(map);
 
+//=========================================================== CONFIGURATIONS =================================================================
+// Custom colors for boroughs
+function getColorForBorough(borough) {
+  switch (borough) {
+    case "Manhattan":
+      return "#33a02c";
+    case "Brooklyn":
+      return "#1f78b4";
+    case "Queens":
+      return "#ff7f00";
+    case "Bronx":
+      return "#e31a1c";
+    case "Staten Island":
+      return "#6a3d9a";
+  }
+}
+
+// Custom icon anchor for boroughs
+function getIconAnchor(borough) {
+  switch (borough) {
+    case "Manhattan":
+      return [30, 20];
+    case "Brooklyn":
+      return [50, 0];
+    case "Queens":
+      return [15, 90];
+    case "Bronx":
+      return [45, 20];
+    case "Staten Island":
+      return [10, 50];
+  }
+}
+
 //=========================================================== BOROUGH BOUNDARIES =================================================================
 // Combine border and summary data
 function combineData(geoData, summaries) {
   geoData.features.forEach((feature) => {
-    let match = summaries.find(
+    var match = summaries.find(
       (summary) => summary.County === feature.properties.BoroName
     );
     if (match) {
@@ -45,7 +78,24 @@ function combineData(geoData, summaries) {
 var formatter = new Intl.NumberFormat("en-US");
 
 var boundaries = L.geoJson(combineData(boroughsGeojson, countySummaries), {
+  style: function (feature) {
+    return {
+      color: getColorForBorough(feature.properties.BoroName),
+      weight: 2,
+      opacity: 1,
+      fillOpacity: 0.7,
+    };
+  },
   onEachFeature: function (feature, layer) {
+    var center = layer.getBounds().getCenter();
+    var label = L.marker(center, {
+      icon: L.divIcon({
+        className: "borough-label",
+        html: feature.properties.BoroName,
+        iconAnchor: getIconAnchor(feature.properties.BoroName),
+      }),
+    }).addTo(map);
+
     // Hover effect
     layer.on("mouseover", function (e) {
       var layer = e.target;
@@ -105,9 +155,9 @@ info.update = function (props) {
       props["Under 5 pct"] * 100
     ).toFixed(2)}%)<br />
       <b>Median Age:</b> ${props["Median age (years)"]}<br />
-      <b>Under 18 Years:</b> ${formatter.format(props["Under 18 years"])} (${(
-      props["Under 18 pct"] * 100
-    ).toFixed(2)}%)<br />
+      <b>Under 18 Years:</b> ${formatter.format(
+        props["Under 18 years"]
+      )} (${props["Under 18 pct"].toFixed(2)}%)<br />
       <b>18 Years and Over:</b> ${formatter.format(
         props["18 years and over"]
       )} (${(props["18 and up pct"] * 100).toFixed(2)}%)<br />
