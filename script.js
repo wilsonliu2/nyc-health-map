@@ -11,8 +11,6 @@ var map = L.map("map", {
   minZoom: 10.75,
   zoomSnap: 0.25,
   zoomDelta: 0.25,
-  dragging: false,
-  scrollWheelZoom: false,
 }).setView([40.65, -73.97], 10.75);
 
 // BASEMAP

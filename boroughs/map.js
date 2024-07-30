@@ -3962,6 +3962,7 @@ Object.keys(maps).forEach((mapId) => {
     style: {
       color: "yellow",
       weight: 5,
+      fillOpacity: 0,
     },
     interactive: false,
   }).addTo(maps[mapId]);
