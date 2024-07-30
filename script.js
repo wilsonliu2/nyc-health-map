@@ -124,8 +124,14 @@ var boundaries = L.geoJson(combineData(boroughsGeojson, countySummaries), {
 
       if (boroughName == "Staten Island") {
         window.location.href = "boroughs/staten-island.html";
-      } else {
-        window.location.href = "boroughs/" + boroughName + ".html";
+      } else if (boroughName == "Manhattan") {
+        window.location.href = "boroughs/manhattan.html";
+      } else if (boroughName == "Brooklyn") {
+        window.location.href = "boroughs/brooklyn.html";
+      } else if (boroughName == "Queens") {
+        window.location.href = "boroughs/queens.html";
+      } else if (boroughName == "Bronx") {
+        window.location.href = "boroughs/bronx.html";
       }
     });
   },
