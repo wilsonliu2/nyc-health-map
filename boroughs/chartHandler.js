@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     (summary) => summary.Borough === BORO_NAME
   );
 
+  // Function to create a chart
   function createChart(container, title, series) {
     Highcharts.chart(container, {
       chart: {
@@ -52,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Function to show the selected chart and hide others
   function showChart(chartId) {
     document.getElementById("chart-behavior").style.display = "none";
     document.getElementById("chart-health").style.display = "none";
@@ -62,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById(chartId).style.display = "block";
   }
 
+  // Event listener for the Unhealthy Behaviors button
   document.getElementById("hc-risk-btn").addEventListener("click", function () {
     showChart("chart-behavior");
     createChart(
@@ -112,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   });
 
+  // Event listener for the Health Outcomes button
   document
     .getElementById("hc-outcomes-btn")
     .addEventListener("click", function () {
@@ -156,6 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     });
 
+  // Event listener for the Health Screenings button
   document
     .getElementById("hc-screens-btn")
     .addEventListener("click", function () {
@@ -200,6 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     });
 
+  // Event listener for the Health Status button
   document
     .getElementById("hc-status-btn")
     .addEventListener("click", function () {
@@ -236,6 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     });
 
+  // Event listener for the Disability button
   document
     .getElementById("hc-disability-btn")
     .addEventListener("click", function () {
@@ -292,7 +299,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ]);
     });
 
-  // Default chart
+  // Default chart to display
   showChart("chart-behavior");
   createChart(
     "chart-behavior",

@@ -11,7 +11,7 @@ var map = L.map("map", {
   minZoom: 10.75,
   zoomSnap: 0.25,
   zoomDelta: 0.25,
-}).setView([40.65, -73.97], 10.75);
+}).setView([40.65, -73.97], 10.75); // Initial map view coordinates and zoom level
 
 // BASEMAP
 var baseLayer = L.tileLayer(
@@ -29,7 +29,7 @@ var baseLayer = L.tileLayer(
 ).addTo(map);
 
 //=========================================================== CONFIGURATIONS =================================================================
-// Custom colors for boroughs
+// Returns color of a borough
 function getColorForBorough(borough) {
   switch (borough) {
     case "Manhattan":
@@ -45,7 +45,8 @@ function getColorForBorough(borough) {
   }
 }
 
-// Custom icon anchor for boroughs
+// Returns icon anchor coordinates of a borough
+// Icon anchors determine where the label is positioned on a map
 function getIconAnchor(borough) {
   switch (borough) {
     case "Manhattan":
@@ -62,7 +63,7 @@ function getIconAnchor(borough) {
 }
 
 //=========================================================== BOROUGH BOUNDARIES =================================================================
-// Combine border and summary data
+// This function is use to combine nyc-borough-boundaries.js and county-summaries.js
 function combineData(geoData, summaries) {
   geoData.features.forEach((feature) => {
     var match = summaries.find(
@@ -75,9 +76,10 @@ function combineData(geoData, summaries) {
   return geoData;
 }
 
-var formatter = new Intl.NumberFormat("en-US");
+var formatter = new Intl.NumberFormat("en-US"); // Format number to US style
 
 var boundaries = L.geoJson(combineData(boroughsGeojson, countySummaries), {
+  // Borough style
   style: function (feature) {
     return {
       color: getColorForBorough(feature.properties.BoroName),
@@ -87,7 +89,9 @@ var boundaries = L.geoJson(combineData(boroughsGeojson, countySummaries), {
     };
   },
   onEachFeature: function (feature, layer) {
-    var center = layer.getBounds().getCenter();
+    var center = layer.getBounds().getCenter(); // Try to get center of the borough
+
+    // Create borough labels
     var label = L.marker(center, {
       icon: L.divIcon({
         className: "borough-label",
@@ -96,7 +100,7 @@ var boundaries = L.geoJson(combineData(boroughsGeojson, countySummaries), {
       }),
     }).addTo(map);
 
-    // Hover effect
+    // Hover style: highlight borough on hover
     layer.on("mouseover", function (e) {
       var layer = e.target;
       layer.setStyle({
@@ -105,18 +109,19 @@ var boundaries = L.geoJson(combineData(boroughsGeojson, countySummaries), {
         dashArray: "",
         fillOpacity: 0.7,
       });
-      // Update info with hovered borough
+
+      // Update info (county data) with hovered borough
       info.update(layer.feature.properties);
     });
 
     // Remove hover effect
     layer.on("mouseout", function (e) {
-      // Reset styles and info
+      // Reset styles and info (county data)
       boundaries.resetStyle(e.target);
       info.update();
     });
 
-    // Navigate to borough on click
+    // Navigate to different borough dashboard on click
     layer.on("click", function (e) {
       var boroughName = feature.properties.BoroName;
 
@@ -135,7 +140,7 @@ var boundaries = L.geoJson(combineData(boroughsGeojson, countySummaries), {
   },
 }).addTo(map);
 
-// Info control
+//=========================================================== COUNTY DATA DISPLAY =================================================================
 var info = L.control();
 
 info.onAdd = function (map) {
@@ -144,6 +149,7 @@ info.onAdd = function (map) {
   return this._div;
 };
 
+// Update county level data based on the hovered borough
 info.update = function (props) {
   if (props) {
     this._div.innerHTML = `

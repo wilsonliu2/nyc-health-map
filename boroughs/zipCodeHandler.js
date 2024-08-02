@@ -17,7 +17,7 @@ function populateZipCodeDropdown() {
 function updateContentContainer(selectedZipCode) {
   const zipCodeContentContainer = document.getElementById("zip-code-content");
 
-  // Default
+  // Default content when no zip code is selected
   zipCodeData.forEach((zipCode) => {
     if (selectedZipCode === "Select a Zip Code") {
       zipCodeContentContainer.innerHTML = `
@@ -31,7 +31,8 @@ function updateContentContainer(selectedZipCode) {
       `;
       return;
     }
-    // Selected zip
+
+    // Content for the selected zip code
     if (zipCode["Zip Code"] == selectedZipCode) {
       zipCodeContentContainer.innerHTML = `
       <h4 style="text-align: center; font-size: 1.5rem;"><strong>${zipCode["Zip Code"]}</strong></h4> 
@@ -88,6 +89,7 @@ function updateContentContainer(selectedZipCode) {
       let currentChartIndex = 0;
       const chartTypes = ["gender", "age", "ethnicity", "race"];
 
+      // Function to show chart based on current index
       function showChart(index) {
         const chartType = chartTypes[index];
         document.getElementById("chart-title").textContent =
@@ -101,12 +103,14 @@ function updateContentContainer(selectedZipCode) {
 
       showChart(currentChartIndex);
 
+      // Event listener for previous chart button
       document.getElementById("prev-chart").addEventListener("click", () => {
         currentChartIndex =
           (currentChartIndex - 1 + chartTypes.length) % chartTypes.length;
         showChart(currentChartIndex);
       });
 
+      // Event listener for next chart button
       document.getElementById("next-chart").addEventListener("click", () => {
         currentChartIndex = (currentChartIndex + 1) % chartTypes.length;
         showChart(currentChartIndex);
@@ -131,6 +135,7 @@ document
     highlightZipCodeBoundary(selectedZip);
   });
 
+// Function to highlight the zip code boundary on the map
 // Fire custom highlightZipCode event with the selected zip code
 function highlightZipCodeBoundary(selectedZipCode) {
   const event = new CustomEvent("highlightZipCode", {
@@ -139,6 +144,7 @@ function highlightZipCodeBoundary(selectedZipCode) {
   document.dispatchEvent(event);
 }
 
+// Function to update pie chart for the selected zip code
 function updatePieChartZip(id, type, properties) {
   var pieData = [];
 
@@ -164,6 +170,7 @@ function updatePieChartZip(id, type, properties) {
   createPieChartForDemographic(`#${id}`, pieData, {});
 }
 
+// Function to update bar plot for race data of the selected zip code
 function updateBarPlotForRaceZip(id, properties) {
   var barData = [
     { label: "White", value: parseInt(properties.White) },

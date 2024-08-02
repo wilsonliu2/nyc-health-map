@@ -33,7 +33,7 @@ header h1 {
   margin-bottom: 10px;
 }
 
-/* Navigation styles */
+/* ================================================================== NAVIGATION STYLES ================================================================== */
 nav ul {
   list-style: none;
   display: flex;
@@ -68,6 +68,7 @@ footer p {
   cursor: pointer;
 }
 
+/* ================================================================== ABOUT POPUP STYLES ================================================================== */
 #about-popup {
   display: none;
   position: fixed;
@@ -120,7 +121,6 @@ footer p {
 
 /* ================================================================== MAP STYLING ================================================================== */
 /* ================================= MAP CONTAINERS ================================= */
-/* Everything */
 #map-layout {
   display: flex;
   flex-direction: column;
@@ -134,13 +134,13 @@ footer p {
   }
 }
 
-/* Everything but the zip-code box */
+/* Map section container */
 #map-section {
   margin-top: 3vh;
   margin-left: 1vw;
 }
 
-/* ================================= MAP STYLING ================================= */
+/* Map container */
 #map-container {
   display: flex;
   justify-content: center;
@@ -288,8 +288,6 @@ details > p {
   font: 10px Arial, Helvetica, sans-serif;
   background: white;
   background: rgba(255, 255, 255, 0.5);
-  /*box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);*/
-  /*border-radius: 5px;*/
   line-height: 24px;
   color: #555;
   min-width: 125px;
@@ -303,7 +301,6 @@ details > p {
 .healthStatusLegend h4 {
   text-align: center;
   font-size: 12px;
-  /*margin: 2px 12px 8px;*/
   color: #777;
   margin-top: 0px;
 }
