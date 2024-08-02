@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("chart-health").style.display = "none";
     document.getElementById("chart-screening").style.display = "none";
     document.getElementById("chart-status").style.display = "none";
+    document.getElementById("chart-disable").style.display = "none";
 
     document.getElementById(chartId).style.display = "block";
   }
@@ -235,7 +236,63 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     });
 
-  // Defalt chart
+  document
+    .getElementById("hc-disability-btn")
+    .addEventListener("click", function () {
+      showChart("chart-disable");
+      createChart("chart-disable", "Percentage of Disability by Neighborhood", [
+        {
+          name: "Hearing Disability",
+          data: filteredData.map((data) => ({
+            name: data["Neighborhood Charts"],
+            y: data["Hearing disability"],
+          })),
+          color: "#f1ced4",
+        },
+        {
+          name: "Vision Disability",
+          data: filteredData.map((data) => ({
+            name: data["Neighborhood Charts"],
+            y: data["Vision disability"],
+          })),
+          color: "#808080",
+        },
+        {
+          name: "Cognitive Disability",
+          data: filteredData.map((data) => ({
+            name: data["Neighborhood Charts"],
+            y: data["Cognitive disability"],
+          })),
+          color: "#d8ddb8",
+        },
+        {
+          name: "Mobility Disability",
+          data: filteredData.map((data) => ({
+            name: data["Neighborhood Charts"],
+            y: data["Mobility disability"],
+          })),
+          color: "#e0ac8e",
+        },
+        {
+          name: "Self-care Disability",
+          data: filteredData.map((data) => ({
+            name: data["Neighborhood Charts"],
+            y: data["Self-care disability"],
+          })),
+          color: "#6d3d38",
+        },
+        {
+          name: "Independent Living Disability",
+          data: filteredData.map((data) => ({
+            name: data["Neighborhood Charts"],
+            y: data["Independent living disability"],
+          })),
+          color: "#6d3d38",
+        },
+      ]);
+    });
+
+  // Default chart
   showChart("chart-behavior");
   createChart(
     "chart-behavior",
