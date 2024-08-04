@@ -119,6 +119,20 @@ footer p {
   padding: 10px 10px 0px 10px;
 }
 
+.credits {
+  font-size: 12px;
+  padding: 10px 10px 0px 10px;
+}
+
+.linkedin-link {
+  color: rgb(0, 128, 128);
+  text-decoration: none;
+}
+
+.linkedin-link:hover {
+  text-decoration: underline;
+}
+
 /* ================================================================== MAP STYLING ================================================================== */
 /* ================================= MAP CONTAINERS ================================= */
 #map-layout {
